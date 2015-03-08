@@ -7,7 +7,7 @@ $(document).ready(init);
 		
 	}
 	function runWatchSearch(){
-					var FETCH_TRIPLES_URL = "http://people.rit.edu/cmb7743/FacetTests/php/fetchtriples.php?n=";
+					var FETCH_TRIPLES_URL = "http://people.rit.edu/cmb7743/FacetTests/php/fetchtriples.php?id=";
 					var value = $.trim($('#comment').val());
 					
 					var url =  FETCH_TRIPLES_URL+value;
