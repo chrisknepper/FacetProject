@@ -1,0 +1,46 @@
+{
+    "catalog": [
+        {
+            "brand": "Zenith",
+            "type": "Watch",
+            "products": []
+                {
+                    "name": "Stratos Flyback Tribute to Felix Baumgartner",
+					"collection":"El Primero",
+					"price":8500,
+					"structure":{
+                    "movement": {
+                        "movement": "El Primero 405B, Automatic",
+                        "calibre": "13 1/4",
+                        "thickness": 6.6,
+                        "components": 331,
+                        "jewels": 31,
+                        "frequency": 36000,
+                        "power reserve": "Min 50 hours",
+                        "finishing": "Oscillating weight with 'Côtes de Genève' motif"
+                    },
+					"case":{
+						"material":[]"stainless steel","unidirectional rotating bezel","black aluminium disc"],
+						"diameter":45,
+						"thickness":14.10,
+						"crystal":"Domed sapphire crystal"
+						
+					}
+					},
+					"craftsmanship":{
+					
+					},
+					"story":{
+					"tagline":"Made to break the sound barrier from space",
+                    "icons": "Felix Baumgartner",
+					"stories":[
+					{"red bull drop":"38,469.5 meter drop, 1,357.6 km/h"}
+					]
+					}
+					
+					
+                }
+            ]
+        }
+    ]
+}
