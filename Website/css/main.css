@@ -8,8 +8,15 @@ body {
 	font-family: sans-serif;
 }
 
-h1 {
+#logo {
+	opacity: 0.7;
 	margin: 6px;
+	transition: 0.3s ease-in all;
+	cursor: pointer;
+}
+
+#logo:hover {
+	opacity: 1.0;
 }
 
 #container {
