@@ -1,0 +1,21 @@
+{
+  "name": "facetNode",
+  "version": "0.0.0",
+  "description": "Facet Node Test",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/serverHTTP.js",
+    "pretest": "jshint ./src",
+    "test": "echo \"Tests complete\""
+  },
+  "author": "Charlie Backus",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "~1.1.0",
+    "socket.io-client": "~1.1.0",
+    "sqlite3": "^3.0.5"
+  },
+  "devDependencies": {
+    "jshint": "~2.5.6"
+  }
+}
