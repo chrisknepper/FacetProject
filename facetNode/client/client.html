@@ -8,7 +8,7 @@
 	<script>
         //The socket.io client library automatically makes a global for the library called io.
         //You can change it to use a different name instead if desired.
-        
+        var socket,user;
 		function connectSocket() {
            
 			var socket = io.connect();
@@ -17,7 +17,9 @@
             //The 'connect' event is automatically fired by socket.io when a socket connects
 			socket.on('connect', function() {
 				console.log('connecting');
-			
+				
+				socket.emit('join', { name: user });
+				
 			});
 
 			socket.on('select', function(data) {

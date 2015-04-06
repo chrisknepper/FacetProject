@@ -69,25 +69,40 @@ var io = socketio(app);
 };
  function queryDB(id){
 	 var title;
-	   db.each("SELECT tagID AS id, productTitle FROM tagInfo where tagID="+id, function(err, row) {
-				console.log(row.id + ": " + row.productTitle);
-				title=row.productTitle;
+	 console.log("querydb");
+	 runQuery(updateProduct);
+	function runQuery(callback){
+            db.each("SELECT tagID AS id, productTitle FROM tagInfo where tagID="+id, function(err, rows){
+                if (err){
+                    // call your callback with the error
+                    callback(err);
+                    //return;
+                }
+                // call your callback with the data
+				console.log(rows);
+                callback(null, rows);
+                //return;
+            });
+        }
+
+ }
+ function updateProduct(err,rows){
+	 console.log(rows);
+	 
+	 console.log("in update product");
+	 if(err) console.log("error with message");
+	 else{
+	 console.log(rows.id + ": " + rows.productTitle);
+				title=rows.productTitle;
 				console.log("queryDB:Title:"+title);
-				var messageData = {
+	  	var messageData = {
 			title: "title for "+title
 			};
-		 socket.broadcast.to('room1').emit('select', messageData);
+			io.sockets.in('room1').emit('select', messageData);
 				
-			});
-			if(title){
-			//updateProduct(title);
-			}
- }
- function updateProduct(title){
-	 console.log("in update product");
-	  
+			
 	 
-	 
+		}
  }
 function closeDb() {
     console.log("closeDb");
