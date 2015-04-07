@@ -1,5 +1,5 @@
 window.onload = function() {
-	var exampleSocket = new WebSocket("ws://localhost:3000");
+	var exampleSocket = new WebSocket("wss://facetnfctest.herokuapp.com/");
 	exampleSocket.onopen = function (event) {
 		//exampleSocket.send("Here's some text that the server is urgently awaiting!"); 
 	};
