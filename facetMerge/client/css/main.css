@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	color: #333;
+	font-family: sans-serif;
+}
+
+#logo {
+	opacity: 0.7;
+	margin: 6px;
+	transition: 0.3s ease-in all;
+	cursor: pointer;
+}
+
+#logo:hover {
+	opacity: 1.0;
+}
+
+#container {
+	width: 150%;
+	margin: 0 auto;
+}
+
+.item {
+	background: #dbdbdb;
+	width: 200px;
+	height: 200px;
+	margin: 6px;
+}
+
+.tall {
+	height: 400px;
+}
+
+.wide {
+	width: 400px;
+}
+
+.white {
+	background: #f4f4f4; /* Temporarily off-white to demonstrate layout */
+}

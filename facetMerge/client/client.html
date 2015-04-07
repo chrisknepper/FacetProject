@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script> <!-- only works when file not hosted by node -->
+    <script src="/socket.io/socket.io.js"></script> <!-- works if file is hosted by node, even in heroku or online -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/main.js"></script>
+	<script >
+	//The socket.io client library automatically makes a global for the library called io.
+        //You can change it to use a different name instead if desired.
+        var socket,user;
+		function connectSocket() {
+           
+			var socket = io.connect();
+			
+            //when the socket connects, fire the connected function
+            //The 'connect' event is automatically fired by socket.io when a socket connects
+			socket.on('connect', function() {
+				console.log('connecting');
+				
+				socket.emit('join', { name: user });
+				
+			});
+
+			socket.on('select', function(data) {
+				console.log(data.title);
+                //document.getElementById("details").text=data.title;
+				$('#details').text(data.title);
+				
+			});
+		
+			
+		}
+		function logProduct(){
+		var tagName=$("#watchname").val();
+			var data = {
+					label:tagName
+					};
+			socket.emit("select", data);
+		}
+		function init() {
+		socket = io.connect();
+		user = 'user' + (Math.floor((Math.random()*1000)) + 1);
+            connectSocket();
+			$('#connect').click(logProduct);
+		}
+	
+        //when the page is loaded, call init
+		window.onload = init;
+	</script>
+	<style>
+		textarea {
+			display: block;
+			background-color: #EEEEEE;
+		}
+	</style>
+</head>
+<body>
+	<label for="watch">Watch:</label>
+	<select id="watchname" name="watch">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+	<input id="connect" type='button' value='connect'/>
+	<h3 id="details">Title for:</h3>
+		<div id="container">
+			<div class="item">
+			</div>
+			<div class="item tall white">
+			</div>
+			<div class="item wide">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item wide">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item wide">
+			</div>
+			<div class="item white">
+			</div>
+			<div class="item tall">
+			</div>
+			<div class="item white">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item wide white">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item wide">
+			</div>
+			<div class="item white">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+			<div class="item white">
+			</div>
+			<div class="item">
+			</div>
+		</div>
+	
+</body>
+</html>
