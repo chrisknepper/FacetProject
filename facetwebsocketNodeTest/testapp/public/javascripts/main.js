@@ -1,4 +1,10 @@
 window.onload = function() {
+	var container = document.querySelector('#container');
+	var msnry = new Masonry( container, {
+		// options
+		columnWidth: 212,
+		itemSelector: '.item'
+	});
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
 	var socketProtocol = window.location.protocol.indexOf('s') > -1 ? 'wss' : 'ws';
 	var socketURL = socketProtocol + '://' + window.location.host;
