@@ -1,5 +1,8 @@
 window.onload = function() {
-	var exampleSocket = new WebSocket("wss://facetnfctest.herokuapp.com/");
+	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
+	var socketProtocol = window.location.protocol.indexOf('s') > -1 ? 'wss' : 'ws';
+	var socketURL = socketProtocol + '://' + window.location.host;
+	var exampleSocket = new WebSocket(socketURL);
 	exampleSocket.onopen = function (event) {
 		//exampleSocket.send("Here's some text that the server is urgently awaiting!"); 
 	};
