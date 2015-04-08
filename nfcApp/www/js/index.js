@@ -40,7 +40,6 @@ var app = {
         function (nfcEvent) {
             var tag = nfcEvent.tag,
                 ndefMessage = tag.ndefMessage;
-
             // dump the raw json of the message
             // note: real code will need to decode
             // the payload from each record
@@ -49,16 +48,13 @@ var app = {
             // assuming the first record in the message has 
             // a payload that can be converted to a string.
             
-            //var FETCH_TRIPLES_URL = "http://Facetnfctest.herokuapp.com/ping?n=";
+            var url = "http://facetnfctest.herokuapp.com/ping";
             
             var value = nfc.bytesToString(ndefMessage[0].payload).substring(3);
-					
-            /*var url =  FETCH_TRIPLES_URL+value;
-            console.log(url);
-            $.getJSON(url).done(function(data){
-            watchDataLoaded(data);});*/
-            
-            alert(value);
+
+            $.get(url, {watch: value}, function(data) {
+                //alert(data);
+            });
             
         }, 
         function () { // success callback
@@ -80,23 +76,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-    
-    // called function after NFC tag is read
-    /*function watchDataLoaded(data){
-				if(data.results){
-				var results = data.results;
-				var current=results[0];
-				if(results.length!=0){
-						
-				$('#Title').text(current.productTitle);
-					
-				}
-				else{
-				$('#Title').text("no results found");
-				}
-						
-				}
-	}*/
 };
 
 app.initialize();
