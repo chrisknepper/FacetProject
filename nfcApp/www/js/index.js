@@ -53,7 +53,7 @@ var app = {
             var value = nfc.bytesToString(ndefMessage[0].payload).substring(3);
 
             $.get(url, {watch: value}, function(data) {
-                alert(data);
+                //alert(data);
             });
             
         }, 
