@@ -4,10 +4,7 @@ var dubya = require('../bin/www');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	var timestamp = new Date().getTime();
-	console.log(req);
-	userId = timestamp;
-	dubya.wss.broadcast(JSON.stringify({msgType:"facetDeviceConnected", msg:{connectionId:timestamp}}));
+	dubya.wss.broadcast(JSON.stringify({msgType:"facetDeviceConnected", msg:{watchID:req.query.watch}}));
 	res.send('You done pinged the server, now the websocket will send a message to listening clients.');
 });
 

@@ -17,7 +17,7 @@ window.onload = function() {
 		el.style.display = 'block';
 		var dataObj = JSON.parse(event.data);
 		var message = dataObj.msg;
-		var deviceID = message.connectionId;
-		el.innerHTML = "The current device ID connected is " + deviceID;
+		var deviceID = message.watchID;
+		el.innerHTML = "The current watch ID connected is " + deviceID;
 	}
 }
