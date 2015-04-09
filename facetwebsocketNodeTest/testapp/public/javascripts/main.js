@@ -2,7 +2,7 @@ window.onload = function() {
 	var container = document.querySelector('#container');
 	var msnry = new Masonry( container, {
 		// options
-		columnWidth: 212,
+		columnWidth: 292,
 		itemSelector: '.item'
 	});
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
@@ -14,6 +14,7 @@ window.onload = function() {
 	};
 	exampleSocket.onmessage = function (event) {
 		var el = document.getElementById('currentDevice');
+		el.style.display = 'block';
 		var dataObj = JSON.parse(event.data);
 		var message = dataObj.msg;
 		var deviceID = message.connectionId;
