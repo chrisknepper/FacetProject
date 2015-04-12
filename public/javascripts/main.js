@@ -2,8 +2,9 @@ window.onload = function() {
 	var container = document.querySelector('#container');
 	var msnry = new Masonry( container, {
 		// options
-		columnWidth: 292,
-		itemSelector: '.item'
+		columnWidth: 280,
+		itemSelector: '.item',
+		gutter: 10
 	});
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
 	var socketProtocol = window.location.protocol.indexOf('s') > -1 ? 'wss' : 'ws';
