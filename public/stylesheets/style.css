@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -20,11 +22,6 @@ body {
 	opacity: 1.0;
 }
 
-#container {
-	width: 150%;
-	margin: 0 auto;
-}
-
 #currentDevice {
 	display: none;
 	position: fixed;
@@ -38,22 +35,28 @@ body {
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.item {
-	background: #818182;
+#homePage {
+	width: 110%;
+	padding: 75px 30px;
+	background: linear-gradient(to right, #fff, #ededed);
+}
+
+#homePage .item {
+	background: #1d1d1d;
 	padding: 25px;
 	width: 280px;
 	height: 280px;
-	margin: 6px;
+	margin: 0 0 10px;
 	color: #fff;
 	text-transform: uppercase;
 }
 
-.tall {
-	height: 560px;
+#homePage .item.tall {
+	height: 570px;
 }
 
-.wide {
-	width: 560px;
+#homePage .item.wide {
+	width: 570px;
 }
 
 .white {
