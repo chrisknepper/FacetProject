@@ -1,14 +1,6 @@
-doctype html
-html
-  head
-    meta(http-equiv='content-type', content='text/html; charset=utf-8')
-    | &#x9;&#x9;
-    link(href='css/main.css', rel='stylesheet', type='text/css')
-    | &#x9;
-    | &#x9;&#x9;
-    | &#x9;&#x9;
-    title Product Name
-  body
+extends layout
+
+block content
     #vscroll.column
       #upnav ^
       | &#x9;
@@ -16,49 +8,49 @@ html
         .thumbnail
           h2.thumbnum
             | 01
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname EL PRIMERO
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 02
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname CHALLENGER
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 03
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname ACADEMY
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 04
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname ELITE
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 05
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname PILOT
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 06
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname ELITE
         | &#x9;&#x9;&#x9;
         .thumbnail
           h2.thumbnum
             | 07
-            img(src='media/watchthumb.png')
+            img(src='/images/watchthumb.png')
             | &#x9;&#x9;&#x9;
             h3.thumbname ACADEMY
       | &#x9;
@@ -77,32 +69,32 @@ html
       | &#x9;
       #categories
         .category
-          img.icon(src='media/movement.png')
+          img.icon(src='/images/movement.png')
           | MOVEMENT
         | &#x9;&#x9;
         .category
-          img.icon(src='media/features.png')
+          img.icon(src='/images/features.png')
           | FEATURES
         | &#x9;&#x9;
         .category
-          img.icon(src='media/external.png')
+          img.icon(src='/images/external.png')
           | EXTERNAL
         | &#x9;&#x9;
         .category
-          img.icon(src='media/variations.png')
+          img.icon(src='/images/variations.png')
           | VARIATIONS
         | &#x9;&#x9;
         .category
-          img.icon(src='media/inspirations.png')
+          img.icon(src='/images/inspirations.png')
           | INSPIRATIONS
         | &#x9;&#x9;
         .category
-          img.icon(src='media/buy.png')
+          img.icon(src='/images/buy.png')
           br
           | BUY
     #media.column
       #model
-        img(src='media/watchimg.png')
+        img(src='/images/watchimg.png')
       | &#x9;
       #details
         h3 Movement
