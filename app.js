@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var simulate = require('./routes/simulate');
 var ping = require('./routes/ping');
+var product = require('./routes/product');
 //handle db stuff
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('facetCatalog.sqlite');
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/simulate', simulate);
 app.use('/ping', ping);
-
+app.use('/product', product);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
