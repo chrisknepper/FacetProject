@@ -135,7 +135,7 @@ left:37%;
 background-color:#EDEDED;
 }
 #details{
-
+overflow:hidden;
 position:fixed;
 bottom:0;
 padding-left:20px;
@@ -175,7 +175,7 @@ color:#A08E6A;
 background-color:#ffffff;
 position:absolute;
 font-size:10pt;
-top:40px;
+top:60px;
 left:0px;
 z-index:2;
 width:80%;
@@ -189,16 +189,17 @@ top:0;
 background-color:#FBFBFB;
 z-index:3;
 }
-/*Details Styles*/
+/*Product Details Styles*/
 #categories{
-padding-left:20px;
+
 margin:auto;
+
 }
 .category{
 float:left;
 width:150px;
 height:150px;
-margin:10px;
+margin:1%;
 text-align:center;
 }
 .category .icon{
@@ -232,5 +233,6 @@ font-size:12pt;
 /*media styles*/
 #model{
 padding-left:15%;
+overflow:hidden
 }
 /*end product page styles*/

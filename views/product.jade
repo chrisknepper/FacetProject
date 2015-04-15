@@ -2,102 +2,102 @@ extends layout
 
 block content
     #vscroll.column
-      #upnav ^
-      | &#x9;
-      #thumbnails
-        .thumbnail
-          h2.thumbnum
-            | 01
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname EL PRIMERO
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 02
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname CHALLENGER
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 03
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname ACADEMY
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 04
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname ELITE
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 05
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname PILOT
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 06
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname ELITE
-        | &#x9;&#x9;&#x9;
-        .thumbnail
-          h2.thumbnum
-            | 07
-            img(src='/images/watchthumb.png')
-            | &#x9;&#x9;&#x9;
-            h3.thumbname ACADEMY
-      | &#x9;
-      #downnav ^
+        #upnav ^
+        | &#x9;
+        #thumbnails
+            .thumbnail
+                h2.thumbnum 01
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname EL PRIMERO
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 02
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname CHALLENGER
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 03
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname ACADEMY
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 04
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname ELITE
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 05
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname PILOT
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 06
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname ELITE
+                | &#x9;&#x9;&#x9;
+            .thumbnail
+                h2.thumbnum 07
+                | &#x9;&#x9;&#x9;
+                img(src='/images/watchthumb.png', alt='watch thumbnail')
+                | &#x9;&#x9;&#x9;
+                h3.thumbname ACADEMY
+                | &#x9;
+        #downnav ^
     #info.column
-      .overlap
-        h1#title CHALLENGER
-        | &#x9;&#x9;
-        h1.position  02/07
-      | &#x9;
-      h3#type CHRONOMASTER GRANDE DATE
-      | &#x9;
-      h3#diameter 45 MM
-      | &#x9;
-      h4#measure 03.2160.4047/01.C713
-      | &#x9;
-      #categories
-        .category
-          img.icon(src='/images/movement.png')
-          | MOVEMENT
-        | &#x9;&#x9;
-        .category
-          img.icon(src='/images/features.png')
-          | FEATURES
-        | &#x9;&#x9;
-        .category
-          img.icon(src='/images/external.png')
-          | EXTERNAL
-        | &#x9;&#x9;
-        .category
-          img.icon(src='/images/variations.png')
-          | VARIATIONS
-        | &#x9;&#x9;
-        .category
-          img.icon(src='/images/inspirations.png')
-          | INSPIRATIONS
-        | &#x9;&#x9;
-        .category
-          img.icon(src='/images/buy.png')
-          br
-          | BUY
+        .overlap
+            h1.title CHALLENGER
+            | &#x9;&#x9;
+            h1.position  02/07
+        | &#x9;
+        h3.type CHRONOMASTER GRANDE DATE
+        | &#x9;
+        h3.diameter 45 MM
+        | &#x9;
+        h4.measure 03.2160.4047/01.C713
+        | &#x9;
+        #categories
+            .category
+                img.icon(src='/images/movement.png', alt='movement icon')
+                | MOVEMENT
+                | &#x9;&#x9;
+            .category
+                img.icon(src='/images/features.png', alt='features icon')
+                | FEATURES
+                | &#x9;&#x9;
+            .category
+                img.icon(src='/images/external.png', alt='external icon')
+                | EXTERNAL
+                | &#x9;&#x9;
+            .category
+                img.icon(src='/images/variations.png', alt='variations icon')
+                | VARIATIONS
+                | &#x9;&#x9;
+            .category
+                img.icon(src='/images/inspirations.png', alt='inspirations icon')
+                | INSPIRATIONS
+                | &#x9;&#x9;
+            .category
+                img.icon(src='/images/buy.png', alt='buy icon')
+                br
+                | BUY
     #media.column
-      #model
-        img(src='/images/watchimg.png')
-      | &#x9;
-      #details
-        h3 Movement
-        p
-          | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
+        #model
+            img(src='/images/watchimg.png', alt='large img')
+        | &#x9;
+        #details
+            h3 Movement
+            p
+            | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
     script(src="javascripts/product.js")
