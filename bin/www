@@ -118,3 +118,4 @@ function onListening() {
 }
 
 exports.wss = wss;
+exports.app = app;

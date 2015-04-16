@@ -63,39 +63,14 @@ app.use(function(err, req, res, next) {
 });
 
 
- function queryDB(id){
-   var title;
-   console.log("querydb");
-   runQuery(updateProduct);
-  function runQuery(callback){
-            db.each("SELECT tagID AS id, productTitle FROM tagInfo where tagID="+id, function(err, rows){
-                if (err){
-                    // call your callback with the error
-                    callback(err);
-                    //return;
-                }
-                // call your callback with the data
-        console.log(rows);
-                callback(null, rows);
-                //return;
-            });
-        }
-
- }
- function updateProduct(err,rows){
-   console.log(rows);
-   console.log("in update product");
-   if(err) console.log("error with message");
-   else{
-   console.log(rows.id + ": " + rows.productTitle);
-        title=rows.productTitle;
-        console.log("queryDB:Title:"+title);
-      var messageData = {
-      title: "title for "+title
-      };
-      io.sockets.in('room1').emit('select', messageData);
-    }
+app.queryDB = function(id, callback){
+  var watchData;
+  var poop = db.get("SELECT name, collection FROM tagInfo where productId="+id, function(err, row) {
+    callback(row);
+  });
+  
 }
+
 function closeDb() {
     console.log("closeDb");
     db.close();

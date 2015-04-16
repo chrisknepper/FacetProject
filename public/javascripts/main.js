@@ -18,7 +18,8 @@ window.onload = function() {
 		el.style.display = 'block';
 		var dataObj = JSON.parse(event.data);
 		var message = dataObj.msg;
-		var deviceID = message.watchID;
-		el.innerHTML = "The current watch ID connected is " + deviceID;
+		var watchResult = message.watchInfo;
+		//console.log(watchResult);
+		el.innerHTML = '<h1>' + watchResult.name + '</h1><h2>' + watchResult.collection + '</h2>';
 	}
 }
