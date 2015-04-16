@@ -65,7 +65,7 @@ app.use(function(err, req, res, next) {
 
 app.queryDB = function(id, callback){
   var watchData;
-  var poop = db.get("SELECT name, collection FROM tagInfo where productId="+id, function(err, row) {
+  db.get("SELECT tags.productid, productInfo.name, productInfo.collection FROM tags INNER JOIN productInfo ON tags.productid = productInfo.id where tags.productid="+id, function(err, row) {
     callback(row);
   });
   
