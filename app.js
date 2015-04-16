@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var simulate = require('./routes/simulate');
+var selection = require('./routes/selection');
 var ping = require('./routes/ping');
 var product = require('./routes/product');
 //handle db stuff
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/simulate', simulate);
+app.use('/selection', selection);
 app.use('/ping', ping);
 app.use('/product', product);
 // catch 404 and forward to error handler

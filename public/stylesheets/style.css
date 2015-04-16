@@ -245,6 +245,62 @@ color:#EDEDED;
 .type,.diameter{
 font-size:12pt;
 }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*styles specific to watch selection page*/
+#watchSelection{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:0px;
+	font-size:25px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	white-space:nowrap;
+}
+.watchSelect{
+	position:relative;
+	display:inline-block;
+	height:100vh;
+	width:350px;
+	background-color:#E0E0E0;
+	text-align:center;
+	color:#000;
+	line-height: 100vh;
+	-webkit-box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	background:url("../images/tempWatch.png") no-repeat center;
+}
+.number{
+	position:absolute;
+	display:inline-block;
+	height:100vh;
+	text-align:center;
+	color:#A08E6A;
+	line-height: 100vh;
+	font-size:250px;
+	z-index:1;
+	right:35px;
+	opacity: 0.85;
+}
+.linkColor { 
+	position:relative;
+	background-color:#FFF; 
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:5px;
+	padding-bottom:5px;
+	z-index:2;
+}
+
+
 /*media styles*/
 #model{
 padding-left:15%;
