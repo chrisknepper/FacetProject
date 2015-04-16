@@ -63,12 +63,17 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.queryDB = function(id, callback){
-  var watchData;
-  db.get("SELECT tags.productid, productInfo.name, productInfo.collection FROM tags INNER JOIN productInfo ON tags.productid = productInfo.id where tags.productid="+id, function(err, row) {
+app.getWatchIDFromTag = function(id, callback){
+  db.get("SELECT productInfo.id FROM tags INNER JOIN productInfo ON tags.productid = productInfo.id where tags.productid="+id, function(err, row) {
+    console.log(row);
     callback(row);
   });
-  
+}
+
+app.getProductInfo = function(id, callback){
+  db.get("SELECT productInfo.name, productInfo.collection FROM productInfo WHERE productInfo.id="+id, function(err, row) {
+    callback(row);
+  });
 }
 
 function closeDb() {

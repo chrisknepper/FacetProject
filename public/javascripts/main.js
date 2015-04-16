@@ -14,12 +14,8 @@ window.onload = function() {
 		//exampleSocket.send("Here's some text that the server is urgently awaiting!"); 
 	};
 	exampleSocket.onmessage = function (event) {
-		var el = document.getElementById('currentDevice');
-		el.style.display = 'block';
 		var dataObj = JSON.parse(event.data);
 		var message = dataObj.msg;
-		var watchResult = message.watchInfo;
-		//console.log(watchResult);
-		el.innerHTML = '<h1>' + watchResult.name + '</h1><h2>' + watchResult.collection + '</h2>';
+		window.location.replace('/product/' + message.watchInfo.id);
 	}
 }
