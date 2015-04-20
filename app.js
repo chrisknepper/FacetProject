@@ -10,6 +10,7 @@ var simulate = require('./routes/simulate');
 var selection = require('./routes/selection');
 var ping = require('./routes/ping');
 var product = require('./routes/product');
+var timeline = require('./routes/timeline');
 //handle db stuff
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('facetCatalog.sqlite');
@@ -33,6 +34,7 @@ app.use('/simulate', simulate);
 app.use('/selection', selection);
 app.use('/ping', ping);
 app.use('/product', product);
+app.use('/timeline', timeline);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
