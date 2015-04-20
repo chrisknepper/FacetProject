@@ -480,3 +480,39 @@ padding-left:15%;
 overflow:hidden
 }
 /*end product page styles*/
+/*timeline styles*/
+.yearnum{
+position:absolute;
+vertical-align:text-top;
+font-size:90pt;
+margin:0px;
+top:10;
+left:5;
+z-index:0;
+padding:0px;
+color:#EDEDED;
+}
+.centnum{
+
+position:absolute;
+font-size:32pt;
+top:20px;
+left:0px;
+z-index:2;
+text-align:center;
+
+}
+.histdef{
+padding:10%;
+}
+.corner{
+width:80px;
+position:fixed;
+top:10px;
+left:0px;
+}
+#histimg{
+height:100%;
+overflow:hidden;
+}
+/*end timeline styles*/
