@@ -3,7 +3,6 @@ window.onload = function() {
 	var msnry = new Masonry( container, {
 		// options
 		columnWidth: 280,
-		itemSelector: '.item',
 		gutter: 10
 	});
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)

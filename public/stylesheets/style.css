@@ -2,13 +2,12 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family:Sans-serif;
 }
 
 body {
 	background: #fff;
 	color: #333;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
 }
@@ -130,7 +129,7 @@ box-shadow:0px 10px 5px #888888;
 overflow-x:hidden;
 padding:0px;
 }
-.column h1,h3,h4,div{
+.column h1,.column h3,.column h4,.column div{
 padding-left:10px;
 }
 #vscroll{
@@ -300,6 +299,180 @@ font-size:12pt;
 	z-index:2;
 }
 
+/*styles specific to history page*/
+#watchHistory{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:0px;
+	font-size:25px;
+	white-space:nowrap;
+}
+.watchHistorySelect{
+	position:relative;
+	display:inline-block;
+	height:100vh;
+	width:350px;
+	background-color:#E0E0E0;
+	text-align:center;
+	color:#000;
+	line-height: 100vh;
+	-webkit-box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	box-shadow: -8px 0px 7px 0px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+
+.watchHistorySelect img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 1080px;
+	-webkit-filter: grayscale(100%) contrast(80%);
+	filter: grayscale(100%) contrast(80%);
+	transition: 0.3s ease-in all;
+}
+
+.watchHistorySelect:hover img {
+	-webkit-filter: grayscale(0%) contrast(100%);
+	filter: grayscale(0%) contrast(100%);
+}
+
+#watchHistory .linkColor {
+	background: none;
+	color: #fff;
+	font-size: 1.5em;
+	position: relative;
+	z-index: 2;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+}
+
+#watchHistory .number {
+	color: rgba(0,0,0,0.6);
+}
+
+#watchHistory .person {
+	display: none;
+	height: 1080px;
+	width: 1792px;
+	position: absolute;
+	top: 0;
+	left: 90px;
+	z-index: 9;
+}
+
+#watchHistory .personBigBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#watchHistory .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+}
+
+#watchHistory .expand {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+}
+
+#watchHistory .person > .close, #watchHistory .person > .expand {
+	z-index: 15;
+}
+
+#watchHistory .galleryContainer > .close, #watchHistory .galleryContainer > .expand {
+	z-index: 30;
+}
+
+#watchHistory .galleryContainer {
+	display: none;
+	width: 1792px;
+	height: 1080px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 25;
+	background: #333;
+	box-shadow: 0 0 10px black;
+	overflow: hidden;
+}
+
+#watchHistory .gallery {
+	position: relative;
+	width: 1972px;
+	height: 1080px;
+	top: 0;
+	left: 0;
+}
+
+#watchHistory .galleryChild {
+	width: 324px;
+	height: 215px;
+	margin: 0;
+}
+
+#watchHistory .galleryChild.w2 {
+	width: 648px;
+}
+
+#watchHistory .galleryChild.h2 {
+	height: 430px;
+}
+
+#watchHistory #infoSnippet {
+	position: absolute;
+	bottom: -150px;
+	width: 1500px;
+	height: 130px;
+	left: 230px;
+	background: white;
+	border-radius: 2px;
+	box-shadow: 0 0 20px black;
+	padding: 35px;
+	transition: 0.4s ease-in bottom;
+	z-index: 20;
+}
+
+#watchHistory #infoSnippet div {
+	float: left;
+	white-space: normal;
+}
+
+#infoSnippet .back {
+	width: 100px;
+}
+#infoSnippet .forward {
+	width: 100px;
+}
+#infoSnippet .text {
+	width: 1032px;
+}
+#infoSnippet .slideCount {
+	width: 100px;
+}
+
+#watchHistory #infoSnippet.visible {
+	bottom: 50px;
+}
+
+#watchHistory .galleryChild, #watchHistory .galleryChild img {
+	transition: width 0.4s, height 0.4s;
+}
+
+#watchHistory .galleryChild.expanded, #watchHistory .galleryChild.expanded img {
+	left: 0;
+	top: 0;
+	width: 1792px;
+	height: 1080px;
+}
 
 /*media styles*/
 #model{
