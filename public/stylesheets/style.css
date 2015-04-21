@@ -292,7 +292,7 @@ font-size:12pt;
 	padding-top: 0px;
 	padding:0px;
 	font-size:25px;
-	font-family: 'GothamHTF-Light';
+	font-family: 'GothamHTF-Book';
 	white-space:nowrap;
 }
 #escape{
@@ -330,8 +330,8 @@ font-size:12pt;
 	position:absolute;
 	display:inline-block;
 	height:100vh;
+	color:#9D8C6C;
 	text-align:center;
-	color:#A08E6A;
 	line-height: 100vh;
 	font-size:250px;
 	z-index:1;
@@ -354,7 +354,7 @@ font-size:12pt;
 	display:inline-block;
 	height:100vh;
 	text-align:center;
-	color:#A08E6A;
+	color:#9D8C6C;
 	line-height: 100vh;
 	font-size:250px;
 	z-index:1;
