@@ -12,6 +12,37 @@ body {
 	overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
 }
 
+/*	FONTS */
+
+@font-face {
+	font-family: 'BodoniStd-BoldCondensed';
+    src: url('../fonts/BodoniStd-BoldCondensed.otf');
+}
+@font-face {
+	font-family: 'BodoniStd-Book';
+    src: url('../fonts/BodoniStd-Book.otf');
+}
+@font-face {
+	font-family: 'GothamHTF-Light';
+    src: url('../fonts/GothamHTF-Light.otf');
+}
+@font-face {
+	font-family: 'GothamHTF-Medium';
+    src: url('../fonts/GothamHTF-Medium.otf');
+}
+@font-face {
+	font-family: 'GothamHTF-BookItalic';
+    src: url('../fonts/GothamHTF-BookItalic.otf');
+}
+@font-face {
+	font-family: 'GothamHTF-Book';
+    src: url('../fonts/GothamHTF-Book.otf');
+}
+@font-face {
+	font-family: 'GaramondPremrPro';
+    src: url('../fonts/GaramondPremrPro.otf');
+}
+
 #logo {
 	opacity: 0.7;
 	margin: 6px;
@@ -261,7 +292,7 @@ font-size:12pt;
 	padding-top: 0px;
 	padding:0px;
 	font-size:25px;
-	font-family: 'Gotham-Light', Helvetica, Verdana, sans-serif;
+	font-family: 'GothamHTF-Light';
 	white-space:nowrap;
 }
 #escape{
@@ -280,9 +311,9 @@ font-size:12pt;
 	text-align:center;
 	color:#000;
 	line-height: 100vh;
-	-webkit-box-shadow: -5px 0px 7px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: -5px 0px 7px 0px rgba(0,0,0,0.2);
-	box-shadow: -5px 0px 7px 0px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 }
 .watchSelect img{
 	position:absolute;
@@ -295,7 +326,7 @@ font-size:12pt;
     text-align:center;
 }
 .number{
-	font-family: Bodoni MT,Didot,Didot LT STD,Hoefler Text,Garamond,Times New Roman,serif;
+	font-family: 'BodoniStd-BoldCondensed';
 	position:absolute;
 	display:inline-block;
 	height:100vh;
@@ -304,17 +335,31 @@ font-size:12pt;
 	line-height: 100vh;
 	font-size:250px;
 	z-index:1;
-	right:60px;
+	right:85px;
 	opacity: 0.85;
 }
 .linkColor { 
 	position:relative;
+	letter-spacing: 4px;
 	background-color:#FFF; 
-	padding-left:75px;
-	padding-right:75px;
+	padding-left:60px;
+	padding-right:60px;
 	padding-top:5px;
 	padding-bottom:5px;
 	z-index:2;
+}
+#firstNum {
+	font-family: 'BodoniStd-BoldCondensed';
+	position:absolute;
+	display:inline-block;
+	height:100vh;
+	text-align:center;
+	color:#A08E6A;
+	line-height: 100vh;
+	font-size:250px;
+	z-index:1;
+	right:80px;
+	opacity: 0.85;
 }
 
 /*styles specific to history page*/
