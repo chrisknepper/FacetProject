@@ -2,27 +2,35 @@ extends layout
 
 block content
 	#watchSelection
+		#escape
+			img(src='../images/watches/close.png')
 		.watchSelect
+			img(src='../images/watches/primero.png')
 			span.linkColor EL PRIMERO
 			| &#x9;
-			.number 07
+			.number 01
 		.watchSelect
+			img(src='../images/watches/challenger.png')
 			span.linkColor CHALLENGER
 			| &#x9;
 			.number 02
 		.watchSelect
+			img(src='../images/watches/academy.png')
 			span.linkColor ACADEMY
-			| &#x9;
-			.number 04
-		.watchSelect
-			span.linkColor ELITE
 			| &#x9;
 			.number 03
 		.watchSelect
-			span.linkColor FAT AL
+			span.linkColor ELITE
+			img(src='../images/watches/elite.png')
 			| &#x9;
-			.number 01
+			.number 04
 		.watchSelect
-			span.linkColor CROCEY
+			img(src='../images/watches/pilot.png')
+			span.linkColor PILOT
 			| &#x9;
-			.number 08
+			.number 05
+		.watchSelect
+			img(src='../images/tempWatch.png')
+			span.linkColor BLAH
+			| &#x9;
+			.number 06
