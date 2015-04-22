@@ -17,4 +17,10 @@ window.onload = function() {
 		var message = dataObj.msg;
 		window.location.replace('/product/' + message.watchInfo.id);
 	}
+     document.querySelector("body").css({
+        "-moz-transform":"scale(1)",
+        "-webkit-transform":"scale(1)",
+        "-o-transform":"scale(1)",
+        "-ms-transform":"scale(1)"
+    });
 }
