@@ -14,7 +14,7 @@ body {
 	color: #333;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
-	overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
+	/*overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
 }
 a{
     text-decoration:none;
@@ -589,16 +589,9 @@ font-size:12pt;
 }
 
 #watchHistory .galleryChild {
-
+	font-size: 0;
+	display: inline-block;
 	margin: 0;
-}
-
-#watchHistory .galleryChild.w2 {
-
-}
-
-#watchHistory .galleryChild.h2 {
-
 }
 
 #watchHistory #infoSnippet {
