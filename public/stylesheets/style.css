@@ -4,6 +4,7 @@
 	padding: 0;
 }
 
+
 body {
      -moz-transform:scale(1);
      -webkit-transform":scale(1);
@@ -14,6 +15,9 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
 	overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
+}
+a{
+    text-decoration:none;
 }
 
 /*	FONTS */
@@ -136,6 +140,7 @@ body {
 #homePage .item h2 {
 	font-size: 1.6em;
 	margin: 15px 0 0 5px;
+    
 }
 
 #homePage .item h1.top {
@@ -155,12 +160,50 @@ body {
 	padding: 0;
 	z-index: 1;
 }
+/*social styles*/
+.vcolumn{
+height:100%;
+float:left;
+-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+position:relative;
+padding:0px;
+width:350px;
+}			
+.accent{
+background-color:#A08E6A;
+}
+
+.post{
+width:80%;
+position:absolute;
+top:30%;
+left:10%;
+padding:30px;
+}
+.timestamp{
+width:80%;
+position:absolute;
+top:40%;
+left:10%;
+padding:30px;
+}
 /*styles specific to product page*/
+#vcontainer{
+position:absolute;
+height:100%;
+width:150%;
+overflow-x:hidden;
+overflow-y:scroll;
+}
 .column{
 height:100%;
 float:left;
 position:absolute;
-box-shadow:0px 10px 5px #888888;
+-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 overflow-x:hidden;
 padding:0px;
 }
@@ -643,9 +686,4 @@ height:100%;
 overflow:hidden;
 }
 /*end timeline styles*/
-/*social media */
-.post{
-width:80%;
-margin:auto;
-position:relative;
-}
+
