@@ -650,8 +650,12 @@ font-size:12pt;
 
 /*media styles*/
 #model{
-padding-left:15%;
-overflow:hidden
+
+overflow:hidden;
+}
+#model iframe{
+position:absolute;
+top:-30;
 }
 /*end product page styles*/
 /*timeline styles*/
