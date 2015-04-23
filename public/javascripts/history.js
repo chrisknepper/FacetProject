@@ -8,7 +8,7 @@ window.onload = function() {
 		currentGallery.imagesLoaded(function() {
 			currentGallery.masonry({
 				// options
-				columnWidth: 324,
+				columnWidth: 1, //WHY ISN'T THIS MORE DOCUMENTED
 				gutter: 0,
 				itemSelector: '.galleryChild'
 			});

@@ -525,17 +525,16 @@ font-size:12pt;
 }
 
 #watchHistory .galleryChild {
-	width: 324px;
-	height: 215px;
+
 	margin: 0;
 }
 
 #watchHistory .galleryChild.w2 {
-	width: 648px;
+
 }
 
 #watchHistory .galleryChild.h2 {
-	height: 430px;
+
 }
 
 #watchHistory #infoSnippet {
