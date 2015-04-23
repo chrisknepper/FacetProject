@@ -311,9 +311,9 @@ font-size:12pt;
 	text-align:center;
 	color:#000;
 	line-height: 100vh;
-	-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.1);
-	box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+	box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
 }
 .watchSelect img{
 	position:absolute;
