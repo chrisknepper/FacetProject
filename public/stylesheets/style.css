@@ -173,6 +173,7 @@ width:350px;
 }			
 .accent{
 background-color:#A08E6A;
+color:#FFFFFF;
 }
 
 .post{
@@ -181,13 +182,14 @@ position:absolute;
 top:30%;
 left:10%;
 padding:30px;
+font-family: 'BodoniStd-Book';
+font-size:24pt;
 }
 .timestamp{
-width:80%;
-position:absolute;
-top:40%;
-left:10%;
-padding:30px;
+
+font-family:'GothamHTF-Book';
+font-size:12pt;
+padding-top:30px;
 }
 /*styles specific to product page*/
 #vcontainer{
@@ -245,10 +247,13 @@ overflow:hidden;
 background-color:#ffffff;
 z-index:0;
 position:relative;
+
 }
 .thumbnail img{
 position:absolute;
+margin:auto;
 top:-60;
+left:-20;
 z-index:0;
 }
 .thumbnum{
@@ -263,6 +268,7 @@ padding:0px;
 opacity: 0.85;
 color:#A08E6A;
 font-family: 'BodoniStd-BoldCondensed';
+text-align:center;
 }
 .thumbname{
 background-color:#ffffff;
