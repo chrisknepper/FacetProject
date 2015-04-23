@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var simulate = require('./routes/simulate');
-var selection = require('./routes/selection');
+var watchselection = require('./routes/watchselection');
+var timeselection = require('./routes/timeselection');
 var ping = require('./routes/ping');
 var product = require('./routes/product');
 var history = require('./routes/history');
@@ -33,7 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/simulate', simulate);
-app.use('/selection', selection);
+app.use('/watchselection', watchselection);
+app.use('/timeselection', timeselection);
 app.use('/ping', ping);
 app.use('/product', product);
 app.use('/history', history);

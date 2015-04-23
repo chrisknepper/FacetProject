@@ -173,6 +173,7 @@ width:350px;
 }			
 .accent{
 background-color:#A08E6A;
+color:#FFFFFF;
 }
 
 .post{
@@ -181,13 +182,14 @@ position:absolute;
 top:30%;
 left:10%;
 padding:30px;
+font-family: 'BodoniStd-Book';
+font-size:24pt;
 }
 .timestamp{
-width:80%;
-position:absolute;
-top:40%;
-left:10%;
-padding:30px;
+
+font-family:'GothamHTF-Book';
+font-size:12pt;
+padding-top:30px;
 }
 /*styles specific to product page*/
 #vcontainer{
@@ -245,10 +247,13 @@ overflow:hidden;
 background-color:#ffffff;
 z-index:0;
 position:relative;
+
 }
 .thumbnail img{
 position:absolute;
+margin:auto;
 top:-60;
+left:-20;
 z-index:0;
 }
 .thumbnum{
@@ -263,6 +268,7 @@ padding:0px;
 opacity: 0.85;
 color:#A08E6A;
 font-family: 'BodoniStd-BoldCondensed';
+text-align:center;
 }
 .thumbname{
 background-color:#ffffff;
@@ -349,7 +355,7 @@ font-size:12pt;
     top:25px;
 	right:75px;
 	font:22px;
-	z-index:1;
+	z-index:2;
 }
 .watchSelect{
 	position:relative;
@@ -374,7 +380,7 @@ font-size:12pt;
     right: 0;
     text-align:center;
 }
-.number{
+#watchSelection .number{
 	font-family: 'BodoniStd-BoldCondensed';
 	position:absolute;
 	display:inline-block;
@@ -386,7 +392,7 @@ font-size:12pt;
 	right:85px;
 	opacity: 0.85;
 }
-.linkColor { 
+#watchSelection .linkColor { 
 	position:relative;
 	letter-spacing: 4px;
 	background-color:#FFF; 
@@ -408,6 +414,64 @@ font-size:12pt;
 	z-index:1;
 	right:80px;
 	opacity: 0.85;
+}
+
+/*styles specific to time selection*/
+#timeSelection{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:0px;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+	white-space:nowrap;
+}
+.timeSelect{
+	position:relative;
+	display:inline-block;
+	height:100vh;
+	width:350px;
+	background-color:#FFF;
+	text-align:center;
+	color:#000;
+	line-height: 100vh;
+	-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+	box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+}
+.timeSelect img{
+	position:absolute;
+	display:inline-block;
+	margin:auto;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+	z-index:2;
+	width:50%;
+}
+#timeSelection .linkColor { 
+	font-family: 'BodoniStd-Book';
+	position:relative;
+	z-index:2;
+	right:30px;
+	top:-5px;
+	font-size:85px;
+}
+#timeSelection .number{
+	font-family: 'BodoniStd-BoldCondensed';
+	position:absolute;
+	display:inline-block;
+	vertical-align:middle;
+	color:#9D8C6C;
+	text-align:center;
+	font-size:250px;
+	z-index:1;
+	right:60px;
+	opacity: 0.85;
+	z-index:1;
 }
 
 /*styles specific to history page*/
