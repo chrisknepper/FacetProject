@@ -62,35 +62,37 @@ block content
                 | &#x9;&#x9;
                 h1.position  02/07
                 | &#x9;
-            h3.type= productTitle
-            | &#x9;
-            h3.diameter 45 MM
-            | &#x9;
-            h4.measure 03.2160.4047/01.C713
-            | &#x9;
+                h3.type= productTitle
+                | &#x9;
+                h3.diameter 45 MM
+                | &#x9;
+                h4.measure 03.2160.4047/01.C713
+                | &#x9;
             #categories
                 #menu.menusection
-                    .category
+                    #movementm.category
                         img.icon(src='/images/categories/movement_off.svg', alt='movement icon')
-                        | MOVEMENT
+                        .ctitle
+                            | MOVEMENT
                         | &#x9;&#x9;
-                    .category
+                    #featuresm.category
                         img.icon(src='/images/categories/features_off.svg', alt='features icon')
                         | FEATURES
                         | &#x9;&#x9;
-                    .category
+                    #externalm.category
                         span.icon-watches_off.general-ui-icon.icon
-                        | EXTERNAL
-                        | &#x9;&#x9;
-                    .category
+                        .ctitle
+                            | EXTERNAL
+                            | &#x9;&#x9;
+                    #variationsm.category
                         img.icon(src='/images/categories/variation_off.svg', alt='variations icon')
                         | VARIATIONS
                         | &#x9;&#x9;
-                    .category
+                    #inspirationm.category
                         img.icon(src='/images/categories/inspiration_off.svg', alt='inspirations icon')
                         | INSPIRATIONS
                         | &#x9;&#x9;
-                    .category
+                    #buym.category
                         img.icon(src='/images/categories/buy_off.svg', alt='buy icon')
                         br
                         | BUY
@@ -130,4 +132,5 @@ block content
                 h3 Movement
                 p
                 | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
     script(src="javascripts/product.js")
