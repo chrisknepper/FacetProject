@@ -1,63 +1,6 @@
 function init() {
 	var hiddenItems, currentGallery, currentGalleryLength;
-
-	var loadGallery = function(container) {
-		currentGallery = container.children('.gallery').first();
-		currentGalleryLength = container.find('.galleryChild').length;
-		currentGallery.imagesLoaded(function() {
-			currentGallery.masonry({
-				// options
-				columnWidth: 1, //WHY ISN'T THIS MORE DOCUMENTED
-				gutter: 0,
-				itemSelector: '.galleryChild'
-			});
-		});
-		$(container).toggle(400);
-		$(container).toggleClass('visible');
-	}
-
-	var togglePerson = function(container) {
-		$(container).toggle(400);
-		$(container).toggleClass('visible');
-	}
-
-	var unloadGallery = function(container) {
-		$(container).toggle(400, function(e) {
-			currentGallery.masonry('destroy');
-		});
-		$(container).toggleClass('visible');
-	}
-
-	var unloadSlide = function(container) {
-		$('.galleryChild').removeClass('expanded');
-		for (var i = 0; i < hiddenItems.length; i++) {
-			hiddenItems[i].show();
-		};
-		setTimeout(function() { //This is a bad way to do this, but masonry's .reveal method seems broken
-			currentGallery.masonry();
-		}, 700);
-		$('#infoSnippet').removeClass('visible');
-		
-	}
-
-	var handleFocusSwitch = function(evtObj, selector, callback) {
-		var selectedContainer = evtObj.next(selector);
-		var selectedContainerVisible = selector + '.visible';
-		var selectedContainerAnimated = selector + ':animated';
-		if($(selectedContainerVisible).length === 0) {
-			callback(selectedContainer);
-		}
-		else {
-			$(selectedContainerVisible).toggle({
-				duration: 400,
-				always: function(e) {
-					if($(selectedContainerAnimated).length === 0) {
-						callback(selectedContainer);
-					}
-				}
-			});
-		}
-	}
+	console.log('history init');
 
 	$('.watchHistorySelect').on('click', function(e) {
 		handleFocusSwitch($(this), '.person', togglePerson);
@@ -85,7 +28,7 @@ function init() {
 
 	$('.galleryChild').on('click', function(e) {
 		$('.galleryChild').removeClass('expanded');
-		$(this).toggleClass('expanded');
+		$(this).addClass('expanded');
 		hiddenItems = new Array();
 		$(this).siblings().each(function() {
 			hiddenItems.push($(this));
@@ -126,21 +69,80 @@ function init() {
 			updateInfoSnippet();
 		}
 	});
+}
 
-	var updateInfoSnippet = function() {
-		if($('.galleryChild.expanded').prev('.galleryChild').length === 0) {
-			$('#infoSnippet .back').css('opacity', '0.5');
-		}
-		else {
-			$('#infoSnippet .back').css('opacity', '1');
-		}
-		if($('.galleryChild.expanded').next('.galleryChild').length === 0) {
-			$('#infoSnippet .forward').css('opacity', '0.5');
-		}
-		else {
-			$('#infoSnippet .forward').css('opacity', '1');
-		}
-		var ind = $('.galleryChild.expanded').index() + 1;
-		$('#infoSnippet .slideCount').text(ind + '/' + currentGalleryLength);
+var loadGallery = function(container) {
+	currentGallery = container.children('.gallery').first();
+	currentGalleryLength = container.find('.galleryChild').length;
+	imagesLoaded(currentGallery[0], function() {
+		msnry = new Masonry( currentGallery[0], {
+			// options
+			columnWidth: 1, //WHY ISN'T THIS MORE DOCUMENTED
+			gutter: 0,
+			itemSelector: '.galleryChild'
+		});
+	});
+
+	$(container).toggle(400);
+	$(container).toggleClass('visible');
+}
+
+var togglePerson = function(container) {
+	$(container).toggle(400);
+	$(container).toggleClass('visible');
+}
+
+var unloadGallery = function(container) {
+	$(container).toggle(400, function(e) {
+		currentGallery.masonry('destroy');
+	});
+	$(container).toggleClass('visible');
+}
+
+var unloadSlide = function(container) {
+	$('.galleryChild').removeClass('expanded');
+	for (var i = 0; i < hiddenItems.length; i++) {
+		hiddenItems[i].show();
+	};
+	setTimeout(function() { //This is a bad way to do this, but masonry's .reveal method seems broken
+		currentGallery.masonry();
+	}, 700);
+	$('#infoSnippet').removeClass('visible');
+	
+}
+
+var handleFocusSwitch = function(evtObj, selector, callback) {
+	var selectedContainer = evtObj.next(selector);
+	var selectedContainerVisible = selector + '.visible';
+	var selectedContainerAnimated = selector + ':animated';
+	if($(selectedContainerVisible).length === 0) {
+		callback(selectedContainer);
 	}
+	else {
+		$(selectedContainerVisible).toggle({
+			duration: 400,
+			always: function(e) {
+				if($(selectedContainerAnimated).length === 0) {
+					callback(selectedContainer);
+				}
+			}
+		});
+	}
+}
+
+var updateInfoSnippet = function() {
+	if($('.galleryChild.expanded').prev('.galleryChild').length === 0) {
+		$('#infoSnippet .back').css('opacity', '0.5');
+	}
+	else {
+		$('#infoSnippet .back').css('opacity', '1');
+	}
+	if($('.galleryChild.expanded').next('.galleryChild').length === 0) {
+		$('#infoSnippet .forward').css('opacity', '0.5');
+	}
+	else {
+		$('#infoSnippet .forward').css('opacity', '1');
+	}
+	var ind = $('.galleryChild.expanded').index() + 1;
+	$('#infoSnippet .slideCount').text(ind + '/' + currentGalleryLength);
 }
