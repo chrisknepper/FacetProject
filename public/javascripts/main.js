@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = init = function() {
 	var container = document.querySelector('#container');
 	
 	var msnry = new Masonry( container, {
@@ -24,4 +24,5 @@ window.onload = function() {
         "-o-transform":"scale(1)",
         "-ms-transform":"scale(1)"
     });
+
 }

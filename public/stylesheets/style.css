@@ -20,6 +20,7 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    transition: 0.3s linear opacity;
 }
 a{
     text-decoration:none;
@@ -81,25 +82,23 @@ a{
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-achievement_off:before {
+.icon-features_off:before {
 	content: "\e600";
 }
 
-.icon-achievement_on .path1:before {
+.icon-movment_off:before {
 	content: "\e601";
-	color: rgb(158, 140, 108);
-}
-.icon-achievement_on .path2:before {
-	content: "\e602";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
 }
 
-.icon-achivement_info:before {
+.icon-inspiration_off:before {
+	content: "\e602";
+}
+
+.icon-variation_off:before {
 	content: "\e603";
 }
 
-.icon-Add_icon:before {
+.icon-externals_off:before {
 	content: "\e604";
 }
 
@@ -107,142 +106,21 @@ a{
 	content: "\e605";
 }
 
-.icon-event_info:before {
+.icon-buy_off:before {
 	content: "\e606";
 }
 
-.icon-event_off:before {
+.icon-add_icon:before {
 	content: "\e607";
 }
 
-.icon-event_on .path1:before {
-	content: "\e608";
-	color: rgb(158, 140, 108);
-}
-.icon-event_on .path2:before {
-	content: "\e609";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-event_on .path3:before {
-	content: "\e60a";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-event_on .path4:before {
-	content: "\e60b";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-event_on .path5:before {
-	content: "\e60c";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-event_on .path6:before {
-	content: "\e60d";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
-.icon-history_info:before {
-	content: "\e60e";
-}
-
-.icon-history_off:before {
-	content: "\e60f";
-}
-
-.icon-history_on .path1:before {
-	content: "\e610";
-	color: rgb(158, 140, 108);
-}
-.icon-history_on .path2:before {
-	content: "\e611";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-history_on .path3:before {
-	content: "\e612";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
-.icon-icon_info:before {
-	content: "\e613";
-}
-
-.icon-icon_off:before {
-	content: "\e614";
-}
-
-.icon-icon_on .path1:before {
-	content: "\e615";
-	color: rgb(158, 140, 108);
-}
-.icon-icon_on .path2:before {
-	content: "\e616";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
-.icon-technology_info:before {
-	content: "\e617";
-}
-
-.icon-technology_off:before {
-	content: "\e618";
-}
-
-.icon-technology_on .path1:before {
-	content: "\e619";
-	color: rgb(158, 140, 108);
-}
-.icon-technology_on .path2:before {
-	content: "\e61a";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-.icon-technology_on .path3:before {
-	content: "\e61b";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
-.icon-Tirangle .path1:before {
-	content: "\e61c";
-	color: rgb(255, 255, 255);
-}
-.icon-Tirangle .path2:before {
-	content: "\e61d";
-	margin-left: -1em;
-	color: rgb(204, 204, 204);
-}
-
-.icon-watches_info:before {
-	content: "\e61e";
-}
-
-.icon-watches_off:before {
-	content: "\e61f";
-}
-
-.icon-watches_on .path1:before {
-	content: "\e620";
-	color: rgb(158, 140, 108);
-}
-.icon-watches_on .path2:before {
-	content: "\e621";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
 .general-ui-icon {
-	display: inline-block;
+	display: inline;
 	position: relative;
 	color: black;
 	font-size: 5.2em;
 	border-radius: 50%;
+	border: 2px solid black;
 	padding-left: none !important;
 	overflow: hidden;
 	cursor: pointer;
@@ -252,11 +130,11 @@ a{
 .general-ui-icon:hover {
 	color: white;
 	background: #a18f6b;
+	border: 2px solid #a18f6b;
 }
 
 #watchHistory .general-ui-icon {
 	font-size: 2.5em;
-	color: white;
 }
 
 #info .general-ui-icon {
@@ -886,11 +764,17 @@ font-size:12pt;
 	transition: width 0.4s, height 0.4s;
 }
 
-#watchHistory .galleryChild.expanded, #watchHistory .galleryChild.expanded img {
+#watchHistory .galleryImage {
+	background-position: center top;
+	background-size: cover;
+}
+
+#watchHistory .galleryChild.expanded, #watchHistory .galleryChild.expanded div {
 	left: 0;
 	top: 0;
-	width: 1792px;
-	height: 1080px;
+	width: 1792px !important;
+	height: 1080px !important;
+	background-size: 100% 100%;
 }
 
 /*media styles*/

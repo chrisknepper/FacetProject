@@ -1,5 +1,18 @@
 window.onload = function() {
 
+	//Testing JS page loading
+	$('.go-to-page').on('click', function(e) {
+		e.preventDefault();
+		var url = $(this).attr('href');
+		$('body').css('opacity', '0');
+		$.get(url, {someData: 'data'}, function(result) {
+			$('body').html(result);
+			$('body').css('opacity', '1');
+			history.pushState(null, null, url);
+			init();
+		});
+	});
+
 	var hiddenItems, currentGallery, currentGalleryLength;
 
 	var loadGallery = function(container) {
