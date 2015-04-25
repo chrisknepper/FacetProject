@@ -1,5 +1,4 @@
-window.onload = function() {
-
+function init() {
 	var hiddenItems, currentGallery, currentGalleryLength;
 
 	var loadGallery = function(container) {
@@ -144,5 +143,4 @@ window.onload = function() {
 		var ind = $('.galleryChild.expanded').index() + 1;
 		$('#infoSnippet .slideCount').text(ind + '/' + currentGalleryLength);
 	}
-
 }

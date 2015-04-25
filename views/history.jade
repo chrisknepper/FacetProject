@@ -2,7 +2,7 @@ extends layout
 
 block content
 	#watchHistory
-		a(href="/")
+		a(href="/").go-to-page
 			#escape.icon-close_icon.general-ui-icon.close-button
 		.watchHistorySelect
 			img(src="/images/icons/ghandi_org.jpg", alt="Cats and boots and cats and boots")
@@ -12,10 +12,10 @@ block content
 		.person
 			img(src="http://placehold.it/1792x1080", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild.w2.h2
 						img(src="http://rdjpg.com/648/430", alt="", width="648", height="430", class="galleryImage")
@@ -37,10 +37,10 @@ block content
 		.person
 			img(src="/images/icons/felix_cover.jpg", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild
 						div(style="width:542px;height:402px;background-image:url('/images/icons/felix/felix_gallery_12.png');" class="galleryImage")
@@ -83,10 +83,10 @@ block content
 		.person
 			img(src="http://placehold.it/1792x1080", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild.w2.h2
 						img(src="http://rdjpg.com/648/430", alt="", width="648", height="430", class="galleryImage")
@@ -108,10 +108,10 @@ block content
 		.person
 			img(src="http://placehold.it/1792x1080", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild.w2.h2
 						img(src="http://rdjpg.com/648/430", alt="", width="648", height="430", class="galleryImage")
@@ -133,10 +133,10 @@ block content
 		.person
 			img(src="http://placehold.it/1792x1080", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild.w2.h2
 						img(src="http://rdjpg.com/648/430", alt="", width="648", height="430", class="galleryImage")
@@ -158,10 +158,10 @@ block content
 		.person
 			img(src="http://placehold.it/1792x1080", class="personBigBackground" alt="Person")
 			a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-			a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-Add_icon.general-ui-icon.add-button
+				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild.w2.h2
 						img(src="http://rdjpg.com/648/430", alt="", width="648", height="430", class="galleryImage")
@@ -180,7 +180,6 @@ block content
 			.forward &gt;
 			.text Breaking Sound - Baumgartner gets a little help suiting up for his jump, Felix steps into the void.
 			.slideCount 1/12
-	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
 	script(src="javascripts/imagesloaded.pkgd.min.js")
 	script(src="javascripts/masonry.pkgd.min.js")
 	script(src="/javascripts/history.js")
