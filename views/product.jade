@@ -1,132 +1,136 @@
 extends layout
 
 block content
-    #vscroll.column
-        #upnav ^
-        | &#x9;
-        #thumbnails
-            .thumbnail
-                h2.thumbnum 01
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname EL PRIMERO
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 02
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname CHALLENGER
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 03
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname ACADEMY
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 04
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname ELITE
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 05
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname PILOT
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 06
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname ELITE
-                | &#x9;&#x9;&#x9;
-            .thumbnail
-                h2.thumbnum 07
-                | &#x9;&#x9;&#x9;
-                img(src='/images/watchthumb.png', alt='watch thumbnail')
-                | &#x9;&#x9;&#x9;
-                h3.thumbname ACADEMY
+    #pcontainer
+        #vscroll.column
+            #upnav ^
+            | &#x9;
+            #thumbnails
+                .thumbnail
+                    h2.thumbnum 01
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname EL PRIMERO
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 02
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname CHALLENGER
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 03
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname ACADEMY
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 04
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname ELITE
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 05
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname PILOT
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 06
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname ELITE
+                    | &#x9;&#x9;&#x9;
+                .thumbnail
+                    h2.thumbnum 07
+                    | &#x9;&#x9;&#x9;
+                    img(src='/images/watchthumb.png', alt='watch thumbnail')
+                    | &#x9;&#x9;&#x9;
+                    h3.thumbname ACADEMY
+                    | &#x9;
+            #downnav ^
+        #info.column
+            .overlap
+                h1.title= productCollection
+                | &#x9;&#x9;
+                h1.position  02/07
                 | &#x9;
-        #downnav ^
-    #info.column
-        .overlap
-            h1.title= productCollection
-            | &#x9;&#x9;
-            h1.position  02/07
-        | &#x9;
-        h3.type= productTitle
-        | &#x9;
-        h3.diameter 45 MM
-        | &#x9;
-        h4.measure 03.2160.4047/01.C713
-        | &#x9;
-        #categories
-            #menu.menusection
-                .category
-                    img.icon(src='/images/categories/movement_off.svg', alt='movement icon')
-                    | MOVEMENT
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='/images/categories/features_off.svg', alt='features icon')
-                    | FEATURES
-                    | &#x9;&#x9;
-                .category
-                    span.icon-watches_off.general-ui-icon.icon
-                    | EXTERNAL
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='/images/categories/variation_off.svg', alt='variations icon')
-                    | VARIATIONS
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='/images/categories/inspiration_off.svg', alt='inspirations icon')
-                    | INSPIRATIONS
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='/images/categories/buy_off.svg', alt='buy icon')
-                    br
-                    | BUY
-            #movement.menusection
-                button#back(type='button') back
-                h2 Movement Section
-            #features.menusection
-                button#back(type='button') back
-                h2 Features Section
-            #externals.menusection
-                button#back(type='button') back
-                h2 Movement Section
-            #variations.menusection
-                button#back(type='button') back
-                h2 Features Section
-            #inspirations.menusection
-                button#back(type='button') back
-                h2 Inspirations Section
-            #buy.menusection
-                button#back(type='button') back
-                h2 Buy Section
-    #media.column
-        #escape
-            a(href="/watchselection")
-                img(src='../images/watches/close.png')
-        #model
-            iframe(width='100%', height='700', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed?autostart=1', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
-            p(style='font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;')
-            a(href='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Withings Activit&eacute; Watch
-            |     by 
-            a(href='https://sketchfab.com/sketchfab?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Sketchfab
-            |     on 
-            a(href='https://sketchfab.com?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Sketchfab
-
-        #details
-            img#categorydetails(src='/images/categories/movement_detail.svg', alt='category details')
-            h3 Movement
-            p
-            | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
+                h3.type= productTitle
+                | &#x9;
+                h3.diameter 45 MM
+                | &#x9;
+                h4.measure 03.2160.4047/01.C713
+                | &#x9;
+            #categories
+                #menu.menusection
+                    #movementm.category
+                        img.icon(src='/images/categories/movement_off.svg', alt='movement icon')
+                        .ctitle
+                            | MOVEMENT
+                        | &#x9;&#x9;
+                    #featuresm.category
+                        img.icon(src='/images/categories/features_off.svg', alt='features icon')
+                        | FEATURES
+                        | &#x9;&#x9;
+                    #externalm.category
+                        span.icon-watches_off.general-ui-icon.icon
+                        .ctitle
+                            | EXTERNAL
+                            | &#x9;&#x9;
+                    #variationsm.category
+                        img.icon(src='/images/categories/variation_off.svg', alt='variations icon')
+                        | VARIATIONS
+                        | &#x9;&#x9;
+                    #inspirationm.category
+                        img.icon(src='/images/categories/inspiration_off.svg', alt='inspirations icon')
+                        | INSPIRATIONS
+                        | &#x9;&#x9;
+                    #buym.category
+                        img.icon(src='/images/categories/buy_off.svg', alt='buy icon')
+                        br
+                        | BUY
+                #movement.menusection
+                    button#back(type='button') back
+                    h2 Movement Section
+                #features.menusection
+                    button#back(type='button') back
+                    h2 Features Section
+                #externals.menusection
+                    button#back(type='button') back
+                    h2 Movement Section
+                #variations.menusection
+                    button#back(type='button') back
+                    h2 Features Section
+                #inspirations.menusection
+                    button#back(type='button') back
+                    h2 Inspirations Section
+                #buy.menusection
+                    button#back(type='button') back
+                    h2 Buy Section
+        #media.column
+            #escape
+                a(href="/watchselection")
+                    img(src='../images/watches/close.png')
+            #model
+                iframe(width='100%', height='700', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed?autostart=1', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
+                p(style='font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;')
+                a(href='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Withings Activit&eacute; Watch
+                |     by 
+                a(href='https://sketchfab.com/sketchfab?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Sketchfab
+                |     on 
+                a(href='https://sketchfab.com?utm_source=oembed&utm_medium=embed&utm_campaign=04e3d5fe3f9046aa9f2ab62ffece4fce', target='_blank', style='font-weight: bold; color: #1CAAD9;') Sketchfab
+    
+            #details
+                img#categorydetails(src='/images/categories/movement_detail.svg', alt='category details')
+                h3 Movement
+                p
+                | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
     script(src="javascripts/product.js")

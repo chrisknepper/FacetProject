@@ -170,6 +170,7 @@ a{
 	height: 1080px;
 	padding: 75px 30px;
 	background: linear-gradient(to right, #fff, #ededed);
+	overflow-y:hidden;
 }
 
 #homePage .item {
@@ -426,6 +427,10 @@ font-family:"GothamHTF-Medium";
 margin:auto;
 clear:both;
 width:100px;
+display:inline;
+}
+.ctitle{
+display:block;
 }
 .overlap{
 position:relative;
@@ -457,8 +462,17 @@ font-family:"BodoniStd-BoldCondensed";
 .measure{
 color:#EDEDED;
 }
-.type,.diameter{
+.type{
 font-size:12pt;
+position:absolute;
+top:325px;
+left:65px;
+}
+.diameter{
+font-size:12pt;
+position:absolute;
+top:345px;
+left:65px;
 }
 .noselect {
     -webkit-touch-callout: none;

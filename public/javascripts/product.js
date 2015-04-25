@@ -16,5 +16,16 @@ window.onload = function() {
 		var deviceID = message.watchID;
 		el.innerHTML =deviceID;
 	}
-    //document.querySelector('#movement')
+    $('#movementm').click(function(){
+        switchMenu('#movement');
+    })
+    $('.back').click(function(){
+         $(this).parent.css('zIndex', '-1')
+    })
+   
+}
+function switchMenu(active){
+     $(active).css('zIndex', '70');
+     console.log('hi');
+    
 }
