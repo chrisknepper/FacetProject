@@ -10,7 +10,6 @@ body {
      -webkit-transform":scale(1);
      -o-transform:scale(1);
      -ms-transform:scale(1);
-	 -ms-touch-action: pan-x pan-y;
 	background: #fff;
 	color: #333;
 	font-family: 'GothamHTF-Book','Montserrat', sans-serif;
@@ -293,6 +292,7 @@ a{
 	height: 1080px;
 	padding: 75px 30px;
 	background: linear-gradient(to right, #fff, #ededed);
+	overflow-y:hidden;
 }
 
 #homePage .item {
