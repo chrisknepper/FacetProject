@@ -1,21 +1,5 @@
 window.onload = function() {
 	var container = document.querySelector('#container');
-	var zoomlevel=1;
-
-    $("body").dblclick(function(ev) {
-        zoomlevel = zoomlevel == 1 ? 2 : 1;
-
-
-
-        $(this).css({
-            "-moz-transform":"scale("+zoomlevel+")",
-            "-webkit-transform":"scale("+zoomlevel+")",
-            "-o-transform":"scale("+zoomlevel+")",
-            "-ms-transform":"scale("+zoomlevel+")"
-        });
-
-
-    });
 	
 	var msnry = new Masonry( container, {
 		// options
