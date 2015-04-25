@@ -16,17 +16,22 @@ window.onload = function() {
 		var deviceID = message.watchID;
 		el.innerHTML =deviceID;
 	}
-    $('#movementm').click(function(){
-        switchMenu('#movement');
-    })
+    $('#movementm').click(function(){switchMenu('#movement');});
+    $('#featuresm').click(function(){switchMenu('#features');});
+    $('#variationsm').click(function(){switchMenu('#variations');});
+    $('#inspirationm').click(function(){switchMenu('#inspiration');});  
+    $('#externalm').click(function(){switchMenu('#external');});
+    $('#buym').click(function(){switchMenu('#buy');});
     $('.back').click(function(){
-         $(this).parent.css('zIndex', '-1')
+        //var category=this.parent();
+         $(this).parent().css('zIndex', '-1');
+         console.log('hi');
     })
    
 }
 function switchMenu(active){
      $(active).css('zIndex', '70');
-     console.log('hi');
+     
     
 }
 
