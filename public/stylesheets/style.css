@@ -12,7 +12,7 @@ body {
      -ms-transform:scale(1);
 	background: #fff;
 	color: #333;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'GothamHTF-Book','Montserrat', sans-serif;
 	font-size: 16px;
 	/*overflow-y: hidden; /* This rule prevents vertical scrolling but might cause conflicts with other layouts */
 }
@@ -235,6 +235,10 @@ bottom:0;
 padding:1%;
 background-color:#ffffff;
 }
+#categorydetails{
+width:90px;
+height:90px;
+}
 /*vscroll styles*/
 .thumbnails{
 overflow-y:scroll;
@@ -290,9 +294,25 @@ z-index:3;
 }
 /*Product Details Styles*/
 #categories{
-
+position:relative;
 margin:auto;
+width:95%;
+height:65%;
+overflow:hidden;
 
+
+}
+#menu{
+z-index:1;
+}
+.menusection{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+background-color:#F5F5F5;
 }
 .category{
 float:left;
@@ -300,11 +320,12 @@ width:150px;
 height:150px;
 margin:1%;
 text-align:center;
+font-family:"GothamHTF-Medium";
 }
 .category .icon{
-margin:5px;
+margin:auto;
 clear:both;
-width:75%;
+width:100px;
 }
 .overlap{
 position:relative;
@@ -314,15 +335,19 @@ height:150px;
 .title{
 position:absolute;
 z-index:2;
-top:40px;
+top:50px;
+font-family:"GothamHTF-Light";
+color:#1E1E1E;
 }
 .position{
 position:absolute;
-color:#EDEDED;
+color:#1E1E1E;
+opacity:.1;
 font-size:100pt;
 margin:0px;
 z-index:1;
 left:5%;
+font-family:"BodoniStd-BoldCondensed";
 }
 .measure{
 color:#EDEDED;
