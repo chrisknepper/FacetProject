@@ -199,10 +199,17 @@ width:150%;
 overflow-x:hidden;
 overflow-y:scroll;
 }
+#pcontainer{
+position:absolute;
+height:100%;
+width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+}
 .column{
 height:100%;
 float:left;
-position:absolute;
+position:relative;
 -webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 -moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
@@ -212,20 +219,21 @@ padding:0px;
 .column h1,.column h3,.column h4,.column div{
 padding-left:10px;
 }
+.column::-webkit-scrollbar { width: 0 !important }
 #vscroll{
 width:10%;
-min-width:190px;
+
 background-color:#FBFBFB;
-left:0%;
+
 }
 #info{
 width:27%;
 background-color:#F5F5F5;
-left:10%;
+
 }
 #media{
 width:63%;
-left:37%;
+
 background-color:#EDEDED;
 }
 #details{
