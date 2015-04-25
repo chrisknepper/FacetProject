@@ -29,3 +29,7 @@ function switchMenu(active){
      console.log('hi');
     
 }
+
+$(document).ready(function(e) {
+	$('#model iframe').attr('src', 'https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed?autostart=1');
+});
