@@ -77,8 +77,8 @@ block content
                 | FEATURES
                 | &#x9;&#x9;
             .category
-                img.icon(src='/images/external.png', alt='external icon')
-                | EXTERNAL
+                span.icon-watches_off.general-ui-icon.icon
+                div EXTERNAL
                 | &#x9;&#x9;
             .category
                 img.icon(src='/images/variations.png', alt='variations icon')
@@ -94,8 +94,7 @@ block content
                 | BUY
     #media.column
         #escape
-            a(href="/watchselection")
-                img(src='../images/watches/close.png')
+            a(href="/watchselection").icon-close_icon.general-ui-icon.close-button
         #model
             iframe(width='100%', height='700', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed?autostart=1', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
             p(style='font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;')
