@@ -102,6 +102,8 @@ block content
                 #movement.menusection
                     button.back(type='button') back
                     h2 Movement Section
+                    h3 Frequency
+                    p #{frequency}
                 #features.menusection
                     button.back(type='button') back
                     h2 Features Section
@@ -122,9 +124,9 @@ block content
                 a(href="/watchselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                iframe(width='640', height='480', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
+                iframe(width='100%', height='480', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
             #details
-                img#categorydetails(src='/images/categories/movement_detail.svg', alt='category details')
+                img(src='/images/categories/movement_detail.svg', alt='category details')
                 h3 Movement
                 p
                 | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
