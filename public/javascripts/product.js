@@ -16,5 +16,6 @@ function init() {
         //var category=this.parent();
          $(this).parent().css('zIndex', '-1');
          console.log('hi');
+         
     })
 }

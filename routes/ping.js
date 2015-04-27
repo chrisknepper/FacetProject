@@ -11,7 +11,6 @@ router.get('/', function(req, res, next) {
 	}
 	console.log(tagID);
 	dubya.app.getWatchIDFromTag(tagID, function(result) {
-        console.log("in ping router")
 		dubya.wss.broadcast(JSON.stringify({msgType:"facetDeviceConnected", msg:{watchInfo:result}}));
 	});
 	res.send('You done pinged the server, now the websocket will send a message to listening clients.');

@@ -341,26 +341,26 @@ bottom:0;
 padding:1%;
 background-color:#ffffff;
 height:175px;
-width:100%;
+width:63%;
 }
 #details h3 {
-	padding-left:150px;
+	
 	letter-spacing:2px;
 }
 #details p {
 	font-size:20px;
 	padding:15px;
 	padding-left:160px;
-	width:51%;
+	max-width:51%;
+    
 	line-height:115%;
 }
 #details img {
 	position:relative;
 	float:left;
-	left:50px;
-	top:15px;
     width:90px;
     height:90px;
+    padding-right:20px;
 }
 #categorydetails{
 width:90px;
@@ -457,6 +457,26 @@ margin:auto;
 clear:both;
 width:100px;
 display:inline;
+margin-bottom:20px;
+}
+.menusection button{
+float:left;
+}
+.menusection h2{
+float:left;
+
+}
+.menusection h3{
+font-size:16px;
+line-height:1.5;
+font-family:"GothamHTF-Book";
+padding:10px;
+clear:both;
+}
+.menusection h4{
+font-size:16px;
+line-height:1.5;
+font-family:"GothamHTF-Light";
 }
 .ctitle{
 display:block;
@@ -501,7 +521,12 @@ left:70px;
 font-family:"GothamHTF-Book";
 }
 .measure{
-color:#EDEDED;
+color:#1E1E1E;
+opacity:.1;
+font-size:12pt;
+position:absolute;
+top:365px;
+left:65px;
 }
 .type{
 font-size:12pt;

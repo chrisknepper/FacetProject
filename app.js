@@ -75,8 +75,7 @@ app.use(function(err, req, res, next) {
 
 app.getWatchIDFromTag = function(id, callback){
   db.get("SELECT productInfo.id FROM tags INNER JOIN productInfo ON tags.productid = productInfo.id where tags.productid="+id, function(err, row) {
-    //console.log(row);
-        
+
     app.getProductInfo(row.id,callback);
   });
 }
@@ -85,7 +84,7 @@ app.getProductInfo = function(tag, callback){
    id=tag || 3;
   db.get("SELECT * FROM productInfo INNER JOIN productDetails ON productInfo.id="+id+" AND productDetails.watchId=productInfo.id", function(err, row) {
     //console.log(row);
-    console.log("getProductInfo:"+row);
+    //console.log("getProductInfo:"+row);
     callback(row);
   });
 }

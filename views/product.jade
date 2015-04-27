@@ -58,15 +58,15 @@ block content
             #downnav ^
         #info.column
             .overlap
-                h1.title= productCollection
+                h1.title #{specs.collection}
                 | &#x9;&#x9;
                 h1.position  02/07
                 | &#x9;
-                h3.type= productTitle
+                h3.type #{specs.name}
                 | &#x9;
-                h3.diameter 45 MM
+                h3.diameter #{specs.diameter} MM
                 | &#x9;
-                h4.measure 03.2160.4047/01.C713
+                h4.measure #{specs.calibre}
                 | &#x9;
             #categories
                 #menu.menusection
@@ -101,30 +101,64 @@ block content
                         | BUY
                 #movement.menusection
                     button.back(type='button') back
-                    h2 Movement Section
+                    h2 Movement
                     h3 Frequency
-                    p #{frequency}
+                    h4 #{specs.frequency}
+                    h3 Movement
+                    h4 #{specs.movement}
+                    h3 Calibre
+                    h4 #{specs.calibre}
+                    h3 Components
+                    h4 #{specs.components}
+                    h3 Crystal
+                    h4 #{specs.crystal}
+                    h3 Jewels
+                    h4 #{specs.jewels}
                 #features.menusection
                     button.back(type='button') back
-                    h2 Features Section
+                    h2 Features
+                    h3 Water Resistance
+                    h4 #{specs.waterResistance} ATM
+                    h3 Power Reserve
+                    h4 #{specs.powerReserve}
+                    h3 Production Model
+                    h4 #{specs.productionModel}
                 #external.menusection
                     button.back(type='button') back
-                    h2 External Section
+                    h2 External
+                    h3 Strap
+                    h4 #{specs.strap}
+                    h3 Finishing
+                    h4 #{specs.finishing}
+                    h3 Case Back
+                    h4 #{specs.caseBack}
+                    h3 Clasp
+                    h4 #{specs.clasp}
+                    h3 Diameter
+                    h4 #{specs.diameter}
+                    h3 Thickness
+                    h4 #{specs.thickness}
                 #variations.menusection
                     button.back(type='button') back
-                    h2 Features Section
+                    h2 Variations
+                    h3 Number of Variations
+                    h4 #{specs.variations}
                 #inspirations.menusection
                     button.back(type='button') back
-                    h2 Inspirations Section
+                    h2 Inspiration
+                    h3 Icon Story
+                    h4 #{specs.icon}
                 #buy.menusection
                     button.back(type='button') back
-                    h2 Buy Section
+                    h2 Buy
+                    h3 Price
+                    h4 #{specs.price}
         #media.column
             #escape
                 a(href="/watchselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                iframe(width='100%', height='480', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
+                iframe(width='100%', height='800', src='https://sketchfab.com/models/04e3d5fe3f9046aa9f2ab62ffece4fce/embed', frameborder='0', allowfullscreen='', mozallowfullscreen='true', webkitallowfullscreen='true', onmousewheel='')
             #details
                 img(src='/images/categories/movement_detail.svg', alt='category details')
                 h3 Movement
