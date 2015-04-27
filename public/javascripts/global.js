@@ -3,6 +3,37 @@
 //also manipulating browser/url history and calling respective pages' init functions if they exist
 $(document).ready(function() {
 
+
+//Leap motion stuff
+//From https://github.com/RudeDude/LeapScroll/blob/master/LeapScroll.js
+//We need to modify this to make it pinch to zoom
+function runScript(){
+        var e={};
+        var t={};
+        var n=document.body;
+        Leap.loop(function(t){
+                var r={};
+                var i={};
+                for(var s=0, o=t.pointables.length; s!=o; s++){
+                        var u=t.pointables[s];
+                        var a=e[u.id];
+                        var f=n.scrollTop;
+                        if(document.hasFocus()){
+                                if(u.tipPosition[1]-325>0){n.scrollTop=f-=150}
+                                if(u.tipPosition[1]-125>0){n.scrollTop=f-=5}
+                                if(u.tipPosition[1]-90<0){n.scrollTop=f+=5}
+                        }
+                }
+        })
+}
+if(typeof Leap=="undefined"){
+        var jsCode=document.createElement("script");
+        jsCode.setAttribute("src","https://js.leapmotion.com/0.2.0/leap.min.js");
+        jsCode.onload=runScript;document.body.appendChild(jsCode)
+}else{
+        runScript()
+}
+
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
 	var socketProtocol = window.location.protocol.indexOf('s') > -1 ? 'wss' : 'ws';
 	var socketURL = socketProtocol + '://' + window.location.host;
