@@ -113,7 +113,24 @@ a{
 .icon-add_icon:before {
 	content: "\e607";
 }
-
+.icon-watches_icon:before {
+	content: "\e608";
+}
+.icon-technology_icon:before {
+	content: "\e609";
+}
+.icon-event_icon:before {
+	content: "\e610";
+}
+.icon-icon_icon:before {
+	content: "\e611";
+}
+.icon-history_icon:before {
+	content: "\e612";
+}
+.icon-achievement_icon:before {
+	content: "\e613";
+}
 .general-ui-icon {
 	display: inline;
 	position: relative;
@@ -312,7 +329,7 @@ padding-left:10px;
 .column::-webkit-scrollbar { width: 0 !important }
 #vscroll{
 width:10%;
-
+overflow-x:visible;
 background-color:#FBFBFB;
 
 }
@@ -368,17 +385,30 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
+margin:auto;
 overflow-y:scroll;
 min-width:150px;
 }
 .thumbnail{
 width:100%;
 height:150px;
-overflow:hidden;
+
 background-color:#ffffff;
 z-index:0;
 position:relative;
 
+}
+.selected{
+z-index:70;
+overflow:visible;
+width:110%;
+background-color:#ffffff;
+-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+}
+.selected .yearnum{
+color:#9D8C6C;
 }
 .thumbnail img{
 position:absolute;
@@ -459,8 +489,9 @@ width:100px;
 display:inline;
 margin-bottom:20px;
 }
-.menusection button{
+.menusection .back{
 float:left;
+background-color:none;
 }
 .menusection h2{
 float:left;
@@ -878,6 +909,7 @@ left:5;
 z-index:0;
 padding:0px;
 color:#EDEDED;
+font-family: 'BodoniStd-BoldCondensed';
 
 }
 .centnum{

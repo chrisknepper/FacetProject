@@ -20,8 +20,8 @@ block content
                     | &#x9;&#x9;&#x9;
                     h3.centnum 19
                     | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 24
+                .thumbnail.selected
+                    h2.yearnum 25
                     |             
                     img.corner(src='images/triangle.png', alt='overlay')
                     | &#x9;&#x9;&#x9;
@@ -65,41 +65,64 @@ block content
             | &#x9;
             | &#x9;
             #categories
-                .category
-                    img.icon(src='images/movement.png')
-                    | WATCHES
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='images/features.png')
-                    | TECHNOLOGY
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='images/external.png')
-                    | EVENT
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='images/variations.png')
-                    | ICON
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='images/inspirations.png')
-                    | HISTORY
-                    | &#x9;&#x9;
-                .category
-                    img.icon(src='images/buy.png')
-                    br
-                    | ACHIEVEMENT
+                #menu.menusection
+                    #watchesm.category
+                        span.icon-watches_off.general-ui-icon.icon
+                        .ctitle
+                            | WATCHES
+                        | &#x9;&#x9;
+                    #technologym.category
+                        span.icon-technology_off.general-ui-icon.icon
+                        .ctitle
+                            | TECHNOLOGY
+                            | &#x9;&#x9;
+                    #eventm.category
+                        span.icon-event_off.general-ui-icon.icon
+                        .ctitle
+                            | EVENT
+                            | &#x9;&#x9;
+                    #iconm.category
+                        span.icon-icon_off.general-ui-icon.icon
+                        .ctitle
+                            | ICON
+                            | &#x9;&#x9;
+                    #historym.category
+                        span.icon-history_off.general-ui-icon.icon
+                        .ctitle
+                            | HISTORY
+                            | &#x9;&#x9;
+                    #achievementsm.category
+                        span.icon-buy_off.general-ui-icon.icon
+                        .ctitle
+                            | ACHIEVEMENTS
+                #watches.menusection
+                    .back <
+                    h2 Watches
+                    h4 #{specs.frequency}
+                #technology.menusection
+                    .back <
+                    h2 Technology
+                    h4 #{specs.waterResistance} ATM
+                #event.menusection
+                    .back <
+                    h2 Event
+                    h4 #{specs.strap}
+                #icon.menusection
+                    .back <
+                    h2 Icon
+                    h4 #{specs.variations}
+                #history.menusection
+                    .back <
+                    h2 History
+                    h4 #{specs.icon}
+                #achievements.menusection
+                    .back <
+                    h2 Achievements
+                    h4 #{specs.price}
         #media.column
             #escape
-                a(href="/timeselection")
+                a(href="/watchselection").go-to-page
                     img(src='../images/watches/close.png')
-            img#histimg(src='images/icons/media_watch.png')
-            | &#x9;
-            #plus
-                img(src='../images/watches/close.png')
-            #details
-                img(src='images/icons/details_watch.png')
-                h3 WATCHES
-                p
-                 | He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
-        
+            #model
+                img(src='/images/icons/media_watch.png', alt='category details')
+     script(src="/javascripts/timeline.js")           
