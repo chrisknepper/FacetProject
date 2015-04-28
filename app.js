@@ -88,7 +88,13 @@ app.getProductInfo = function(tag, callback){
     callback(row);
   });
 }
+app.getDateInfo = function(tag, callback){
+   year=tag || 1900;
+  db.get("SELECT * FROM timeline where year="+year, function(err, row) {
 
+    callback(row);
+  });
+}
 function closeDb() {
     console.log("closeDb");
     db.close();
