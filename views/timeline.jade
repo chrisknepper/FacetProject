@@ -6,62 +6,92 @@ block content
             #upnav ^
             | &#x9;
             #thumbnails
-                .thumbnail
-                    h2.yearnum 03
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 11
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail.selected
-                    h2.yearnum 25
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 64
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 72
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 90
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
-                    | &#x9;&#x9;&#x9;
-                .thumbnail
-                    h2.yearnum 98
-                    |             
-                    img.corner(src='images/triangle.png', alt='overlay')
-                    | &#x9;&#x9;&#x9;
-                    h3.centnum 19
+                a(href="../timeline/1900")
+                    .thumbnail
+                        h2.yearnum 00
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1911")        
+                    .thumbnail
+                        h2.yearnum 11
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1925")  
+                    .thumbnail.selected
+                        h2.yearnum 25
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1948")  
+                    .thumbnail
+                        h2.yearnum 48
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1960")  
+                    .thumbnail
+                        h2.yearnum 60
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1969")  
+                    .thumbnail
+                        h2.yearnum 69
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1975")  
+                    .thumbnail
+                        h2.yearnum 75
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                a(href="../timeline/1984")  
+                    .thumbnail
+                        h2.yearnum 84
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1994")  
+                    .thumbnail
+                        h2.yearnum 94
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/2000")  
+                    .thumbnail
+                        h2.yearnum 00
+                        |             
+                        img.corner(src='../images/triangle.png', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 20
             | &#x9;
             #downnav ^
         #info.column
             .overlap
-                .title NINETEEN 25
+                .title #{specs.longhand}
                 | &#x9;&#x9;
-                h1.position 1925
-                #desc The Manufacture established by George Farve-Jacot definitively adopts the name of Zenith, referring to the highest point.
+                h1.position #{specs.year}
+                #desc #{specs.blurb}
             | &#x9;
             | &#x9;
             #categories
@@ -98,31 +128,31 @@ block content
                 #watches.menusection
                     .back <
                     h2 Watches
-                    h4 #{specs.frequency}
+                    h4 #{specs.watches}
                 #technology.menusection
                     .back <
                     h2 Technology
-                    h4 #{specs.waterResistance} ATM
+                    h4 #{specs.technology}
                 #event.menusection
                     .back <
                     h2 Event
-                    h4 #{specs.strap}
+                    h4 #{specs.event}
                 #icon.menusection
                     .back <
                     h2 Icon
-                    h4 #{specs.variations}
+                    h4 #{specs.icon}
                 #history.menusection
                     .back <
                     h2 History
-                    h4 #{specs.icon}
+                    h4 #{specs.history}
                 #achievements.menusection
                     .back <
                     h2 Achievements
-                    h4 #{specs.price}
+                    h4 #{specs.achievements}
         #media.column
             #escape
-                a(href="/watchselection").go-to-page
+                a(href="/timeselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                img(src='/images/icons/media_watch.png', alt='category details')
+                img#timeimg(src='/images/icons/media_watch.png', alt='category details')
      script(src="/javascripts/timeline.js")           
