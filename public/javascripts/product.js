@@ -8,6 +8,7 @@ function init() {
 	}
 
 	var container = document.querySelector('#container');
+
 	$('#movementm').click(function(){switchMenu('#movement');});
 	$('#featuresm').click(function(){switchMenu('#features');});
 	$('#variationsm').click(function(){switchMenu('#variations');});
@@ -17,7 +18,7 @@ function init() {
 	$('.back').click(function(){
 		//var category=this.parent();
 		 $(this).parent().css('zIndex', '-1');
-		 console.log('hi');
+		 
 		 
 	});
 
@@ -121,5 +122,6 @@ function animate() {
 function render() {
 
 	renderer.render( scene, camera );
+
 
 }
