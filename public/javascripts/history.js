@@ -34,9 +34,9 @@ function init() {
 			hiddenItems.push($(this));
 			$(this).hide();
 		});
+		updateInfoSnippet($(this).data('text'));
 		$('#infoSnippet').toggleClass('visible');
-		currentGallery.masonry();
-		updateInfoSnippet();
+		//currentGallery.masonry();
 	});
 
 	$('#infoSnippet .back').on('click', function(e) {
@@ -130,7 +130,7 @@ var handleFocusSwitch = function(evtObj, selector, callback) {
 	}
 }
 
-var updateInfoSnippet = function() {
+var updateInfoSnippet = function(text) {
 	if($('.galleryChild.expanded').prev('.galleryChild').length === 0) {
 		$('#infoSnippet .back').css('opacity', '0.5');
 	}
@@ -145,4 +145,7 @@ var updateInfoSnippet = function() {
 	}
 	var ind = $('.galleryChild.expanded').index() + 1;
 	$('#infoSnippet .slideCount').text(ind + '/' + currentGalleryLength);
+	if(text) {
+		$('#infoSnippet .text').text(text);
+	}
 }
