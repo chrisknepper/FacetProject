@@ -55,12 +55,23 @@ if(typeof Leap=="undefined"){
 		e.preventDefault();
 		goToURL($(this).attr('href'));
 	});
+
 });
 
 function goToURL(url) {
 	window.sessionStorage.usingAjaxNav = 1;
 	$('body').css('opacity', '0');
 	$.get(url, {someData: 'data'}, function(result) {
+		/* Three.js doesn't work after navigating pages...trying to figure it out */
+		/*
+		window.cancelAnimationFrame(frame);
+		renderer.domElement.addEventListener('dblclick', null, false);
+		frame = null;
+		scene = null;
+		camera = null;
+		renderer = null;
+		*/
+		$('#ThreeJS').empty();
 		$('body').html(result);
 		$('body').css('opacity', '1');
 		history.pushState(null, null, url);
