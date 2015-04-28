@@ -311,7 +311,7 @@ position:absolute;
 height:100%;
 width:100%;
 overflow-x:hidden;
-overflow-y:scroll;
+overflow-y:hidden;
 }
 .column{
 height:100%;
@@ -321,6 +321,7 @@ position:relative;
 -moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 overflow-x:hidden;
+overflow-y:hidden;
 padding:0px;
 }
 .column h1,.column h3,.column h4,.column div{
@@ -330,6 +331,7 @@ padding-left:10px;
 #vscroll{
 width:10%;
 overflow-x:visible;
+overflow-y:scroll;
 background-color:#FBFBFB;
 
 }
@@ -385,27 +387,29 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
-margin:auto;
+
 overflow-y:scroll;
 min-width:150px;
+padding-left:0px;
+margin-left:0px;
 }
 .thumbnail{
 width:100%;
 height:150px;
-
+overflow-x:hidden;
 background-color:#ffffff;
 z-index:0;
 position:relative;
-
+padding:0px;
+margin:0px;
 }
 .selected{
-z-index:70;
+z-index:2;
 overflow:visible;
-width:110%;
 background-color:#ffffff;
--webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
--moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.05);
+-webkit-box-shadow: 0px 5px 42px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 42px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 42px 1px rgba(0,0,0,0.75);
 }
 .selected .yearnum{
 color:#9D8C6C;
@@ -481,13 +485,17 @@ margin-left:7%;
 margin-right:7%;
 text-align:center;
 font-family:"GothamHTF-Medium";
+display:block;
 }
 .category .icon{
 margin:auto;
 clear:both;
-width:100px;
-display:inline;
+width:90px;
+height:90px;
+display:inline-block;
 margin-bottom:20px;
+}
+.icon{
 }
 .menusection .back{
 float:left;
