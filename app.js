@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+var mobileindex = require('./routes/mobileindex');
 var simulate = require('./routes/simulate');
 var watchselection = require('./routes/watchselection');
 var timeselection = require('./routes/timeselection');
@@ -33,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/mobileindex', mobileindex);
 app.use('/simulate', simulate);
 app.use('/watchselection', watchselection);
 app.use('/timeselection', timeselection);
