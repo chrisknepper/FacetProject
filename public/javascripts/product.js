@@ -1,11 +1,6 @@
 var threeContainer;
 
-var camera, scene, renderer, frame;
-
-var mouseX = 0, mouseY = 0;
-
-var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 2;
+var camera, scene, renderer, frame, controls;
 
 function init() {
 	function switchMenu(active){
@@ -36,26 +31,24 @@ function threeInit() {
 
 	threeContainer = document.getElementById( 'ThreeJS' );
 
-	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-	camera.position.z = 100;
+	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 	// scene
 
 	scene = new THREE.Scene();
 
-	var ambient = new THREE.AmbientLight( 0x101030 );
+	scene.add(camera);	
+
+	var ambient = new THREE.AmbientLight( '#aaaaaa' );
+	camera.position.set(0,0,-800);
+	controls = new THREE.OrbitControls( camera );
+	controls.damping = 0.05;
+	controls.addEventListener( 'change', render );
 	scene.add( ambient );
 
 	var directionalLight = new THREE.DirectionalLight( 0xffeedd );
-	directionalLight.position.set( 0, 0, 1 );
+	directionalLight.position.set( 40, -100, 0 );
 	scene.add( directionalLight );
-
-	// skybox
-	var skyBoxGeometry = new THREE.BoxGeometry( 10000, 10000, 10000 );
-	var skyBoxMaterial = new THREE.MeshBasicMaterial( { color: 0x9999ff, side: THREE.BackSide } );
-	var skyBox = new THREE.Mesh( skyBoxGeometry, skyBoxMaterial );
-	scene.add(skyBox);
-	scene.fog = new THREE.FogExp2( 0x9999ff, 0.00025 );
 
 	// texture
 
@@ -78,31 +71,24 @@ function threeInit() {
 	var onError = function ( xhr ) {
 	};
 
-
-	var loader = new THREE.ImageLoader( manager );
-	loader.load( '/models/textures/UV_Grid_Sm.jpg', function ( image ) {
-
-		texture.image = image;
-		texture.needsUpdate = true;
-
-	} );
-
 	// model
-
-	var loader = new THREE.OBJLoader( manager );
-	loader.load( '/models/male02.obj', function ( object ) {
+	var loader = new THREE.OBJMTLLoader( manager );
+	loader.load( '/models/orient.obj', '/models/orient.mtl', function ( object ) {
 
 		object.traverse( function ( child ) {
 
 			if ( child instanceof THREE.Mesh ) {
 
-				child.material.map = texture;
+				child.geometry.computeBoundingBox();
+				//console.log(child.geometry.boundingBox);
 
 			}
 
 		} );
-
-		//object.position.y = - 80;
+		object.position.x = 200;
+		object.position.y = 0;
+		object.position.z = 0;
+		object.scale.set(0.2, 0.2, 0.2);
 		scene.add( object );
 
 	}, onProgress, onError );
@@ -114,18 +100,11 @@ function threeInit() {
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	threeContainer.appendChild( renderer.domElement );
 
-	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-	//
-
 	window.addEventListener( 'resize', onWindowResize, false );
 
 }
 
 function onWindowResize() {
-
-	windowHalfX = window.innerWidth / 2;
-	windowHalfY = window.innerHeight / 2;
 
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
@@ -134,26 +113,12 @@ function onWindowResize() {
 
 }
 
-function onDocumentMouseMove( event ) {
-
-	mouseX = ( event.clientX - windowHalfX ) / 2;
-	mouseY = ( event.clientY - windowHalfY ) / 2;
-
-}
-
-//
-
 function animate() {
 	frame = requestAnimationFrame( animate );
 	render();
 }
 
 function render() {
-
-	camera.position.x += ( mouseX - camera.position.x ) * .05;
-	camera.position.y += ( - mouseY - camera.position.y ) * .05;
-
-	camera.lookAt( scene.position );
 
 	renderer.render( scene, camera );
 
