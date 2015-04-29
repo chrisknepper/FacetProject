@@ -368,7 +368,11 @@ bottom:0;
 padding:1%;
 background-color:#ffffff;
 height:175px;
+line-height:27pt;
 width:63%;
+-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 }
 #details h3 {
 	
@@ -409,8 +413,9 @@ overflow-x:hidden;
 background-color:#ffffff;
 z-index:0;
 position:relative;
+left:-10px;
 padding:0px;
-margin:0px;
+margin:auto;
 }
 .selected{
 z-index:2;
@@ -434,9 +439,9 @@ z-index:0;
 position:absolute;
 vertical-align:text-top;
 font-size:90pt;
-margin:0px;
+margin:auto;
 top:10;
-left:5;
+left:15%;
 z-index:1;
 padding:0px;
 opacity: 0.85;
@@ -446,13 +451,16 @@ text-align:center;
 }
 .thumbname{
 background-color:#ffffff;
-position:absolute;
+position:relative;
 font-size:10pt;
-top:60px;
-left:0px;
+margin:auto;
+margin-top:60px;
 z-index:2;
-width:80%;
+width:100%;
+
 text-align:center;
+color:#333;
+text-transform:uppercase;
 
 }
 #upnav{
@@ -509,10 +517,11 @@ margin-bottom:20px;
 .menusection .back{
 float:left;
 background-color:none;
+
 }
 .menusection h2{
 float:left;
-
+text-transform: uppercase;
 }
 .menusection h3{
 font-size:16px;
@@ -543,7 +552,9 @@ left:65px;
 letter-spacing:3px;
 font-family:"GothamHTF-Light";
 color:#1E1E1E;
+text-transform: uppercase;
 font-size:50px;
+text-align:center;
 }
 .position{
 position:absolute;
@@ -555,7 +566,8 @@ margin:0px;
 z-index:1;
 left:5%;
 top:125px;
-left:100px;
+left:70px;
+text-align:center;
 font-family:"BodoniStd-BoldCondensed";
 }
 #desc{
@@ -568,6 +580,7 @@ left:5%;
 top:315px;
 left:70px;
 font-family:"GothamHTF-Book";
+
 }
 .measure{
 color:#1E1E1E;
@@ -580,6 +593,7 @@ left:65px;
 .type{
 font-size:12pt;
 position:absolute;
+text-transform: uppercase;
 top:325px;
 left:65px;
 }
