@@ -6,7 +6,7 @@ function init() {
 	function switchMenu(active){
 		$(active).css('zIndex', '70');    
 	}
-
+    
 	var container = document.querySelector('#container');
 
 	$('#movementm').click(function(){switchMenu('#movement');});
@@ -21,7 +21,8 @@ function init() {
 		 
 		 
 	});
-
+    var watchid='#'+3;
+    $('#3').addClass('selected');
 	threeInit();
 	animate();
 
