@@ -1,4 +1,10 @@
 function init() {
+    var title=$('.position').text();
+    var watchid='#'+title;
+    console.log(watchid);
+    console.log()
+    $(watchid).addClass('selected');
+    
 	function switchMenu(active){
     	$(active).css('zIndex', '70');    
 	}
@@ -16,4 +22,5 @@ function init() {
          
          
     })
+    
 }

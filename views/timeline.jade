@@ -7,7 +7,7 @@ block content
             | &#x9;
             #thumbnails
                 a(href="../timeline/1900")
-                    .thumbnail
+                    #1900.thumbnail
                         h2.yearnum 00
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -15,7 +15,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1911")        
-                    .thumbnail
+                    #1911.thumbnail
                         h2.yearnum 11
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -23,7 +23,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1925")  
-                    .thumbnail.selected
+                    #1925.thumbnail
                         h2.yearnum 25
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -31,7 +31,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1948")  
-                    .thumbnail
+                    #1948.thumbnail
                         h2.yearnum 48
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -39,7 +39,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1960")  
-                    .thumbnail
+                    #1960.thumbnail
                         h2.yearnum 60
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -47,7 +47,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1969")  
-                    .thumbnail
+                    #1969.thumbnail
                         h2.yearnum 69
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -55,14 +55,14 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1975")  
-                    .thumbnail
+                    #1975.thumbnail
                         h2.yearnum 75
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
                         | &#x9;&#x9;&#x9;
                         h3.centnum 19
                 a(href="../timeline/1984")  
-                    .thumbnail
+                    #1984.thumbnail
                         h2.yearnum 84
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -70,7 +70,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/1994")  
-                    .thumbnail
+                    #1994.thumbnail
                         h2.yearnum 94
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -78,7 +78,7 @@ block content
                         h3.centnum 19
                         | &#x9;&#x9;&#x9;
                 a(href="../timeline/2000")  
-                    .thumbnail
+                    #2000.thumbnail
                         h2.yearnum 00
                         |             
                         img.corner(src='../images/triangle.svg', alt='overlay')
@@ -154,5 +154,5 @@ block content
                 a(href="/timeselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                img#timeimg(src='/images/icons/media_watch.png', alt='category details')
+                img#timeimg(src="../images/"+specs.img, alt='category details')
      script(src="/javascripts/timeline.js")           
