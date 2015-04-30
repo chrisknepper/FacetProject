@@ -183,3 +183,62 @@ imgnav label {
 #slide-content-04 { background: url(../images/icons/felix_cover.jpg) no-repeat; background-size: 100% 100%;  }
 #slide-content-05 { background: url(../images/icons/felix_cover.jpg) no-repeat; background-size: 100% 100%;  }
 #slide-content-06 { background: url(../images/icons/felix_cover.jpg) no-repeat; background-size: 100% 100%;  }
+
+/* WATCH SELECTION PAGE */
+
+#watchSelection{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:3.5%;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+}
+.watchSelect{
+	position:relative;
+	display:inline-block;
+	margin-top:0.5vh;
+	height:28vh;
+	width:450px;
+	background-color:#fff;
+	text-align:center;
+	color:#000;
+	-webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+}
+.watchSelect img{
+	position:absolute;
+	display:inline-block;
+	margin:auto;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+	z-index:1;
+}
+.watchSelect .number{
+	position:relative;
+	font-family: 'BodoniStd-BoldCondensed';
+	text-align:center;
+	padding-top:4vh;
+	color:#000;
+	font-size:250px;
+	right:5px;
+	z-index:1;
+	color:#9D8C6C;
+	opacity: 0.85;
+}
+#watchSelection .linkColor { 
+	position:relative;
+	letter-spacing: 4px;
+	background-color:#FFF; 
+	top:13vh;
+	padding-left:80px;
+	padding-right:80px;
+	padding-top:5px;
+	padding-bottom:5px;
+	z-index:2;
+}
