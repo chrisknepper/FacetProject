@@ -5,20 +5,37 @@ html(lang='en')
 		link(rel='stylesheet', href='stylesheets/mobile.css')
 		title Facet Mobile
 	body
-		#nav Facet Watches
+		a(href='/mobileindex')
+			#nav Facet Watches
 		#firstRow
-			.item.top.sm
-				span Facet History - 1810
-			a(href='/product')
+			a(href='/history')
+				.item.top.sm
+					topspan Brand History
+			a(href='/history')
 				.item.med
+					btmspan Breaking the sound wall
 					img(src='images/Felix.png')
 			a(href='/history')
 				.item.med
+					btmspan Ghandi goes to india
 					img(src='images/Gandi.png')
+			a(href='/timeselection')
+				.item.med
+					img(src="/images/internal ad.png")
+					topspan Time Selection
 			.item.med
+				topspan Social
 		#secondRow
-			.item.sm
-				span Facet History - 1920
-			.item.big
-				span Stratos Flyback Tribute to Felix...
+			a(href='/history')
+				.item.sm
+					topspan Facet History - 1920
+			a(href='/timeline')
+				.item.big
+					topspan Stratos Flyback Tribute to Felix...
+					img(src="/images/watch_01.png")
+			a(href='/watchselection')
+				.item.med
+					img(src="/images/facetmobile.png")
+					topspan Watch Selection
 			.item.med
+				topspan Social
