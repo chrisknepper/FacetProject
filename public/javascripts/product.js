@@ -21,7 +21,7 @@ function init() {
 		 
 		 
 	});
-    var title=$('.position').text();
+    var title=$('.position').val();
     var watchid='#'+title;
     console.log(watchid);
     console.log()
