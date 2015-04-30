@@ -296,7 +296,28 @@ box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 position:relative;
 padding:0px;
 width:350px;
-}			
+
+display:inline-block;
+
+}	
+.vcolumn img{
+width:75px;
+height:75px;
+position:absolute;
+right:50px;
+bottom:5%;
+opacity:.3;
+}
+#vcontainer{
+position:absolute;
+height:100%;
+min-width:150%;
+overflow-x:scroll;
+overflow-y:hidden;
+top:0;
+left:0;
+
+}	
 .accent{
 background-color:#A08E6A;
 color:#FFFFFF;
@@ -304,33 +325,38 @@ color:#FFFFFF;
 
 .post{
 width:80%;
+height:60%;
 position:absolute;
-top:30%;
+top:20%;
 left:10%;
 padding:30px;
-font-family: 'BodoniStd-Book';
+font-family: 'PT Serif', serif;
 font-size:24pt;
 }
-.timestamp{
-
-font-family:'GothamHTF-Book';
-font-size:12pt;
-padding-top:30px;
-}
-/*styles specific to product page*/
-#vcontainer{
+.vcolumn .timestamp{
+clear:both;
 position:absolute;
-height:100%;
-width:150%;
-overflow-x:hidden;
-overflow-y:scroll;
+bottom:20%;
+font-family:'GothamHTF-Book';
+font-size:20px;
+padding-top:30px;
+line-height:3.6pt;
+color:#333;
+opacity:.3;
 }
+
+/*styles specific to product page*/
+
 #pcontainer{
 position:absolute;
 height:100%;
 width:100%;
 overflow-x:hidden;
 overflow-y:hidden;
+display:inline-block;
+margin-left:0px;
+top:0px;
+min-height:800px;
 }
 .column{
 height:100%;
@@ -377,6 +403,7 @@ overflow:hidden;
 
 position:fixed;
 bottom:0;
+right:0;
 padding:1%;
 background-color:#ffffff;
 height:175px;
@@ -649,6 +676,8 @@ left:65px;
 	right:75px;
 	font:22px;
 	z-index:2;
+    width:75px;
+    height:75px;
 }
 .watchSelect{
 	position:relative;
