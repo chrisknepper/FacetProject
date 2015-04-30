@@ -5,25 +5,25 @@ block content
 		#escape
 			a(href="/").go-to-page
 				img(src='../images/watches/close.png')
-		a(href="/product").go-to-page
+		a(href="/product/1").go-to-page
 			.watchSelect
 				img(src='../images/watches/primero.png')
 				span.linkColor EL PRIMERO
 				| &#x9;
 				#firstNum 01
-		a(href="/product").go-to-page
+		a(href="/product/10").go-to-page
 			.watchSelect
 				img(src='../images/watches/challenger.png')
 				span.linkColor CHALLENGER
 				| &#x9;
 				.number 02
-		a(href="/product").go-to-page
+		a(href="/product/14").go-to-page
 			.watchSelect
 				img(src='../images/watches/academy.png')
 				span.linkColor ACADEMY
 				| &#x9;
 				.number 03
-		a(href="/product").go-to-page
+		a(href="/product/16").go-to-page
 			.watchSelect
 				span.linkColor ELITE
 				img(src='../images/watches/elite.png')
@@ -41,3 +41,8 @@ block content
 				span.linkColor BLAH
 				| &#x9;
 				.number 06
+	script(type='text/javascript').
+		<!--
+		if (screen.width <= 699) {
+		document.location = "mobilewatchselection";
+		}

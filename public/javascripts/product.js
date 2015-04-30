@@ -21,8 +21,11 @@ function init() {
 		 
 		 
 	});
-    var watchid='#'+3;
-    $('#3').addClass('selected');
+    var title=$('.position').val();
+    var watchid='#'+title;
+    console.log(watchid);
+    console.log()
+    $(watchid).addClass('selected');
 	threeInit();
 	animate();
 

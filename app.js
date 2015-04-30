@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var mobileindex = require('./routes/mobileindex');
+var mobilehistory = require('./routes/mobilehistory');
+var mobilewatchselection = require('./routes/mobilewatchselection');
 var simulate = require('./routes/simulate');
 var watchselection = require('./routes/watchselection');
 var timeselection = require('./routes/timeselection');
@@ -35,9 +37,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/mobileindex', mobileindex);
+app.use('/mobilewatchselection', mobilewatchselection);
 app.use('/simulate', simulate);
 app.use('/watchselection', watchselection);
 app.use('/timeselection', timeselection);
+app.use('/mobilehistory', mobilehistory);
 app.use('/ping', ping);
 app.use('/product', product);
 app.use('/history', history);
