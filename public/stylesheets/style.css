@@ -394,11 +394,11 @@ box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 	font-size:20px;
 	padding:15px;
     padding-top:10px;
-    padding-left:10%;
+    
 	padding-left:160px;
-	width:20%;
+	width:200px;
     line-height:27pt;
-	white-space:nowrap;
+	
 }
 #details img {
 	position:relative;
@@ -533,6 +533,10 @@ margin-bottom:20px;
 float:left;
 background-color:none;
 
+}
+.back img{
+width:25px;
+height:25px;
 }
 .menusection h2{
 float:left;
