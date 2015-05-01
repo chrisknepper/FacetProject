@@ -42,7 +42,7 @@ block content
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
 				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
-					.galleryChild(data-text="Blah blah blah blah")
+					.galleryChild(data-text="<strong>Breaking Sound</strong> - Baumgartner gets a little help suiting up for his jump, Felix steps into the void.")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/felix/felix_gallery_12.png');" class="galleryImage")
 					.galleryChild(data-text="Blah blah blah blah")
 						div(style="width:553px;height:402px;background-image:url('/images/icons/felix/felix_gallery_07.png');" class="galleryImage")
@@ -184,9 +184,11 @@ block content
 					.galleryChild.h2
 						img(src="http://rdjpg.com/324/430", alt="", width="324", height="430", class="galleryImage")
 		#infoSnippet
-			.back &lt;
-			.forward &gt;
-			.text Breaking Sound - Baumgartner gets a little help suiting up for his jump, Felix steps into the void.
+			.nav
+				.back.icon-left_arrow.general-ui-icon
+				.forward.icon-right_arrow.general-ui-icon
+			.section
+				.text <strong>Breaking Sound</strong> - Baumgartner gets a little help suiting up for his jump, Felix steps into the void.
 			.slideCount 1/12
 	script(src="/javascripts/imagesloaded.pkgd.min.js")
 	script(src="/javascripts/masonry.pkgd.min.js")

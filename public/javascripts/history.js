@@ -139,5 +139,5 @@ var handleFocusSwitch = function(evtObj, selector, callback) {
 
 var updateInfoSnippet = function(text) {
 	$('#infoSnippet .slideCount').text((currentExpandedIndex + 1) + '/' + currentGalleryLength);
-	$('#infoSnippet .text').text(text);
+	$('#infoSnippet .text').html(text);
 }
