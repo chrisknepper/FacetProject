@@ -1,7 +1,3 @@
-var threeContainer;
-
-var camera, scene, renderer, frame, controls;
-
 function init() {
 	function switchMenu(active){
 		$(active).css('zIndex', '70');    
@@ -26,8 +22,9 @@ function init() {
     console.log(watchid);
     console.log()
     $(watchid).addClass('selected');
+
    
-	//threeInit();
+	threeInit();
 	animate();
 
 
@@ -128,6 +125,7 @@ function animate() {
 function render() {
 
 	renderer.render( scene, camera );
+
 
 
 }
