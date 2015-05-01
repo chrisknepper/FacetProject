@@ -71,7 +71,7 @@ function threeInit() {
 
 	// model
 	var loader = new THREE.OBJMTLLoader(manager);
-	loader.load( '/models/watchandtexturetrial.obj', '/models/watchandtexturetrial.mtl', function ( object ) {
+	loader.load( '/models/finalwatchmodel.obj', '/models/finalwatchmodel.mtl', function ( object ) {
 
 		object.traverse( function ( child ) {
 
