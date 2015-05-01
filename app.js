@@ -18,6 +18,7 @@ var product = require('./routes/product');
 var history = require('./routes/history');
 var timeline = require('./routes/timeline');
 var social = require('./routes/social');
+var productmodel = require('./routes/productmodel');
 var threedemo = require('./routes/threedemo');
 //handle db stuff
 var sqlite3 = require('sqlite3').verbose();
@@ -51,6 +52,7 @@ app.use('/history', history);
 app.use('/timeline', timeline);
 app.use('/social', social);
 app.use('/threedemo', threedemo);
+app.use('/productmodel', productmodel);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

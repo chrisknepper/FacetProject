@@ -267,16 +267,11 @@ block content
                 a(href="/watchselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                #ThreeJS(style="position: absolute; left:0px; top:0px")
+                iframe(src='/productmodel', height=500, width=800)
             #plus
                 img(src='../images/watches/close.png')
             #details
                 img(src='/images/categories/movement_detail.svg', alt='category details')
                 h3 Movement
                 p He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js")
-    script(src="/javascripts/OBJLoader.js")
-    script(src="/javascripts/MTLLoader.js")
-    script(src="/javascripts/OBJMTLLoader.js")
-    script(src="/javascripts/OrbitControls.js")
     script(src="/javascripts/product.js")
