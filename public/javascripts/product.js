@@ -78,6 +78,7 @@ function threeInit() {
 
 	// model
 	var loader = new THREE.OBJMTLLoader( manager );
+	/*
 	loader.load( '/models/orient.obj', '/models/orient.mtl', function ( object ) {
 
 		object.traverse( function ( child ) {
@@ -97,7 +98,7 @@ function threeInit() {
 		scene.add( object );
 
 	}, onProgress, onError );
-
+	*/
 	//
 
 	renderer = new THREE.WebGLRenderer({ alpha: true, antialias:true });

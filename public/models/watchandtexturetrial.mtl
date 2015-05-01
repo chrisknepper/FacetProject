@@ -1,0 +1,80 @@
+newmtl watchandtexturetrial:0
+illum 4
+Kd 0.79 0.81 0.81
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.19 0.19 0.19
+Ns 0.06
+newmtl watchandtexturetrial:64
+illum 4
+Kd 0.25 0.25 0.25
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl watchandtexturetrial:103
+illum 4
+Kd 0.97 1.00 0.40
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl watchandtexturetrial:143
+illum 4
+Kd 0.46 0.00 0.56
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl watchandtexturetrial:193
+illum 4
+Kd 1.00 0.75 0.76
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl watchandtexturetrial:201
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 0.06
+newmtl watchandtexturetrial:206
+illum 4
+Kd 0.01 0.27 0.76
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.19 0.19 0.19
+Ns 0.06
+newmtl watchandtexturetrial:238
+illum 4
+Kd 0.86 0.87 0.88
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.37 0.37 0.37
+Ns 0.06
+newmtl watchandtexturetrial:255
+illum 4
+Kd 0.25 0.80 1.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.06
+newmtl watchandtexturetrial:Liquid
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
