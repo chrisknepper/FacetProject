@@ -161,10 +161,11 @@ block content
             #downnav ^
         #info.column
             .overlap
-                h1(value=specs.id).title #{specs.collection}
+                h1.title #{specs.collection}
                 | &#x9;&#x9;
                 h1.position  #{specs.id}/19
                 | &#x9;
+                #dash  
                 h3.type #{specs.name}
                 | &#x9;
                 h3.diameter #{specs.diameter} MM
@@ -262,6 +263,10 @@ block content
                     h2 Pricing
                     h3 Price
                     h4 #{specs.price}
+                #data.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2#watchid #{specs.id}
         #media.column
             #escape
                 a(href="/watchselection").go-to-page
