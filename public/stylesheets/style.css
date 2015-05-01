@@ -852,13 +852,18 @@ left:65px;
 }
 
 #watchHistory .person {
-	display: none;
+	display: block;
 	height: 1080px;
 	width: 1792px;
 	position: absolute;
-	top: 0;
+	top: -2000px;
 	left: 90px;
 	z-index: 9;
+	transition: 0.5s ease-in all;
+}
+
+#watchHistory .person.visible {
+	top: 0;
 }
 
 #watchHistory .personBigBackground {
@@ -873,6 +878,10 @@ left:65px;
 	top: 10px;
 	right: 10px;
 	color: white;
+}
+
+#watchHistory > .close {
+	z-index: 900;
 }
 
 #watchHistory .expand {
@@ -890,35 +899,43 @@ left:65px;
 	z-index: 30;
 }
 
+
 #watchHistory .galleryContainer {
-	display: none;
+	display: block;
 	width: 1792px;
 	height: 1080px;
 	position: absolute;
-	top: 0;
+	top: -2000px;
 	left: 0;
-	z-index: 25;
+	z-index: 500;
 	background: #333;
 	box-shadow: 0 0 10px black;
 	overflow: hidden;
+	transition: 0.5s ease-in all;
+
 }
 
 #watchHistory .galleryContainer:before {
 	content: ' ';
-	display: block;
+	display: none;
 	position: absolute;
-	left: 0;
+	left: 90px;
 	top: 0;
 	width: 1792px;
 	height: 1080px;
-	z-index: 26;
-	background: pink;
+	z-index: 501;
+	background: url('../images/facet.png') no-repeat;
+	background-position: center;
 	pointer-events: none;
-	opacity: 0;
+	transition: none;
 }
 
 #watchHistory .galleryContainer.loading:before {
-	opacity: 1;
+	display: block;
+}
+
+#watchHistory .galleryContainer.visible {
+	top: 0;
 }
 
 #watchHistory .gallery {
@@ -927,12 +944,43 @@ left:65px;
 	height: 1080px;
 	top: 0;
 	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease-in all;
+}
+
+#watchHistory .gallery.visible {
+	pointer-events: auto;
+	opacity: 1;
 }
 
 #watchHistory .galleryChild {
 	font-size: 0;
 	display: inline-block;
 	margin: 0;
+	cursor: pointer;	
+}
+
+#watchHistory .galleryChild:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#watchHistory .galleryChild:before, #watchHistory .galleryImage {
+	transition: 0.5s ease-in all;
+}
+
+#watchHistory .galleryChild:hover:before {
+	box-shadow: 0 0 10px 50px black inset;
+}
+
+#watchHistory .galleryChild:hover .galleryImage {
+	-webkit-filter: contrast(1.4) grayscale(10%);
 }
 
 #watchHistory #infoSnippet {
@@ -952,6 +1000,17 @@ left:65px;
 #watchHistory #infoSnippet div {
 	float: left;
 	white-space: normal;
+}
+
+#watchHistory > .galleryChildExpanded {
+	display: block;
+	pointer-events: none;
+	opacity: 0;
+	transition: 0.5s ease-in all;
+}
+
+#watchHistory > .galleryChildExpanded.visible {
+	opacity: 1;
 }
 
 #infoSnippet .back {
@@ -982,7 +1041,7 @@ left:65px;
 
 #watchHistory .galleryChildExpanded, #watchHistory .galleryChildExpanded div {
 	z-index: 29;
-	left: 0 !important;
+	left: 90px !important;
 	top: 0 !important;
 	width: 1792px !important;
 	height: 1080px !important;

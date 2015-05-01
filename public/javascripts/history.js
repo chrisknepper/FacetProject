@@ -1,10 +1,14 @@
-var hiddenItems, currentGallery, currentGalleryLength, currentExpandedIndex, currentGalleryChild;
+var hiddenItems, currentGallery, currentGalleryLength, currentExpandedIndex, currentGalleryChild, msnry;
 function init() {
 
 	console.log('history init');
 
 	$('.watchHistorySelect').on('click', function(e) {
 		handleFocusSwitch($(this), '.person', togglePerson);
+	});
+
+	$(document).on('click', '#watchHistory > .close', function(e) {
+		unloadSlide();
 	});
 
 	$('.person > .close').on('click', function(e) {
@@ -34,9 +38,13 @@ function init() {
 		var bigImage = $(this).clone();
 		bigImage.removeClass('galleryChild');
 		bigImage.addClass('galleryChildExpanded');
+		bigImage.append($('.close.icon-close_icon').first().clone());
 		$('#watchHistory').prepend(bigImage);
 		updateInfoSnippet(bigImage.data('text'));
-		$('#infoSnippet').addClass('visible');
+		window.setTimeout(function() {
+			$('#watchHistory > .galleryChildExpanded').addClass('visible');
+			$('#infoSnippet').addClass('visible');
+		}, 100);
 	});
 
 	$('#infoSnippet .back').on('click', function(e) {
@@ -51,33 +59,38 @@ function init() {
 }
 
 var loadGallery = function(container) {
-	//container.addClass('loading');
-	currentGallery = container.children('.gallery').first();
-	currentGalleryLength = container.find('.galleryChild').length;
-	imagesLoaded(currentGallery[0], function() {
-		msnry = new Masonry( currentGallery[0], {
-			// options
-			columnWidth: 1, //WHY ISN'T THIS MORE DOCUMENTED
-			gutter: 0,
-			itemSelector: '.galleryChild'
-		});
-		//container.removeClass('loading');
-	});
-
-	$(container).toggle(400);
 	$(container).toggleClass('visible');
+	window.setTimeout(function() {
+		container.addClass('loading');
+	}, 500);
+	window.setTimeout(function() {
+		currentGallery = container.children('.gallery').first();
+		currentGalleryLength = container.find('.galleryChild').length;
+		imagesLoaded(currentGallery[0], function() {
+		msnry = new Masonry( currentGallery[0], {
+		// options
+		columnWidth: 1, //WHY ISN'T THIS MORE DOCUMENTED
+		gutter: 0,
+		itemSelector: '.galleryChild'
+		});
+		container.removeClass('loading');
+		});
+		window.setTimeout(function() {
+			currentGallery.addClass('visible');
+		}, 300);
+		
+	}, 1000);	
 }
 
 var togglePerson = function(container) {
-	$(container).toggle(400);
+	//$(container).toggle(400);
 	$(container).toggleClass('visible');
 }
 
 var unloadGallery = function(container) {
-	$(container).toggle(400, function(e) {
-		currentGallery.masonry('destroy');
-	});
+	currentGallery.removeClass('visible');
 	$(container).toggleClass('visible');
+	msnry.destroy();
 }
 
 var switchSlide = function() {
@@ -92,8 +105,13 @@ var switchSlide = function() {
 	bigImage.removeClass('galleryChild');
 	unloadSlide();
 	bigImage.addClass('galleryChildExpanded');
+	bigImage.append($('.close.icon-close_icon').first().clone());
 	$('#watchHistory').prepend(bigImage);
-	updateInfoSnippet(bigImage.data('text'));
+	window.setTimeout(function() {
+		$('#watchHistory > .galleryChildExpanded').addClass('visible');
+		updateInfoSnippet(bigImage.data('text'));
+	}, 100);
+
 }
 
 var unloadSlide = function(container) {
