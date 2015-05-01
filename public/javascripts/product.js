@@ -21,12 +21,13 @@ function init() {
 		 
 		 
 	});
-    var title=$('.position').val();
+    var title=$('#watchid').text();
     var watchid='#'+title;
     console.log(watchid);
     console.log()
     $(watchid).addClass('selected');
-	threeInit();
+   
+	//threeInit();
 	animate();
 
 
