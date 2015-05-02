@@ -21,11 +21,11 @@
         camera.position.z = -50;
         console.log( camera );
 
-        var ambient = new THREE.AmbientLight( '#888888' );
+        var ambient = new THREE.AmbientLight( '#ffffff' );
         scene.add( ambient );
 
-        var directionalLight = new THREE.DirectionalLight( 0xf4e7bb );
-        directionalLight.position.set( 0, 300, -20 );
+        var directionalLight = new THREE.DirectionalLight( 0xffffff );
+        directionalLight.position.set( 0, 10, -10 );
         scene.add( directionalLight );
 
         controls = new THREE.LeapTrackballControls( camera , controller );
