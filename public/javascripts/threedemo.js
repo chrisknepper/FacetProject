@@ -18,14 +18,14 @@
           1000
         );
 
-        camera.position.z = -50;
+        camera.position.z = -30;
         console.log( camera );
 
         var ambient = new THREE.AmbientLight( '#ffffff' );
         scene.add( ambient );
 
         var directionalLight = new THREE.DirectionalLight( 0xffffff );
-        directionalLight.position.set( camera.position.x, camera.position.y - 100, camera.position.z);
+        directionalLight.position.set( camera.position.x, camera.position.y - 100, camera.position.z + 200);
         scene.add( directionalLight );
 
         var directionalLight = new THREE.DirectionalLight( 0xffffff );
@@ -35,14 +35,14 @@
         controls = new THREE.LeapTrackballControls( camera , controller );
 
         controls.rotationSpeed            = 10;
-        controls.rotationDampening        = .98;
+        controls.rotationDampening        = .45;
         controls.zoom                     = 40;
         controls.zoomDampening            = .6;
         controls.zoomCutoff               = .9;
         controls.zoomEnabled              = true;
 
         controls.minZoom                  = 20;
-        controls.maxZoom                  = 80;
+        controls.maxZoom                  = 75;
 
           var loader = new THREE.OBJMTLLoader();
   loader.load( '/models/finalwatchmodelthree.obj', '/models/finalwatchmodel.mtl', function ( object ) {
