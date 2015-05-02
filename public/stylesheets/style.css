@@ -288,6 +288,11 @@ a{
 	margin: 0 10px;
 }
 
+#globalNav.black a {
+	color: black;
+	border-color: black;
+}
+
 #globalNav.visible {
 	opacity: 1;
 	pointer-events: auto;

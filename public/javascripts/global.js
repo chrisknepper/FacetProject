@@ -43,6 +43,10 @@ $(document).ready(function() {
 		e.preventDefault();
 		goToURL($('#backURL').data('url'));
 	});
+
+	if($('#navColor').length > 0) {
+		$('#globalNav').addClass($('#navColor').data('color'));
+	}
 });
 
 function goToURL(url) {
