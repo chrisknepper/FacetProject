@@ -24,8 +24,8 @@
         var ambient = new THREE.AmbientLight( '#aaaaaa' );
         scene.add( ambient );
 
-        var directionalLight = new THREE.DirectionalLight( 0xffeedd );
-        directionalLight.position.set( 40, -100, 0 );
+        var directionalLight = new THREE.DirectionalLight( 0xf4e7bb );
+        directionalLight.position.set( 10, -100, 0 );
         scene.add( directionalLight );
 
         controls = new THREE.LeapTrackballControls( camera , controller );
