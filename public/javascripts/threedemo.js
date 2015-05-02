@@ -25,6 +25,10 @@
         scene.add( ambient );
 
         var directionalLight = new THREE.DirectionalLight( 0xffffff );
+        directionalLight.position.set( camera.position.x, camera.position.y - 100, camera.position.z);
+        scene.add( directionalLight );
+
+        var directionalLight = new THREE.DirectionalLight( 0xffffff );
         directionalLight.position.set( 0, -100, -10);
         scene.add( directionalLight );
 
