@@ -17,10 +17,14 @@ $(document).ready(function() {
 			goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
 		}
 	}
-	if(!$('#homePage').length > 0) {
+	if($('#homePage').length > 0) {
+		$('body').addClass('prevent-vertical-scroll');
+	}
+	else {
 		$('#globalNav').addClass('visible');
 	}
-	if($('#watchHistory').length > 0 || $('#homePage').length > 0) {
+
+	if($('#watchHistory').length > 0) {
 		$('body').addClass('prevent-vertical-scroll prevent-horizontal-scroll');
 		$('body').data('person-open', 'no');
 	}
