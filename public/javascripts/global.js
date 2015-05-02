@@ -17,6 +17,9 @@ $(document).ready(function() {
 			goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
 		}
 	}
+	setInterval(function() {
+		exampleSocket.send('Ping');
+	}, 15000);
 	if($('#homePage').length > 0) {
 		$('body').addClass('prevent-vertical-scroll');
 	}
