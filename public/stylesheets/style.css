@@ -364,6 +364,14 @@ a{
 	height: 100%;
 }
 
+#homePage .item .social {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	z-index: 1;
+	font-size: 2em;
+}
+
 #homePage .item h1 {
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 0.4em;
