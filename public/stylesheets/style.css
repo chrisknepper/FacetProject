@@ -987,6 +987,8 @@ left:65px;
 	padding:0px;
 	font-size:25px;
 	white-space:nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 .watchHistorySelect{
 	position:relative;

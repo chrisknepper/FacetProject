@@ -84,15 +84,16 @@ var loadGallery = function(container) {
 
 var togglePerson = function(container) {
 	
-	if(!$('body').hasClass('prevent-horizontal-scroll')) {
-		$('body').animate({scrollLeft:0}, 'slow', 'swing', function() {
-			$('body').toggleClass('prevent-horizontal-scroll');
+	if($('body').data('person-open') == 'no') {
+		$('body').data('person-open', 'yes');
+		var animValue = $('body').scrollLeft() > 0 ? 'slow' : 0;
+		$('body').animate({scrollLeft:0}, animValue, 'swing', function() {
 			$('#globalNav').toggleClass('visible');
 			$(container).toggleClass('visible');
 		});
 	}
 	else {
-		$('body').toggleClass('prevent-horizontal-scroll');
+		$('body').data('person-open', 'no');
 		$(container).toggleClass('visible');
 		$('#globalNav').toggleClass('visible');
 	}

@@ -21,7 +21,8 @@ $(document).ready(function() {
 		$('#globalNav').addClass('visible');
 	}
 	if($('#watchHistory').length > 0 || $('#homePage').length > 0) {
-		$('body').addClass('prevent-vertical-scroll');
+		$('body').addClass('prevent-vertical-scroll prevent-horizontal-scroll');
+		$('body').data('person-open', 'no');
 	}
 	if(window.sessionStorage.usingAjaxNav != 1) {
 		init();
