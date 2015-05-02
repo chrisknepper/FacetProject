@@ -15,10 +15,10 @@ function threeInit() {
 	threeContainer = document.getElementById( 'ThreeJS' );
 
 	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
-	camera.position.z = 1000;
+	camera.position.z = 7;
 
 	controls = new THREE.TrackballControls( camera );
-	controls.rotateSpeed = 1.0;
+	controls.rotateSpeed = 1.5;
 	controls.zoomSpeed = 1.2;
 	controls.panSpeed = 0.8;
 	controls.noZoom = false;
@@ -71,7 +71,7 @@ function threeInit() {
 
 	// model
 	var loader = new THREE.OBJMTLLoader(manager);
-	loader.load( '/models/black watch.obj', '/models/black watch.mtl', function ( object ) {
+	loader.load( '/models/finalwatchmodel.obj', '/models/finalwatchmodel.mtl', function ( object ) {
 
 		object.traverse( function ( child ) {
 
@@ -86,7 +86,8 @@ function threeInit() {
 		object.position.x = 0;
 		object.position.y = 0;
 		object.position.z = 0;
-		//object.scale.set(0.2, 0.2, 0.2);
+		object.rotation.y = -10;
+		object.rotation.x = -5;
 		scene.add( object );
 
 	}, onProgress, onError );
