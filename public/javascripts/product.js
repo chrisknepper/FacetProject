@@ -22,7 +22,10 @@ function init() {
     console.log(watchid);
     console.log()
     $(watchid).addClass('selected');
-
+    //$('#vscroll').scrollTo(watchid);
+    var height=$(window).height(); 
+    var offset='20px';
+    $('#vscroll').animate({scrollTop:$(watchid).position().top}, 'slow')
    
 	threeInit();
 	animate();

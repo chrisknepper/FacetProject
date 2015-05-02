@@ -3,7 +3,8 @@ extends layout
 block content
     #pcontainer
         #vscroll.column
-            #upnav ^
+            #upnav.vscrollnav
+                img(src='/images/up_arrow.svg', alt='up arrow')
             | &#x9;
             #thumbnails
                 a(href="../timeline/1900")
@@ -85,7 +86,8 @@ block content
                         | &#x9;&#x9;&#x9;
                         h3.centnum 20
             | &#x9;
-            #downnav ^
+            #downnav.vscrollnav 
+                img(src='/images/down_arrow.svg', alt='down arrow')
         #info.column
             .overlap
                 .title #{specs.longhand}
