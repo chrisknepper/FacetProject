@@ -1,6 +1,12 @@
 extends layout
 
 block content
+    a(href='/mobiletimeselection')
+        #nav
+        #navFix
+            img(src='../images/facet_type_m.png')
+    #timelinePic
+        img#timeimg(src="../images/"+specs.img, alt='category details')
     #pcontainer
         #vscroll.column
             #upnav.vscrollnav
@@ -134,13 +140,7 @@ block content
                         .ctitle
                             | ACHIEVEMENTS
                         #achievementvalue.cvalue #{specs.achievement}
-        #media.column
+        #media
             #model
-                img#timeimg(src="../images/"+specs.img, alt='category details')
     #backURL(data-url="/timeselection")
     script(src="/javascripts/timeline.js")
-    script(type='text/javascript').
-        <!--
-        if (screen.width <= 699) {
-        document.location = "/mobiletimeline/#{specs.year}";
-        }
