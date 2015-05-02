@@ -1319,18 +1319,52 @@ overflow:hidden;
 /*end timeline styles*/
 
 /* MOBILE TIMELINE PAGE */
-@media (max-width: 700px){
+@media only screen and (max-device-width: 700px){
+
+#nav{
+	width:100%;
+	height:12vh;
+	background:#000;
+}
+#navFix{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:12vh;
+	line-height:13.5vh;
+	text-align:center;
+	background:#000;
+	z-index:3;
+}
+#timelinePic{
+	position:relative;
+	width:100%;
+	height:45vh;
+	background:#fff;
+	z-index:10;
+}
+
+#timelinePic img{
+	width:100%;
+	height:100%;
+}
+
+#model{
+overflow:visible;
+}
+#model iframe{
+position:absolute;
+top:-30;
+width:25%;
+height:25%;
+}
 
 #pcontainer{
-position:absolute;
 height:100%;
 width:100%;
-overflow-x:hidden;
-overflow-y:hidden;
 display:inline-block;
 margin-left:0px;
 top:0px;
-min-height:800px;
 }
 .column{
 height:100%;
@@ -1339,8 +1373,6 @@ position:relative;
 -webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 -moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
-overflow-x:hidden;
-overflow-y:hidden;
 padding:0px;
 }
 .column h1,.column h3,.column h4,.column div{
@@ -1348,31 +1380,14 @@ padding-left:10px;
 }
 .column::-webkit-scrollbar { width: 0 !important }
 #vscroll{
-width:10%;
-overflow-x:hidden;
-overflow-y:scroll;
-background-color:#FBFBFB;
 display:none;
 }
 .vscrollnav{
     
-    width:10%;
-    position:absolute;
-    min-width:90px;
-    height:100px;
-    text-align:center;
-    z-index:4;
-   left:0;
-   background-color:white;
-   -webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
--moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+display:none;
 }
 .vscrollnav img{
-height:30px;
-width:50px;
-opacity:.3;
-margin:10px;
+display:none;
 
 }
 #upnav{
@@ -1385,13 +1400,13 @@ bottom:0;
 height:80px;
 }
 #info{
-width:27%;
+
+width:100%;
 background-color:#F5F5F5;
+top:50vh;
 
 }
 #media{
-width:63%;
-
 background-color:#EDEDED;
 }
 
@@ -1405,10 +1420,9 @@ background-color:#EDEDED;
     height:75px;
 }
 #details{
-overflow:hidden;
 
-position:fixed;
-bottom:0;
+position:absolute;
+top:10vh;
 right:0;
 padding:1%;
 background-color:#ffffff;
@@ -1425,7 +1439,7 @@ box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 	letter-spacing:2px;
 }
 #details p {
-	font-size:20px;
+	font-size:50px;
 	padding:15px;
     padding-top:10px;
     
@@ -1449,7 +1463,6 @@ height:90px;
 /*vscroll styles*/
 .thumbnails{
 margin-top:150px;
-overflow-y:scroll;
 min-width:150px;
 padding-left:0px;
 margin-left:0px;
@@ -1458,7 +1471,6 @@ margin-left:0px;
 .thumbnail{
 width:150%;
 height:150px;
-overflow-x:hidden;
 background-color:#ffffff;
 z-index:0;
 position:relative;
@@ -1521,13 +1533,11 @@ z-index:3;
 }
 /*Product Details Styles*/
 #categories{
-position:relative;
-margin:auto;
+position:absolute;
 width:100%;
-height:65%;
-overflow:hidden;
-left:15px;
-top:300px;
+height:60%;
+left:3%;
+top:30vh;
 }
 
 #menu{
@@ -1617,7 +1627,6 @@ display:none;
 .overlap{
 position:relative;
 width:100%;
-height:150px;
 }
 .title{
 position:absolute;
@@ -1657,14 +1666,15 @@ z-index:3;
 #desc{
 position:absolute;
 color:#1E1E1E;
-font-size:15px;
+font-size:1.8em;
 margin:0px;
 z-index:1;
 left:5%;
-top:315px;
+top:19vh;
 left:70px;
 font-family:"GothamHTF-Book";
-width:80%;
+width:85%;
+z-index:999;
 }
 .measure{
 color:#1E1E1E;
