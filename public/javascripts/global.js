@@ -3,23 +3,36 @@
 //also manipulating browser/url history and calling respective pages' init functions if they exist
 $(document).ready(function() {
 
+	function isJSON(str) {
+		try {
+			JSON.parse(str);
+		} catch (e) {
+			return false;
+		}
+		return true;
+	}
+
 	//Detect whether we are using HTTPS, if so we also use WSS (secure websocket)
 	var socketProtocol = window.location.protocol.indexOf('s') > -1 ? 'wss' : 'ws';
 	var socketURL = socketProtocol + '://' + window.location.host;
 	var exampleSocket = new WebSocket(socketURL);
 	exampleSocket.onopen = function (event) {
-		//exampleSocket.send("Here's some text that the server is urgently awaiting!"); 
+		setInterval(function() {
+			exampleSocket.send('Ping');
+		}, 15000);
 	};
 	exampleSocket.onmessage = function (event) {
-		var dataObj = JSON.parse(event.data);
-		var message = dataObj.msg;
-		if(window.location.href.indexOf('simulate') === -1 && window.location.href.indexOf('ping') === -1) {
-			goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
+		if(isJSON(event.data)) {
+			var dataObj = JSON.parse(event.data);
+			var message = dataObj.msg;
+			if(message.watchInfo.id > 0) {
+				if(window.location.href.indexOf('simulate') === -1 && window.location.href.indexOf('ping') === -1 && window.location.href.indexOf('threedemo') === -1) {
+					goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
+				}
+			}
 		}
 	}
-	setInterval(function() {
-		exampleSocket.send('Ping');
-	}, 15000);
+
 	if($('#homePage').length > 0) {
 		$('body').addClass('prevent-vertical-scroll');
 	}
