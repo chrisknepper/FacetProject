@@ -1744,23 +1744,23 @@ z-index:999;
 .measure{
 color:#1E1E1E;
 opacity:.1;
-font-size:12pt;
+font-size:2em;
 position:absolute;
-top:365px;
-left:65px;
+top:15.5vh;
+left:40%;
 }
 .type{
-font-size:12pt;
+font-size:2.3em;
 position:absolute;
 text-transform: uppercase;
-top:325px;
-left:65px;
+top:10vh;
+left:40%;
 }
 .diameter{
-font-size:12pt;
+font-size:1.8em;
 position:absolute;
-top:345px;
-left:65px;
+top:13vh;
+left:40%;
 }
 .noselect {
     -webkit-touch-callout: none;

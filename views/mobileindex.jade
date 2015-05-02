@@ -4,33 +4,35 @@ html(lang='en')
     meta(charset='utf-8')
     link(rel='stylesheet', href='stylesheets/mobile.css')
     title Facet Mobile
-  body
+  body(style='background:#000')
     a(href='/mobileindex')
       #nav
       #navFix
         img(src='../images/facet_type_m.png')
     #firstRow
-      a(href='/mobilehistory')
-        .item.top.sm
-          topspan Brand History
-      a(href='/mobilehistory')
-        .item.med
-          btmspan Breaking the sound wall
-          img(src='images/Felix.png')
-      a(href='/mobilehistory')
-        .item.med
-          btmspan Ghandi goes to india
-          img(src='images/Gandi.png')
+      a(href='/mobilewatchselection')
+        .item.top.med
+          img(src='images/mobile/historyicon1.png')
+          btmspan The Academy
       a(href='/mobiletimeselection')
         .item.med
-          img(src='/images/internal ad.png')
+          img(src='/images/internal_ad.png')
           topspan Time Selection
-      .item.med
-        topspan Social
+      a(href='/mobilehistory')
+        .item.med
+          btmspan Gandhi
+          img(src='images/Gandi.png')
+      a(href='/mobilehistory')
+        .item.med
+          btmspan Facet 1920
+          img(src='images/mobile/historyicon2.png')
+        .item.sm
+          btmspan
     #secondRow
       a(href='/mobilehistory')
-        .item.sm
-          topspan Facet History - 1920
+        .item.top.med
+          btmspan Go Faster
+          img(src='images/Felix.png')
       a(href='/mobiletimeline')
         .item.big
           topspan Stratos Flyback Tribute to Felix...
@@ -38,7 +40,8 @@ html(lang='en')
       a(href='/mobilewatchselection')
         .item.med
           img(src='/images/facetmobile.png')
-          topspan Watch Selection
+          topspan Watches
       a(href='/mobilesocial')
         .item.med
-          topspan Social
+          img(src='/images/mobile/social.png')
+          btmspan Social

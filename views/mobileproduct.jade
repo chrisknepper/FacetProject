@@ -1,108 +1,285 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    link(rel='stylesheet', href='/stylesheets/mobile.css')
-    title Facet Mobile
-  body
+extends layout
+
+block content
     a(href='/mobilewatchselection')
-      #nav
-      #navFix
-        img(src='../images/facet_type_m.png')
-    #timeline
-      #model
-        img#timeimg(src="../images/"+specs.img, alt='category details')
-      .title #{specs.collection}
-      h1.position #{specs.id}/19
-      #desc #{specs.name}
-      #desc2 #{specs.diameter} MM
-      #desc3 #{specs.calibre}
-      #categories
-            #menu.menusection
-                #movementm.category
-                    span.icon-watches_off.general-ui-icon.icon
-                    .ctitle MOVEMENT
-                #featuresm.category
-                  span.icon-technology_off.general-ui-icon.icon
-                  .ctitle
-                    | FEATURES
-                #externalm.category
-                  span.icon-event_off.general-ui-icon.icon
-                  .ctitle
-                    | EXTERNAL
-                #variationsm.category
-                  span.icon-icon_off.general-ui-icon.icon
-                  .ctitle
-                    | VARIATIONS
-                #inspirationm.category
-                  span.icon-history_off.general-ui-icon.icon
-                  .ctitle
-                    | INSPIRATIONS
-                #buym.category
-                  span.icon-buy_off.general-ui-icon.icon
-                  .ctitle PRICING
-            #movement.menusection
-                    .back 
+        #nav
+        #navFix
+            img(src='../images/facet_type_m.png')
+    #pcontainer
+        #vscroll.column
+            #upnav.vscrollnav 
+                img(src='/images/up_arrow.svg', alt='up arrow')
+            | &#x9;
+            #thumbnails.productscroll
+                a(href="../product/1") 
+                    #1.thumbnail
+                        h2.thumbnum 01
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Reserve
+                        | &#x9;&#x9;&#x9;
+                a(href="../product/2") 
+                    #2.thumbnail
+                        h2.thumbnum 02
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/academy.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname 1969
+                        | &#x9;&#x9;&#x9; 
+                a(href="../product/3") 
+                    #3.thumbnail
+                        h2.thumbnum 03
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/pilot.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Auto
+                        | &#x9;&#x9;&#x9;       
+                a(href="../product/4") 
+                    #4.thumbnail
+                        h2.thumbnum 04
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/challenger.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Lightweight
+                        | &#x9;&#x9;&#x9;    
+                a(href="../product/5") 
+                    #5.thumbnail
+                        h2.thumbnum 05
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/elite.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Night
+                        | &#x9;&#x9;&#x9;  
+                a(href="../product/6") 
+                    #6.thumbnail
+                        h2.thumbnum 06
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname 36'000
+                        | &#x9;&#x9;&#x9;   
+                a(href="../product/7") 
+                    #7.thumbnail
+                        h2.thumbnum 07
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/academy.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Original
+                        | &#x9;&#x9;&#x9;
+                a(href="../product/8") 
+                    #8.thumbnail
+                        h2.thumbnum 08
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/pilot.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Spindrift
+                        | &#x9;&#x9;&#x9;        
+                a(href="../product/9") 
+                    #9.thumbnail
+                        h2.thumbnum 09
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/elite.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Tribute
+                        | &#x9;&#x9;&#x9;             
+                a(href="../product/10") 
+                    #10.thumbnail
+                        h2.thumbnum 10
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Tourbillon
+                        | &#x9;&#x9;&#x9;   
+                a(href="../product/11") 
+                    #11.thumbnail
+                        h2.thumbnum 11
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/pilot.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Annual
+                        | &#x9;&#x9;&#x9;  
+                a(href="../product/12") 
+                    #12.thumbnail
+                        h2.thumbnum 12
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/academy.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname GMT
+                        | &#x9;&#x9;&#x9;     
+                a(href="../product/13") 
+                    #13.thumbnail
+                        h2.thumbnum 13
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/elite.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Special
+                        | &#x9;&#x9;&#x9;   
+                a(href="../product/14") 
+                    #14.thumbnail
+                        h2.thumbnum 14
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Hurricane
+                        | &#x9;&#x9;&#x9; 
+                a(href="../product/15") 
+                    #15.thumbnail
+                        h2.thumbnum 15
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/academy.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Georges
+                        | &#x9;&#x9;&#x9;      
+                a(href="../product/16") 
+                    #16.thumbnail
+                        h2.thumbnum 16
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Moonphase
+                        | &#x9;&#x9;&#x9;   
+                a(href="../product/17") 
+                    #17.thumbnail
+                        h2.thumbnum 17
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/academy.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Power
+                        | &#x9;&#x9;&#x9;   
+                a(href="../product/18") 
+                    #18.thumbnail
+                        h2.thumbnum 18
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/elite.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Ultra
+                        | &#x9;&#x9;&#x9;  
+                a(href="../product/19") 
+                    #19.thumbnail
+                        h2.thumbnum 19
+                        | &#x9;&#x9;&#x9;
+                        img(src='/images/watches/primero.png', alt='watch thumbnail')
+                        | &#x9;&#x9;&#x9;
+                        h3.thumbname Lady
+                        | &#x9;&#x9;&#x9;                           
+            #downnav.vscrollnav 
+                img(src='/images/down_arrow.svg', alt='up arrow')
+        #info.column
+            .overlap(style='bottom:6vh; left:5%')
+                h1.title #{specs.collection}
+                | &#x9;&#x9;
+                h1.position #{specs.id}/19
+                | &#x9;
+                #dash  
+                h3.type #{specs.name}
+                | &#x9;
+                h3.diameter #{specs.diameter} MM
+                | &#x9;
+                h4.measure #{specs.calibre}
+                | &#x9;
+            #categories(style='bottom:45vh; width:65%; right:0; font-size:1.5em;')
+                #menu.menusection
+                    #movementm(style='margin-right:15%').category
+                        span(style='margin-top:25%; font-size:3.6em;').icon-movment_off.general-ui-icon.icon
+                        .ctitle(style='position:relative; right:10%;')
+                            | MOVEMENT
+                        | &#x9;&#x9;
+                    #featuresm(style='margin-right:15%').category
+                        span(style='margin-top:25%; font-size:3.6em;').icon-features_off.general-ui-icon.icon
+                        .ctitle
+                            | FEATURES
+                            | &#x9;&#x9;
+                    #externalm(style='margin-right:15%').category
+                        span(style='margin-top:50%; font-size:3.6em;').icon-externals_off.general-ui-icon.icon
+                        .ctitle(style='position:relative; right:5%;')
+                            | EXTERNAL
+                            | &#x9;&#x9;
+                    #variationsm(style='margin-right:15%').category
+                        span(style='margin-top:50%; font-size:3.6em;').icon-variation_off.general-ui-icon.icon
+                        .ctitle(style='position:relative; right:10%;')
+                            | VARIATIONS
+                            | &#x9;&#x9;
+                    #inspirationm(style='margin-right:15%').category
+                        span(style='margin-top:75%; font-size:3.6em;').icon-inspiration_off.general-ui-icon.icon
+                        .ctitle(style='position:relative; right:20%;')
+                            | INSPIRATIONS
+                            | &#x9;&#x9;
+                    #buym(style='margin-right:15%').category
+                        span(style='margin-top:75%; font-size:3.6em;').icon-buy_off.general-ui-icon.icon
+                        br
+                        | PRICING
+                #movement.menusection
+                    .back(style='position:relative; font-size:2em; top:1vh;')
                         img(src='../images/arrow.svg')
-                    h2 Movement
-                    h3 Frequency
-                    h4 #{specs.frequency}
-                    h3 Movement
-                    h4 #{specs.movement}
-                    h3 Calibre
-                    h4 #{specs.calibre}
-                    h3 Components
-                    h4 #{specs.components}
-                    h3 Crystal
-                    h4 #{specs.crystal}
-                    h3 Jewels
-                    h4 #{specs.jewels}
+                    h2(style='position:relative; font-size:2em; left:20%; top:1vh;') Movement
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:2vh;') Frequency
+                    h4(style='position:relative; font-size:1.8em; top:-2vh; left:60%;') #{specs.frequency}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-2vh;') Movement
+                    h4(style='position:relative; font-size:1em; top:-5vh; left:50%;') #{specs.movement}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-3vh;')  Calibre
+                    h4(style='position:relative; font-size:1.8em; top:-7.5vh; left:60%;') #{specs.calibre}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-6vh;') Components
+                    h4(style='position:relative; font-size:1.8em; top:-10vh; left:65%;') #{specs.components}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-9vh;') Crystal
+                    h4(style='position:relative; font-size:1em; top:-12vh; left:57%;') #{specs.crystal}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-10vh;') Jewels
+                    h4(style='position:relative; font-size:1.8em; top:-14vh; left:66%;') #{specs.jewels}
                 #features.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;')
                         img(src='../images/arrow.svg')
-                    h2 Features
-                    h3 Water Resistance
-                    h4 #{specs.waterResistance} ATM
-                    h3 Power Reserve
-                    h4 #{specs.powerReserve}
-                    h3 Production Model
-                    h4 #{specs.productionModel}
+                    h2(style='position:relative; font-size:2em; left:20%; top:1vh;') Features
+                    h3(style='position:relative; font-size:1.5em; left:5%; top:2vh;') Water Resistance
+                    h4(style='position:relative; font-size:1.8em; top:-2vh; left:70%;') #{specs.waterResistance} ATM
+                    h3(style='position:relative; font-size:1.5em; left:5%; top:-1vh;') Power Reserve
+                    h4(style='position:relative; font-size:1.8em; top:-5vh; left:60%;') #{specs.powerReserve}
+                    h3(style='position:relative; font-size:1.5em; left:5%; top:-3vh;') Production Model
+                    h4(style='position:relative; font-size:1.8em; top:-7.5vh; left:70%;') #{specs.productionModel}
                 #external.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;') 
                         img(src='../images/arrow.svg')
-                    h2 External
-                    h3 Strap
-                    h4 #{specs.strap}
-                    h3 Finishing
-                    h4 #{specs.finishing}
-                    h3 Case Back
-                    h4 #{specs.caseBack}
-                    h3 Clasp
-                    h4 #{specs.clasp}
-                    h3 Diameter
-                    h4 #{specs.diameter}
+                    h2(style='position:relative; font-size:2em; left:20%; top:1vh;') External
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:2vh;') Strap
+                    h4(style='position:relative; font-size:1.0em; top:-2vh; left:57%;') #{specs.strap}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-1vh;') Finishing
+                    h4(style='position:relative; font-size:1.2em; top:-5vh; left:75%;') #{specs.finishing}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-4vh;') Case Back
+                    h4(style='position:relative; font-size:1.2em; top:-7.5vh; left:60%;') #{specs.caseBack}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-6vh;') Clasp
+                    h4(style='position:relative; font-size:1.2em; top:-9.5vh; left:63%;') #{specs.clasp}
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:-8vh;') Diameter
+                    h4(style='position:relative; font-size:1.8em; top:-12vh; left:75%;') #{specs.diameter}
                     h3 Thickness
                     h4 #{specs.thickness}
                 #variations.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;') 
                         img(src='../images/arrow.svg')
-                    h2 Variations
-                    h3 Number of Variations
-                    h4 #{specs.variations}
+                    h2(style='position:relative; font-size:2em; left:20%; top:1vh;') Variations
+                    h3(style='position:relative; font-size:1.5em; left:0%; top:2vh;') Number of Variations
+                    h4(style='position:relative; font-size:1.8em; top:-2vh; left:70%;') #{specs.variations}
                 #inspirations.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;') 
                         img(src='../images/arrow.svg')
                     h2 Inspiration
                     h3 Icon Story
                     h4 #{specs.icon}
                 #buy.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;') 
                         img(src='../images/arrow.svg')
-                    h2 Pricing
-                    h3 Price
-                    h4 #{specs.price}
+                    h2(style='position:relative; font-size:2em; left:20%; top:1vh;') Pricing
+                    h3(style='position:relative; font-size:1.5em; left:10%; top:2vh;') Price
+                    h4(style='position:relative; font-size:1.8em; top:-2vh; left:57%;') #{specs.price}
                 #data.menusection
-                    .back 
+                    .back(style='position:relative; font-size:2em; top:1vh;') 
                         img(src='../images/arrow.svg')
                     h2#watchid #{specs.id}
-  script(src='/javascripts/product.js')
+        #media.column
+            #model
+            #details
+                span
+                    img#qrcode(src="../images/product_page_qr.jpg")
+                    #plusimg.icon-add_icon.general-ui-icon.icon
+                h3 Mobile
+                p Why stop here? Take the facet experience for this watch with you by tapping the +. Access the qr code through your mobile phone to continue your experience.
+            #backURL(data-url="/watchselection")
+    script(src="/javascripts/product.js")
