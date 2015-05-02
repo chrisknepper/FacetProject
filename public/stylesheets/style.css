@@ -252,6 +252,19 @@ a{
 	opacity: 1.0;
 }
 
+#globalNav {
+	width: 100px;
+	position: fixed;
+	right: 50px;
+	text-align: right;
+	top: 50px;
+	z-index: 9001;
+}
+
+#globalNav a {
+	font-size: 3em;
+}
+
 #currentDevice {
 	display: none;
 	position: fixed;
