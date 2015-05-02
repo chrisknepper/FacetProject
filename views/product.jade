@@ -280,3 +280,8 @@ block content
                 p Why stop here? Take the facet experience for this watch with you by tapping the +. Access the qr code through your mobile phone to continue your experience.
             #backURL(data-url="/watchselection")
     script(src="/javascripts/product.js")
+    script(type='text/javascript').
+        <!--
+        if (screen.width <= 699) {
+        document.location = "/mobileproduct";
+        }
