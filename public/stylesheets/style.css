@@ -440,7 +440,8 @@ opacity:.3;
 #vcontainer{
 position:absolute;
 height:100%;
-min-width:150%;
+min-width:200%;
+max-width:350%;
 overflow-x:scroll;
 overflow-y:hidden;
 top:0;
@@ -1338,6 +1339,7 @@ overflow:hidden;
 @media (max-width: 700px){
 
 #pcontainer{
+/*
 position:absolute;
 height:100%;
 width:100%;
@@ -1347,6 +1349,16 @@ display:inline-block;
 margin-left:0px;
 top:0px;
 min-height:800px;
+*/
+margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:0px;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+	white-space:nowrap;
+	height:100%;
 }
 .column{
 height:100%;
