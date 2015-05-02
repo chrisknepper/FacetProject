@@ -261,6 +261,200 @@ imgnav label {
 	z-index:2;
 }
 
+/* TIMELINE PAGE */
+
+#timeline{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+}
+
+#model {
+	position:relative;
+	margin:0;
+	width:100%;
+	height:40vh;
+}
+
+#model img {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+.title{
+position:absolute;
+z-index:2;
+top:200px;
+width:100%;
+letter-spacing:3px;
+font-family:"GothamHTF-Light";
+color:#1E1E1E;
+text-transform: uppercase;
+font-size:2em;
+text-align:center;
+top:56vh;
+}
+
+.position{
+position:absolute;
+letter-spacing:5px;
+color:#1E1E1E;
+opacity:.1;
+font-size:8em;
+margin:0px;
+z-index:1;
+width:100%;
+top:52vh;
+text-align:center;
+font-family:"BodoniStd-BoldCondensed";
+}
+
+#desc{
+position:absolute;
+color:#1E1E1E;
+font-size:1.3em;
+margin:0px;
+z-index:1;
+right:5%;
+top:65vh;
+left:5%;
+font-family:"GothamHTF-Book";
+}
+#categories{
+position:relative;
+margin:auto;
+top:20vh;
+}
+
+#menu{
+	z-index:1;
+	top: 5vh;
+}
+.menusection{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-4;
+background-color:#F5F5F5;
+}
+.category{
+float:left;
+width:150px;
+height:150px;
+margin-left:7%;
+margin-right:7%;
+text-align:center;
+font-family:"GothamHTF-Medium";
+display:block;
+overflow:hidden;
+}
+.category .icon{
+margin:auto;
+clear:both;
+width:90px;
+height:90px;
+display:inline-block;
+margin-bottom:20px;
+}
+.icon{
+}
+.menusection .back{
+float:left;
+background-color:none;
+
+}
+.back img{
+width:25px;
+height:25px;
+}
+.menusection h2{
+float:left;
+text-transform: uppercase;
+}
+.menusection h3{
+font-size:16px;
+line-height:1.5;
+font-family:"GothamHTF-Book";
+padding:10px;
+clear:both;
+}
+.menusection h4{
+clear:both;
+font-size:16px;
+line-height:1.5;
+font-family:"GothamHTF-Light";
+}
+.ctitle{
+display:block;
+}
+.overlap{
+position:relative;
+width:100%;
+height:150px;
+}
+.measure{
+color:#1E1E1E;
+opacity:.1;
+font-size:12pt;
+position:absolute;
+top:365px;
+left:65px;
+}
+.type{
+font-size:12pt;
+position:absolute;
+text-transform: uppercase;
+top:325px;
+left:65px;
+}
+.diameter{
+font-size:12pt;
+position:absolute;
+top:345px;
+left:65px;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* PRODUCT PAGE */
+
+#desc2{
+position:absolute;
+color:#1E1E1E;
+font-size:1.3em;
+margin:0px;
+z-index:1;
+top:65vh;
+left:42%;
+font-family:"GothamHTF-Book";
+}
+#desc3{
+position:absolute;
+color:#1E1E1E;
+font-size:1.3em;
+margin:0px;
+z-index:1;
+top:65vh;
+right:5%;
+font-family:"GothamHTF-Book";
+}
+
+
+
+
+
 /* TIME SELECTION PAGE */
 
 #timeSelection{
@@ -311,8 +505,166 @@ imgnav label {
 	display:inline-block;
 	color:#9D8C6C;
 	text-align:center;
-	font-size:12.5em;
+	font-size:12em;
 	right:3%;
 	opacity: 0.85;
 	z-index:1;
+}
+
+/* ICONS */
+
+.icon-right_arrow:before {
+	content: "\e61e";
+}
+
+.icon-left_arrow:before {
+	content: "\e61f";
+}
+
+.icon-twitter_icon:before {
+	content: "\e608";
+}
+
+.icon-google_icon:before {
+	content: "\e609";
+}
+
+.icon-facebook_icon:before {
+	content: "\e60a";
+}
+
+.icon-play_icon:before {
+	content: "\e60b";
+}
+
+.icon-Tirangle .path1:before {
+	content: "\e60c";
+	color: rgb(255, 255, 255);
+}
+.icon-Tirangle .path2:before {
+	content: "\e60d";
+	margin-left: -1em;
+	color: rgb(204, 204, 204);
+}
+
+.icon-technology_info:before {
+	content: "\e60e";
+}
+
+.icon-event_info:before {
+	content: "\e60f";
+}
+
+.icon-watches_info:before {
+	content: "\e610";
+}
+
+.icon-icon_info:before {
+	content: "\e611";
+}
+
+.icon-history_info:before {
+	content: "\e612";
+}
+
+.icon-inspiration_info:before {
+	content: "\e613";
+}
+
+.icon-variations_info:before {
+	content: "\e614";
+}
+
+.icon-features_info:before {
+	content: "\e615";
+}
+
+.icon-movement_info:before {
+	content: "\e616";
+}
+
+.icon-external_info:before {
+	content: "\e617";
+}
+
+.icon-rotate_hinting:before {
+	content: "\e618";
+}
+
+.icon-pricing_detail:before {
+	content: "\e619";
+}
+
+.icon-external_detail:before {
+	content: "\e61a";
+}
+
+.icon-features_detail:before {
+	content: "\e61b";
+}
+
+.icon-variations_detail:before {
+	content: "\e61c";
+}
+
+.icon-movement_detail:before {
+	content: "\e61d";
+}
+
+.icon-features_off:before {
+	content: "\e600";
+}
+
+.icon-movment_off:before {
+	content: "\e601";
+}
+
+.icon-inspiration_off:before {
+	content: "\e602";
+}
+
+.icon-variation_off:before {
+	content: "\e603";
+}
+
+.icon-externals_off:before {
+	content: "\e604";
+}
+
+.icon-close_icon:before {
+	content: "\e605";
+}
+
+.icon-buy_off:before {
+	content: "\e606";
+}
+
+.icon-add_icon:before {
+	content: "\e607";
+}
+.general-ui-icon {
+	display: inline;
+	position: relative;
+	color: black;
+	font-size: 5.2em;
+	border-radius: 50%;
+	border: 2px solid black;
+	padding-left: none !important;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s linear all;
+}
+
+.general-ui-icon:hover {
+	color: white;
+	background: #a18f6b;
+	border: 2px solid #a18f6b;
+}
+
+#watchHistory .general-ui-icon {
+	font-size: 2.5em;
+}
+
+#info .general-ui-icon {
+	margin: 20px;
 }

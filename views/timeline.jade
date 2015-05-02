@@ -135,9 +135,12 @@ block content
                             | ACHIEVEMENTS
                         #achievementvalue.cvalue #{specs.achievement}
         #media.column
-            #escape
-                a(href="/timeselection").go-to-page
-                    img(src='../images/watches/close.png')
             #model
                 img#timeimg(src="../images/"+specs.img, alt='category details')
-     script(src="/javascripts/timeline.js")           
+    #backURL(data-url="/timeselection")
+    script(src="/javascripts/timeline.js")
+    script(type='text/javascript').
+        <!--
+        if (screen.width <= 699) {
+        document.location = "/mobiletimeline/#{specs.year}";
+        }

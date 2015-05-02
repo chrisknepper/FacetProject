@@ -1,0 +1,108 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/stylesheets/mobile.css')
+    title Facet Mobile
+  body
+    a(href='/mobilewatchselection')
+      #nav
+      #navFix
+        img(src='../images/facet_type_m.png')
+    #timeline
+      #model
+        img#timeimg(src="../images/"+specs.img, alt='category details')
+      .title #{specs.collection}
+      h1.position #{specs.id}/19
+      #desc #{specs.name}
+      #desc2 #{specs.diameter} MM
+      #desc3 #{specs.calibre}
+      #categories
+            #menu.menusection
+                #movementm.category
+                    span.icon-watches_off.general-ui-icon.icon
+                    .ctitle MOVEMENT
+                #featuresm.category
+                  span.icon-technology_off.general-ui-icon.icon
+                  .ctitle
+                    | FEATURES
+                #externalm.category
+                  span.icon-event_off.general-ui-icon.icon
+                  .ctitle
+                    | EXTERNAL
+                #variationsm.category
+                  span.icon-icon_off.general-ui-icon.icon
+                  .ctitle
+                    | VARIATIONS
+                #inspirationm.category
+                  span.icon-history_off.general-ui-icon.icon
+                  .ctitle
+                    | INSPIRATIONS
+                #buym.category
+                  span.icon-buy_off.general-ui-icon.icon
+                  .ctitle PRICING
+            #movement.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 Movement
+                    h3 Frequency
+                    h4 #{specs.frequency}
+                    h3 Movement
+                    h4 #{specs.movement}
+                    h3 Calibre
+                    h4 #{specs.calibre}
+                    h3 Components
+                    h4 #{specs.components}
+                    h3 Crystal
+                    h4 #{specs.crystal}
+                    h3 Jewels
+                    h4 #{specs.jewels}
+                #features.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 Features
+                    h3 Water Resistance
+                    h4 #{specs.waterResistance} ATM
+                    h3 Power Reserve
+                    h4 #{specs.powerReserve}
+                    h3 Production Model
+                    h4 #{specs.productionModel}
+                #external.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 External
+                    h3 Strap
+                    h4 #{specs.strap}
+                    h3 Finishing
+                    h4 #{specs.finishing}
+                    h3 Case Back
+                    h4 #{specs.caseBack}
+                    h3 Clasp
+                    h4 #{specs.clasp}
+                    h3 Diameter
+                    h4 #{specs.diameter}
+                    h3 Thickness
+                    h4 #{specs.thickness}
+                #variations.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 Variations
+                    h3 Number of Variations
+                    h4 #{specs.variations}
+                #inspirations.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 Inspiration
+                    h3 Icon Story
+                    h4 #{specs.icon}
+                #buy.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2 Pricing
+                    h3 Price
+                    h4 #{specs.price}
+                #data.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2#watchid #{specs.id}
+  script(src='/javascripts/product.js')
