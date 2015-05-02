@@ -2,9 +2,6 @@ extends layout
 
 block content
 	#timeSelection
-		a(href="/")
-			#escape
-				img(src='../images/watches/close.png')
 		a#1865(href="/timeline/1865")
 			.timeSelect
 				img(src='../images/triangle.svg')
@@ -119,6 +116,7 @@ block content
 				span.linkColor 20
 				| &#x9;
 				.number 13
+	#backURL(data-url="/")
 	script(type='text/javascript').
 		<!--
 		if (screen.width <= 699) {
