@@ -41,7 +41,7 @@
         controls.maxZoom                  = 80;
 
           var loader = new THREE.OBJMTLLoader();
-  loader.load( '/models/finalwatchmodel.obj', '/models/finalwatchmodel.mtl', function ( object ) {
+  loader.load( '/models/finalwatchmodelthree.obj', '/models/finalwatchmodel.mtl', function ( object ) {
 
     object.traverse( function ( child ) {
 
