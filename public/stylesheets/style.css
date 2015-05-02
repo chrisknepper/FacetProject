@@ -102,6 +102,10 @@ a{
 	content: "\e60a";
 }
 
+.icon-achievement:before {
+	content: "\e621";
+}
+
 .icon-home_icon:before {
 	content: "\e620";
 }
