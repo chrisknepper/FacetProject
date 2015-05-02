@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/stylesheets/mobile.css')
+    title Facet Mobile
+  body
+    a(href='/mobiletimeselection')
+      #nav
+      #navFix
+        img(src='../images/facet_type_m.png')
+    #timeline
+      #model
+        img#timeimg(src="../images/"+specs.img, alt='category details')
+      .title #{specs.longhand}
+      h1.position #{specs.year}
+      #desc #{specs.blurb}
+      #categories
+        #menu.menusection
+          #watchesm.category
+            span.icon-watches_off.general-ui-icon.icon
+            .ctitle WATCHES
+          #technologym.category
+            span.icon-technology_off.general-ui-icon.icon
+            .ctitle
+              | TECHNOLOGY
+          #eventm.category
+            span.icon-event_off.general-ui-icon.icon
+            .ctitle
+              | EVENT
+          #iconm.category
+            span.icon-icon_off.general-ui-icon.icon
+            .ctitle
+              | ICON
+          #historym.category
+            span.icon-history_off.general-ui-icon.icon
+            .ctitle
+              | HISTORY
+          #achievementsm.category
+            span.icon-buy_off.general-ui-icon.icon
+            .ctitle ACHIEVEMENTS
+  script(src='/javascripts/timeline.js')

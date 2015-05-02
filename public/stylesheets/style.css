@@ -458,10 +458,40 @@ padding-left:10px;
 .column::-webkit-scrollbar { width: 0 !important }
 #vscroll{
 width:10%;
-overflow-x:visible;
+overflow-x:hidden;
 overflow-y:scroll;
 background-color:#FBFBFB;
 
+}
+.vscrollnav{
+    
+    width:10%;
+    position:absolute;
+    min-width:90px;
+    height:100px;
+    text-align:center;
+    z-index:4;
+   left:0;
+   background-color:white;
+   -webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+}
+.vscrollnav img{
+height:30px;
+width:50px;
+opacity:.3;
+margin:10px;
+
+}
+#upnav{
+top:0;
+
+}
+#downnav{
+position:fixed;
+bottom:0;
+height:80px;
 }
 #info{
 width:27%;
@@ -526,7 +556,7 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
-
+padding-top:100px;
 overflow-y:scroll;
 min-width:150px;
 padding-left:0px;
@@ -721,7 +751,6 @@ top:315px;
 left:70px;
 font-family:"GothamHTF-Book";
 width:80%;
-
 }
 .measure{
 color:#1E1E1E;
@@ -1172,6 +1201,8 @@ overflow:hidden;
 #model iframe{
 position:absolute;
 top:-30;
+width:100%;
+height:100%;
 }
 /*end product page styles*/
 /*timeline styles*/
