@@ -46,39 +46,50 @@ function threeInit() {
 
 	scene.add( light );
 
-	var geometry = new THREE.BoxGeometry( 40, 40, 40 );
-
-	for ( var i = 0; i < 200; i ++ ) {
-
-		var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
-
-		object.position.x = Math.random() * 1000 - 500;
-		object.position.y = Math.random() * 600 - 300;
-		object.position.z = Math.random() * 800 - 400;
-
-		object.rotation.x = Math.random() * 2 * Math.PI;
-		object.rotation.y = Math.random() * 2 * Math.PI;
-		object.rotation.z = Math.random() * 2 * Math.PI;
-
-		object.scale.x = Math.random() * 2 + 1;
-		object.scale.y = Math.random() * 2 + 1;
-		object.scale.z = Math.random() * 2 + 1;
-
-		object.castShadow = true;
-		object.receiveShadow = true;
-
-		scene.add( object );
-
-		objects.push( object );
-
-	}
-
 	plane = new THREE.Mesh(
 		new THREE.PlaneBufferGeometry( 2000, 2000, 8, 8 ),
 		new THREE.MeshBasicMaterial( { color: 0x000000, opacity: 0.25, transparent: true } )
 	);
 	plane.visible = false;
 	scene.add( plane );
+	var onProgress = function ( xhr ) {
+		if ( xhr.lengthComputable ) {
+			var percentComplete = xhr.loaded / xhr.total * 100;
+			console.log( Math.round(percentComplete, 2) + '% downloaded' );
+		}
+	};
+
+	var manager = new THREE.LoadingManager();
+	manager.onProgress = function ( item, loaded, total ) {
+
+		console.log( item, loaded, total );
+
+	};
+
+	var onError = function ( xhr ) {
+	};
+
+	// model
+	var loader = new THREE.OBJMTLLoader(manager);
+	loader.load( '/models/finalwatchmodel.obj', '/models/finalwatchmodel.mtl', function ( object ) {
+
+		object.traverse( function ( child ) {
+
+			if ( child instanceof THREE.Mesh ) {
+
+				child.geometry.computeBoundingBox();
+				//console.log(child.geometry.boundingBox);
+
+			}
+
+		} );
+		object.position.x = 0;
+		object.position.y = 0;
+		object.position.z = 0;
+		//object.scale.set(0.2, 0.2, 0.2);
+		scene.add( object );
+
+	}, onProgress, onError );
 	renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setClearColor( 0xf0f0f0 );
 	renderer.setPixelRatio( window.devicePixelRatio );
