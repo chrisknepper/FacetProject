@@ -17,6 +17,12 @@ $(document).ready(function() {
 			goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
 		}
 	}
+	if(!$('#homePage').length > 0) {
+		$('#globalNav').addClass('visible');
+	}
+	if($('#watchHistory').length > 0 || $('#homePage').length > 0) {
+		$('body').addClass('prevent-vertical-scroll');
+	}
 	if(window.sessionStorage.usingAjaxNav != 1) {
 		init();
 	}
@@ -24,23 +30,20 @@ $(document).ready(function() {
 		e.preventDefault();
 		goToURL($(this).attr('href'));
 	});
-
+	$('#globalHome').on('click', function(e) {
+		e.preventDefault();
+		goToURL('/');
+	});
+	$('#globalBack').on('click', function(e) {
+		e.preventDefault();
+		goToURL($('#backURL').data('url'));
+	});
 });
 
 function goToURL(url) {
 	window.sessionStorage.usingAjaxNav = 1;
 	$('body').css('opacity', '0');
 	$.get(url, {someData: 'data'}, function(result) {
-		/* Three.js doesn't work after navigating pages...trying to figure it out */
-		/*
-		window.cancelAnimationFrame(frame);
-		renderer.domElement.addEventListener('dblclick', null, false);
-		frame = null;
-		scene = null;
-		camera = null;
-		renderer = null;
-		*/
-		$('#ThreeJS').empty();
 		$('body').html(result);
 		$('body').css('opacity', '1');
 		history.pushState(null, null, url);

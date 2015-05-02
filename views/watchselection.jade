@@ -2,9 +2,6 @@ extends layout
 
 block content
 	#watchSelection
-		#escape
-			a(href="/").go-to-page
-				img(src='../images/watches/close.png')
 		a(href="/product/1").go-to-page
 			.watchSelect
 				img(src='../images/watches/primero.png')
@@ -41,6 +38,7 @@ block content
 				span.linkColor BLAH
 				| &#x9;
 				.number 06
+	#backURL(data-url="/")
 	script(type='text/javascript').
 		<!--
 		if (screen.width <= 699) {

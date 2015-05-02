@@ -102,6 +102,10 @@ a{
 	content: "\e60a";
 }
 
+.icon-home_icon:before {
+	content: "\e620";
+}
+
 .icon-play_icon:before {
 	content: "\e60b";
 }
@@ -211,6 +215,7 @@ a{
 .icon-add_icon:before {
 	content: "\e607";
 }
+
 .general-ui-icon {
 	display: inline;
 	position: relative;
@@ -233,6 +238,14 @@ a{
 	border: 2px solid #a18f6b;
 }
 
+.prevent-vertical-scroll {
+	overflow-y: hidden;
+}
+
+.prevent-horizontal-scroll {
+	overflow-x: hidden;
+}
+
 #watchHistory .general-ui-icon {
 	font-size: 2.5em;
 }
@@ -250,6 +263,30 @@ a{
 
 #logo:hover {
 	opacity: 1.0;
+}
+
+#globalNav {
+	width: 100px;
+	position: fixed;
+	right: 75px;
+	text-align: right;
+	bottom: 50px;
+	z-index: 9001;
+	transition: 0.5s ease-in all;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#globalNav a {
+	color: #f3f3f3;
+	font-size: 3em;
+	border-color: #f3f3f3;
+	margin: 0 10px;
+}
+
+#globalNav.visible {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 #currentDevice {
@@ -506,11 +543,12 @@ background-color:#EDEDED;
 
 #plus{
 	position:fixed;
-    top:87%;
+    bottom:25px;
 	right:75px;
 	font:22px;
 	z-index:2;
-	-webkit-transform: rotate(45deg);
+    width:75px;
+    height:75px;
 }
 #details{
 overflow:hidden;
@@ -556,7 +594,7 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
-padding-top:100px;
+margin-top:150px;
 overflow-y:scroll;
 min-width:150px;
 padding-left:0px;
@@ -670,7 +708,23 @@ height:90px;
 display:inline-block;
 margin-bottom:20px;
 }
-.icon{
+.true span{
+    color: white;
+	background: #a18f6b;
+	border: 2px solid #a18f6b;
+
+}
+.false:hover span{
+    color: #c9c9c9;
+	background: white;
+	border: 2px solid #a18f6b;
+
+}
+.false:after span{
+    color: black;
+	background: white;
+	border: 2px solid #a18f6b;
+
 }
 .menusection .back{
 float:left;
@@ -701,6 +755,11 @@ font-family:"GothamHTF-Light";
 .ctitle{
 display:block;
 }
+.cvalue{
+z-index:-50;
+display:none;
+}
+
 .overlap{
 position:relative;
 width:100%;
@@ -979,7 +1038,7 @@ left:65px;
 	width: 1792px;
 	position: absolute;
 	top: -2000px;
-	left: 90px;
+	left: 65px;
 	z-index: 9;
 	transition: 0.5s ease-in all;
 }
@@ -1110,7 +1169,7 @@ left:65px;
 	bottom: -150px;
 	width: 1150px;
 	height: 125px;
-	left: 230px;
+	left: 380px;
 	background: white;
 	border-radius: 2px;
 	box-shadow: 0 0 20px black;
@@ -1187,7 +1246,7 @@ left:65px;
 
 #watchHistory .galleryChildExpanded, #watchHistory .galleryChildExpanded div {
 	z-index: 29;
-	left: 90px !important;
+	left: 65px !important;
 	top: 0 !important;
 	width: 1792px !important;
 	height: 1080px !important;

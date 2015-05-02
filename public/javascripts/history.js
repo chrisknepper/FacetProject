@@ -83,14 +83,27 @@ var loadGallery = function(container) {
 }
 
 var togglePerson = function(container) {
-	//$(container).toggle(400);
-	$(container).toggleClass('visible');
+	
+	if(!$('body').hasClass('prevent-horizontal-scroll')) {
+		$('body').animate({scrollLeft:0}, 'slow', 'swing', function() {
+			$('body').toggleClass('prevent-horizontal-scroll');
+			$('#globalNav').toggleClass('visible');
+			$(container).toggleClass('visible');
+		});
+	}
+	else {
+		$('body').toggleClass('prevent-horizontal-scroll');
+		$(container).toggleClass('visible');
+		$('#globalNav').toggleClass('visible');
+	}
+	
 }
 
 var unloadGallery = function(container) {
 	currentGallery.removeClass('visible');
 	$(container).toggleClass('visible');
 	msnry.destroy();
+
 }
 
 var switchSlide = function() {
