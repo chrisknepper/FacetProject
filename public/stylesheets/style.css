@@ -506,11 +506,12 @@ background-color:#EDEDED;
 
 #plus{
 	position:fixed;
-    top:87%;
+    bottom:25px;
 	right:75px;
 	font:22px;
 	z-index:2;
-	-webkit-transform: rotate(45deg);
+    width:75px;
+    height:75px;
 }
 #details{
 overflow:hidden;
@@ -556,7 +557,7 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
-padding-top:100px;
+margin-top:150px;
 overflow-y:scroll;
 min-width:150px;
 padding-left:0px;
@@ -669,7 +670,23 @@ height:90px;
 display:inline-block;
 margin-bottom:20px;
 }
-.icon{
+.true span{
+    color: white;
+	background: #a18f6b;
+	border: 2px solid #a18f6b;
+
+}
+.false:hover span{
+    color: #c9c9c9;
+	background: white;
+	border: 2px solid #a18f6b;
+
+}
+.false:after span{
+    color: black;
+	background: white;
+	border: 2px solid #a18f6b;
+
 }
 .menusection .back{
 float:left;
@@ -700,6 +717,11 @@ font-family:"GothamHTF-Light";
 .ctitle{
 display:block;
 }
+.cvalue{
+z-index:-50;
+display:none;
+}
+
 .overlap{
 position:relative;
 width:100%;

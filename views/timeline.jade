@@ -99,35 +99,41 @@ block content
             | &#x9;
             #categories.timelinecategories
                 #menu.menusection
-                    #watchesm.category(data-status=true)
+                    #watchesm.category
                         span.icon-watches_info.general-ui-icon.icon
                         .ctitle
                             | WATCHES
+                        #watchesvalue.cvalue #{specs.watches}
                         | &#x9;&#x9;
                     #technologym.category
                         span.icon-technology_info.general-ui-icon.icon
                         .ctitle
                             | TECHNOLOGY
                             | &#x9;&#x9;
+                        #technologyvalue.cvalue #{specs.technology}
                     #eventm.category
                         span.icon-event_info.general-ui-icon.icon
                         .ctitle
                             | EVENT
                             | &#x9;&#x9;
+                        #eventvalue.cvalue #{specs.event}
                     #iconm.category
                         span.icon-icon_info.general-ui-icon.icon
                         .ctitle
                             | ICON
                             | &#x9;&#x9;
+                        #iconvalue.cvalue #{specs.icon}
                     #historym.category
                         span.icon-history_info.general-ui-icon.icon
                         .ctitle
                             | HISTORY
                             | &#x9;&#x9;
+                        #historyvalue.cvalue #{specs.history}
                     #achievementsm.category
                         span.icon-achievements_info.general-ui-icon.icon
                         .ctitle
                             | ACHIEVEMENTS
+                        #achievementvalue.cvalue #{specs.achievement}
         #media.column
             #escape
                 a(href="/timeselection").go-to-page
