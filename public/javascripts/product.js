@@ -104,7 +104,7 @@ function threeInit() {
 
 		} );
 		/*
-		var texture = Three.ImageUtils.loadTexture('');
+		var texture = Three.ImageUtils.loadTexture('/models/watch.jpg');
 		var material = new THREE.MeshLambertMaterial({map: texture});
 		mesh = new THREE.Mesh(object, material);
 		scene.add(mesh);
