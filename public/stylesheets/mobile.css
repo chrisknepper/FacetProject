@@ -367,7 +367,6 @@ margin-bottom:20px;
 .menusection .back{
 float:left;
 background-color:none;
-
 }
 .back img{
 width:25px;
@@ -452,7 +451,49 @@ font-family:"GothamHTF-Book";
 }
 
 
-
+/* SOCIAL PAGE */
+#social{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+}
+.post img{
+position:absolute;
+width:10%;
+height:10vh;
+padding-right:5%;
+padding-bottom:1%;
+right:0;
+bottom:0;
+opacity:.3;
+}
+.post{
+width:100%;
+height:25vh;
+position:relative;
+font-family: 'PT Serif', serif;
+font-size:2em;
+background:#fff;
+}
+.bg {
+background:#A08E6A;
+}
+.tweet{
+padding:8%;
+}
+.timestamp{
+clear:both;
+position:relative;
+font-family:'GothamHTF-Book';
+font-size:0.8em;
+left:8%;
+line-height:3.6pt;
+color:#333;
+opacity:.3;
+}
 
 
 /* TIME SELECTION PAGE */

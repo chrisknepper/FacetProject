@@ -32,4 +32,8 @@ block content
 		.vcolumn
 			span.post Check out the next cool thing that Facet is doing
 				.timestamp 8:57pm-April 03
-			img(src='../images/social/twitter_icon.svg')                
+			img(src='../images/social/twitter_icon.svg')
+	script(type='text/javascript').
+		if (screen.width <= 699) {
+		document.location = "/mobilesocial/";
+		}
