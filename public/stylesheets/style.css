@@ -252,6 +252,11 @@ a{
 
 #watchHistory .general-ui-icon {
 	font-size: 2.5em;
+	border-color: white;
+}
+
+#watchHistory .general-ui-icon:hover {
+	border-color: #a18f6b;
 }
 
 #info .general-ui-icon {
@@ -293,6 +298,10 @@ a{
 	border-color: black;
 }
 
+#globalNav a:hover {
+	border-color: #a18f6b;
+}
+
 #globalNav.visible {
 	opacity: 1;
 	pointer-events: auto;
@@ -315,7 +324,7 @@ a{
 	height: 1080px;
 	padding: 75px 30px;
 	background: linear-gradient(to right, #fff, #ededed);
-	width: 4350px;
+	width: 6525px;
 	clear: both;
 }
 
@@ -343,7 +352,7 @@ a{
 	width: 570px;
 }
 
-.white {
+.white:not(#globalNav) {
 	background: #f4f4f4; /* Temporarily off-white to demonstrate layout */
 }
 
@@ -440,7 +449,8 @@ opacity:.3;
 #vcontainer{
 position:absolute;
 height:100%;
-min-width:150%;
+min-width:200%;
+max-width:350%;
 overflow-x:scroll;
 overflow-y:hidden;
 top:0;
@@ -1078,8 +1088,8 @@ left:65px;
 
 #watchHistory .close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	bottom: 20px;
+	right: 20px;
 	color: white;
 }
 
@@ -1089,8 +1099,8 @@ left:65px;
 
 #watchHistory .expand {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	bottom: 20px;
+	right: 100px;
 	color: white;
 }
 
@@ -1111,7 +1121,7 @@ left:65px;
 	top: -2000px;
 	left: 0;
 	z-index: 500;
-	background: #333;
+	background: #000;
 	box-shadow: 0 0 10px black;
 	overflow: hidden;
 	transition: 0.5s ease-in all;
@@ -1120,21 +1130,22 @@ left:65px;
 
 #watchHistory .galleryContainer:before {
 	content: ' ';
-	display: none;
+	display: block;
 	position: absolute;
-	left: 90px;
+	left: 0;
 	top: 0;
 	width: 1792px;
 	height: 1080px;
 	z-index: 501;
-	background: url('../images/facet.png') no-repeat;
+	background: url('/images/facet.png') no-repeat;
 	background-position: center;
 	pointer-events: none;
 	transition: none;
+	opacity: 0;
 }
 
 #watchHistory .galleryContainer.loading:before {
-	display: block;
+	opacity: 1;
 }
 
 #watchHistory .galleryContainer.visible {
@@ -1195,14 +1206,14 @@ left:65px;
 	background: white;
 	border-radius: 2px;
 	box-shadow: 0 0 20px black;
-	padding: 39px 0;
+	padding: 45px 0;
 	transition: 0.4s ease-in bottom;
 	z-index: 50;
+	clear: both;
 }
 
-#watchHistory #infoSnippet div {
-	display: inline-block;
-	vertical-align: middle;
+#watchHistory #infoSnippet > div {
+	float: left;
 	white-space: normal;
 }
 
@@ -1228,14 +1239,36 @@ left:65px;
 }
 #infoSnippet span {
 	color: #9d8c6c;
+	font-style: italic;
 }
 #infoSnippet .slideCount {
 	width: 175px;
 	text-align: center;
 	font-family: 'EB Garamond', serif;
-	font-size: 2em;
+	font-size: 2.2em;
 	line-height: 1;
 	color: #9d8c6c;
+}
+
+#infoSnippet .slideCountCount {
+	position: absolute;
+}
+
+#infoSnippet .slideCount .divider {
+	color: #c9c9c9;
+	right: 62px;
+	top: 34px;
+	font-size: 1em;
+}
+
+#infoSnippet .slideCountCount.first {
+	right: 78px;
+	top: 18px;
+}
+
+#infoSnippet .slideCountCount.second {
+	left: 1085px;
+	top: 43px;
 }
 
 #infoSnippet .nav {
@@ -1246,7 +1279,7 @@ left:65px;
 #infoSnippet .general-ui-icon {
 	font-size: 0.7em;
 	padding: 12px;
-	margin: 0 17px 0 0;
+	margin: 0 10px;
 	color: #c9c9c9;
 	border-color: #c9c9c9;
 }
@@ -1337,6 +1370,8 @@ overflow:hidden;
 /* MOBILE TIMELINE PAGE */
 @media only screen and (max-device-width: 700px){
 
+
+
 #nav{
 	width:100%;
 	height:12vh;
@@ -1369,6 +1404,7 @@ overflow:hidden;
 overflow:visible;
 }
 #model iframe{
+
 position:absolute;
 top:-30;
 width:25%;
@@ -1381,6 +1417,19 @@ width:100%;
 display:inline-block;
 margin-left:0px;
 top:0px;
+
+min-height:800px;
+
+margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding:0px;
+	font-size:25px;
+	font-family: 'GothamHTF-Book';
+	white-space:nowrap;
+	height:100%;
+
 }
 .column{
 height:100%;
