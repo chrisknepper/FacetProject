@@ -306,10 +306,6 @@ a{
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-#homePageWrap {
-	overflow: auto;
-}
-
 #homePage {
 	height: 1080px;
 	padding: 75px 30px;
