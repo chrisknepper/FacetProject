@@ -19,7 +19,7 @@ $(document).ready(function() {
 	exampleSocket.onopen = function (event) {
 		setInterval(function() {
 			exampleSocket.send('Ping');
-		}, 15000);
+		}, 10000);
 	};
 	exampleSocket.onmessage = function (event) {
 		if(isJSON(event.data)) {
