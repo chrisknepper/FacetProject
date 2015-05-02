@@ -106,7 +106,7 @@ app.getProductInfo = function(tag, callback){
 }
 app.getDateInfo = function(tag, callback){
    year=tag || 1900;
-  db.get("SELECT * FROM timeline where year="+year, function(err, row) {
+  db.get("SELECT * FROM timelineBool where year="+year, function(err, row) {
 
     callback(row);
   });

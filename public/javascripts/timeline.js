@@ -4,6 +4,8 @@ function init() {
     console.log(watchid);
     console.log()
     $(watchid).addClass('selected');
+    $('#vscroll').animate({scrollTop:$(watchid).position().top}, 'slow')
+   
     indicateClass();
 	function switchMenu(active){
     	$(active).css('zIndex', '70');    
@@ -25,14 +27,24 @@ function init() {
     */
     function indicateClass(){
         var categories=['#watchesm','#technologym', '#eventm', '#iconm', '#historym', '#achievementsm'];
+        var values=['#watchesvalue','#technologyvalue', '#eventvalue', '#iconvalue', '#historyvalue', '#achievementsvalue'];
 
         for(var i=0;i<categories.length; i++){
-            var cat=$(i).dataset.status;
-            if(cat==true){
-                $(i).addClass('true');
-                console.log(i+'is selected');
+            var thisone=categories[i];
+            var thisvalue=values[i];
+            console.log(categories[i]);
+            var cat=$(thisvalue).text();
+            console.log(cat);
+            if(cat=='true'){
+                $(thisone).addClass('true');
+                
             }
-        }
+            else if(cat != 'true'){
+                $(thisone).addClass('false');
+                
+            }
+            }
+        
     }
     
 }
