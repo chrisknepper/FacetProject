@@ -18,7 +18,7 @@
           1000
         );
 
-        camera.position.z = 100;
+        camera.position.z = -50;
         console.log( camera );
 
         var ambient = new THREE.AmbientLight( '#aaaaaa' );
@@ -56,7 +56,7 @@
     object.position.x = 0;
     object.position.y = 0;
     object.position.z = 0;
-    object.scale.set(0.2, 0.2, 0.2);
+    object.scale.set(4,4,4);
     scene.add( object );
 
   });
