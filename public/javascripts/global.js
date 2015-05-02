@@ -17,9 +17,11 @@ $(document).ready(function() {
 			goToURL('/product/' + message.watchInfo.id); //Only navigate away if we aren't on the ping or simulate pages
 		}
 	}
-	if($('#homePage').length > 0) {
-		$('#globalHome').remove();
-		$('#globalBack').remove();
+	if(!$('#homePage').length > 0) {
+		$('#globalNav').addClass('visible');
+	}
+	if($('#watchHistory').length > 0 || $('#homePage').length > 0) {
+		$('body').addClass('prevent-vertical-scroll');
 	}
 	if(window.sessionStorage.usingAjaxNav != 1) {
 		init();
