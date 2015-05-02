@@ -1,3 +1,5 @@
+var hideLoading
+
 function init() {
 	function switchMenu(active){
 		$(active).css('zIndex', '70');    
@@ -22,8 +24,11 @@ function init() {
     var title=$('#watchid').text();
     var watchid='#'+title;
     $(watchid).addClass('selected');
-   
-
+   	$('iframe').css('opacity', 0);
+    $('iframe').prop('src', '/productmodel');
+    window.setTimeout(function(){
+    	$('iframe').css('opacity', 1);
+    }, 4000);
 
 }
 function switchPic(){

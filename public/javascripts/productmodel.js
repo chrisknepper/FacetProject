@@ -1,4 +1,4 @@
-var threeContainer, stats;
+var loadingContainer, threeContainer, stats;
 var camera, controls, scene, renderer;
 var objects = [], plane;
 
@@ -13,6 +13,7 @@ animate();
 function threeInit() {
 
 	threeContainer = document.getElementById( 'ThreeJS' );
+	loadingContainer = document.getElementById('ThreeLoading');
 
 	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
 	camera.position.z = 7;
@@ -89,6 +90,7 @@ function threeInit() {
 		object.rotation.y = -10;
 		object.rotation.x = -5;
 		scene.add( object );
+		loadingContainer.remove();
 
 	}, onProgress, onError );
 	renderer = new THREE.WebGLRenderer( { antialias: true } );
