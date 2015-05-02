@@ -1,42 +1,146 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    link(rel='stylesheet', href='/stylesheets/mobile.css')
-    title Facet Mobile
-  body
-    a(href='/mobiletimeselection')
-      #nav
-      #navFix
-        img(src='../images/facet_type_m.png')
-    #timeline
-      #model
-        img#timeimg(src="../images/"+specs.img, alt='category details')
-      .title #{specs.longhand}
-      h1.position #{specs.year}
-      #desc #{specs.blurb}
-      #categories
-        #menu.menusection
-          #watchesm.category
-            span.icon-watches_off.general-ui-icon.icon
-            .ctitle WATCHES
-          #technologym.category
-            span.icon-technology_off.general-ui-icon.icon
-            .ctitle
-              | TECHNOLOGY
-          #eventm.category
-            span.icon-event_off.general-ui-icon.icon
-            .ctitle
-              | EVENT
-          #iconm.category
-            span.icon-icon_off.general-ui-icon.icon
-            .ctitle
-              | ICON
-          #historym.category
-            span.icon-history_off.general-ui-icon.icon
-            .ctitle
-              | HISTORY
-          #achievementsm.category
-            span.icon-buy_off.general-ui-icon.icon
-            .ctitle ACHIEVEMENTS
-  script(src='/javascripts/timeline.js')
+extends layout
+
+block content
+    #pcontainer
+        #vscroll.column
+            #upnav.vscrollnav
+                img(src='/images/up_arrow.svg', alt='up arrow')
+            | &#x9;
+            #thumbnails
+                a(href="../timeline/1900")
+                    #1900.thumbnail
+                        h2.yearnum 00
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1911")        
+                    #1911.thumbnail
+                        h2.yearnum 11
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1925")  
+                    #1925.thumbnail
+                        h2.yearnum 25
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1948")  
+                    #1948.thumbnail
+                        h2.yearnum 48
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1960")  
+                    #1960.thumbnail
+                        h2.yearnum 60
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1969")  
+                    #1969.thumbnail
+                        h2.yearnum 69
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1975")  
+                    #1975.thumbnail
+                        h2.yearnum 75
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                a(href="../timeline/1984")  
+                    #1984.thumbnail
+                        h2.yearnum 84
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/1994")  
+                    #1994.thumbnail
+                        h2.yearnum 94
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 19
+                        | &#x9;&#x9;&#x9;
+                a(href="../timeline/2000")  
+                    #2000.thumbnail
+                        h2.yearnum 00
+                        |             
+                        img.corner(src='../images/triangle.svg', alt='overlay')
+                        | &#x9;&#x9;&#x9;
+                        h3.centnum 20
+            | &#x9;
+            #downnav.vscrollnav 
+                img(src='/images/down_arrow.svg', alt='down arrow')
+        #info.column
+            .overlap
+                .title #{specs.longhand}
+                | &#x9;&#x9;
+                h1.position #{specs.year}
+                #dash  
+                #desc #{specs.blurb}
+            | &#x9;
+            | &#x9;
+            #categories.timelinecategories
+                #menu.menusection
+                    #watchesm.category
+                        span.icon-watches_info.general-ui-icon.icon
+                        .ctitle
+                            | WATCHES
+                        #watchesvalue.cvalue #{specs.watches}
+                        | &#x9;&#x9;
+                    #technologym.category
+                        span.icon-technology_info.general-ui-icon.icon
+                        .ctitle
+                            | TECHNOLOGY
+                            | &#x9;&#x9;
+                        #technologyvalue.cvalue #{specs.technology}
+                    #eventm.category
+                        span.icon-event_info.general-ui-icon.icon
+                        .ctitle
+                            | EVENT
+                            | &#x9;&#x9;
+                        #eventvalue.cvalue #{specs.event}
+                    #iconm.category
+                        span.icon-icon_info.general-ui-icon.icon
+                        .ctitle
+                            | ICON
+                            | &#x9;&#x9;
+                        #iconvalue.cvalue #{specs.icon}
+                    #historym.category
+                        span.icon-history_info.general-ui-icon.icon
+                        .ctitle
+                            | HISTORY
+                            | &#x9;&#x9;
+                        #historyvalue.cvalue #{specs.history}
+                    #achievementsm.category
+                        span.icon-achievement.general-ui-icon.icon
+                        .ctitle
+                            | ACHIEVEMENTS
+                        #achievementvalue.cvalue #{specs.achievement}
+        #media.column
+            #model
+                img#timeimg(src="../images/"+specs.img, alt='category details')
+    #backURL(data-url="/timeselection")
+    script(src="/javascripts/timeline.js")
+    script(type='text/javascript').
+        <!--
+        if (screen.width <= 699) {
+        document.location = "/mobiletimeline/#{specs.year}";
+        }
