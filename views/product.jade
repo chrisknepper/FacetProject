@@ -270,17 +270,15 @@ block content
                         img(src='../images/arrow.svg')
                     h2#watchid #{specs.id}
         #media.column
-            #escape
-                a(href="/watchselection").go-to-page
-                    img(src='../images/watches/close.png')
             #model
                 iframe(src='/productmodel', height=500, width=800)
             #plus
-                img(src='../images/watches/close.png')
+                img#plusimg(src='../images/Add_icon.svg')
             #details
                 img(src='/images/categories/movement_detail.svg', alt='category details')
-                h3 Movement
-                p He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
+                h3 Mobile
+                p Why stop here? Take the facet experience for this watch with you by tapping the +. Access the qr code through your mobile phone to continue your experience.
+            #backURL(data-url="/watchselection")
     script(src="/javascripts/product.js")
     script(type='text/javascript').
         <!--
