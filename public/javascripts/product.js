@@ -11,7 +11,8 @@ function init() {
 	$('#inspirationm').click(function(){switchMenu('#inspiration');});  
 	$('#externalm').click(function(){switchMenu('#external');});
 	$('#buym').click(function(){switchMenu('#buy');});
-    $('#plus').click(function(){switchPic();});
+    $('#plusimg').click(function(){switchPic();});
+    $('#qrcode').click(function(){switchPic();});
 	$('.back').click(function(){
 		//var category=this.parent();
 		 $(this).parent().css('zIndex', '-1');
@@ -24,17 +25,23 @@ function init() {
     console.log()
     $(watchid).addClass('selected');
     //$('#vscroll').scrollTo(watchid);
-    var height=$(window).height(); 
-    var offset='20px';
+    
     $('#vscroll').animate({scrollTop:$(watchid).position().top}, 'slow')
    
 	//threeInit();
-	animate();
+	//animate();
 
 
 }
 function switchPic(){
-    $("#plusimg").attr("src","../images/product_page_qr.jpg");
+    if( $('#qrcode').css('display') != 'none'){
+        $("#plusimg").show();
+        $("#qrcode").hide();
+    }
+    else{
+    $("#plusimg").hide();
+    $("#qrcode").show();
+    }
 }
 
 function threeInit() {
