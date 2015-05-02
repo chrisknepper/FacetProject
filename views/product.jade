@@ -3,7 +3,8 @@ extends layout
 block content
     #pcontainer
         #vscroll.column
-            #upnav ^
+            #upnav.vscrollnav 
+                img(src='/images/up_arrow.svg', alt='up arrow')
             | &#x9;
             #thumbnails
                 a(href="../product/1") 
@@ -39,7 +40,7 @@ block content
                         h3.thumbname Lightweight
                         | &#x9;&#x9;&#x9;    
                 a(href="../product/5") 
-                    #1.thumbnail
+                    #5.thumbnail
                         h2.thumbnum 05
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -47,7 +48,7 @@ block content
                         h3.thumbname Night
                         | &#x9;&#x9;&#x9;  
                 a(href="../product/6") 
-                    #1.thumbnail
+                    #6.thumbnail
                         h2.thumbnum 06
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -55,7 +56,7 @@ block content
                         h3.thumbname 36'000
                         | &#x9;&#x9;&#x9;   
                 a(href="../product/7") 
-                    #1.thumbnail
+                    #7.thumbnail
                         h2.thumbnum 07
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -63,7 +64,7 @@ block content
                         h3.thumbname Original
                         | &#x9;&#x9;&#x9;
                 a(href="../product/8") 
-                    #1.thumbnail
+                    #8.thumbnail
                         h2.thumbnum 08
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -71,7 +72,7 @@ block content
                         h3.thumbname Spindrift
                         | &#x9;&#x9;&#x9;        
                 a(href="../product/9") 
-                    #1.thumbnail
+                    #9.thumbnail
                         h2.thumbnum 09
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -79,7 +80,7 @@ block content
                         h3.thumbname Tribute
                         | &#x9;&#x9;&#x9;             
                 a(href="../product/10") 
-                    #1.thumbnail
+                    #10.thumbnail
                         h2.thumbnum 10
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -87,7 +88,7 @@ block content
                         h3.thumbname Tourbillon
                         | &#x9;&#x9;&#x9;   
                 a(href="../product/11") 
-                    #1.thumbnail
+                    #11.thumbnail
                         h2.thumbnum 11
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -95,7 +96,7 @@ block content
                         h3.thumbname Annual
                         | &#x9;&#x9;&#x9;  
                 a(href="../product/12") 
-                    #1.thumbnail
+                    #12.thumbnail
                         h2.thumbnum 12
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -103,7 +104,7 @@ block content
                         h3.thumbname GMT
                         | &#x9;&#x9;&#x9;     
                 a(href="../product/13") 
-                    #1.thumbnail
+                    #13.thumbnail
                         h2.thumbnum 13
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -111,7 +112,7 @@ block content
                         h3.thumbname Special
                         | &#x9;&#x9;&#x9;   
                 a(href="../product/14") 
-                    #1.thumbnail
+                    #14.thumbnail
                         h2.thumbnum 14
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -119,7 +120,7 @@ block content
                         h3.thumbname Hurricane
                         | &#x9;&#x9;&#x9; 
                 a(href="../product/15") 
-                    #1.thumbnail
+                    #15.thumbnail
                         h2.thumbnum 15
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -127,7 +128,7 @@ block content
                         h3.thumbname Georges
                         | &#x9;&#x9;&#x9;      
                 a(href="../product/16") 
-                    #1.thumbnail
+                    #16.thumbnail
                         h2.thumbnum 16
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -135,7 +136,7 @@ block content
                         h3.thumbname Moonphase
                         | &#x9;&#x9;&#x9;   
                 a(href="../product/17") 
-                    #1.thumbnail
+                    #17.thumbnail
                         h2.thumbnum 17
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -143,7 +144,7 @@ block content
                         h3.thumbname Power
                         | &#x9;&#x9;&#x9;   
                 a(href="../product/18") 
-                    #1.thumbnail
+                    #18.thumbnail
                         h2.thumbnum 18
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
@@ -151,20 +152,22 @@ block content
                         h3.thumbname Ultra
                         | &#x9;&#x9;&#x9;  
                 a(href="../product/19") 
-                    #1.thumbnail
+                    #19.thumbnail
                         h2.thumbnum 19
                         | &#x9;&#x9;&#x9;
                         img(src='/images/watchthumb.png', alt='watch thumbnail')
                         | &#x9;&#x9;&#x9;
                         h3.thumbname Lady
                         | &#x9;&#x9;&#x9;                           
-            #downnav ^
+            #downnav.vscrollnav 
+                img(src='/images/down_arrow.svg', alt='up arrow')
         #info.column
             .overlap
-                h1(value=specs.id).title #{specs.collection}
+                h1.title #{specs.collection}
                 | &#x9;&#x9;
                 h1.position  #{specs.id}/19
                 | &#x9;
+                #dash  
                 h3.type #{specs.name}
                 | &#x9;
                 h3.diameter #{specs.diameter} MM
@@ -262,21 +265,20 @@ block content
                     h2 Pricing
                     h3 Price
                     h4 #{specs.price}
+                #data.menusection
+                    .back 
+                        img(src='../images/arrow.svg')
+                    h2#watchid #{specs.id}
         #media.column
             #escape
                 a(href="/watchselection").go-to-page
                     img(src='../images/watches/close.png')
             #model
-                #ThreeJS(style="position: absolute; left:0px; top:0px")
+                iframe(src='/productmodel', height=500, width=800)
             #plus
                 img(src='../images/watches/close.png')
             #details
                 img(src='/images/categories/movement_detail.svg', alt='category details')
                 h3 Movement
                 p He soon understood that he would have to revolutionize production methods if he were to achieve this- for at the time, artisans were scattered among small workshops in the surrounding region or worked from home
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js")
-    script(src="/javascripts/OBJLoader.js")
-    script(src="/javascripts/MTLLoader.js")
-    script(src="/javascripts/OBJMTLLoader.js")
-    script(src="/javascripts/OrbitControls.js")
     script(src="/javascripts/product.js")

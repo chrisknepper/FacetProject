@@ -223,7 +223,10 @@ a{
 	cursor: pointer;
 	transition: 0.3s linear all;
 }
-
+.timelinecategories .general-ui-icon{
+    font-size:3.2em;
+    padding-top:20px;
+}
 .general-ui-icon:hover {
 	color: white;
 	background: #a18f6b;
@@ -455,10 +458,40 @@ padding-left:10px;
 .column::-webkit-scrollbar { width: 0 !important }
 #vscroll{
 width:10%;
-overflow-x:visible;
+overflow-x:hidden;
 overflow-y:scroll;
 background-color:#FBFBFB;
 
+}
+.vscrollnav{
+    
+    width:10%;
+    position:absolute;
+    min-width:90px;
+    height:100px;
+    text-align:center;
+    z-index:4;
+   left:0;
+   background-color:white;
+   -webkit-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
+}
+.vscrollnav img{
+height:30px;
+width:50px;
+opacity:.3;
+margin:10px;
+
+}
+#upnav{
+top:0;
+
+}
+#downnav{
+position:fixed;
+bottom:0;
+height:80px;
 }
 #info{
 width:27%;
@@ -470,6 +503,7 @@ width:63%;
 
 background-color:#EDEDED;
 }
+
 #plus{
 	position:fixed;
     top:87%;
@@ -495,6 +529,7 @@ box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 }
 #details h3 {
 	padding-top:20px;
+    padding-left:30px;
 	letter-spacing:2px;
 }
 #details p {
@@ -502,8 +537,8 @@ box-shadow: inset 5px 0px 5px 0px rgba(0,0,0,0.2);
 	padding:15px;
     padding-top:10px;
     
-	padding-left:160px;
-	width:200px;
+	padding-left:100px;
+	padding-right:120px;
     line-height:27pt;
 	
 }
@@ -521,7 +556,7 @@ height:90px;
 }
 /*vscroll styles*/
 .thumbnails{
-
+padding-top:100px;
 overflow-y:scroll;
 min-width:150px;
 padding-left:0px;
@@ -695,6 +730,15 @@ top:125px;
 left:70px;
 text-align:center;
 font-family:"BodoniStd-BoldCondensed";
+}
+#dash{
+position:absolute;
+height:3px;
+width:45px;
+background-color:#1E1E1E;
+top:300px;
+left:75px;
+z-index:3;
 }
 #desc{
 position:absolute;
@@ -1157,6 +1201,8 @@ overflow:hidden;
 #model iframe{
 position:absolute;
 top:-30;
+width:100%;
+height:100%;
 }
 /*end product page styles*/
 /*timeline styles*/
@@ -1194,9 +1240,11 @@ position:fixed;
 top:15px;
 left:33%;
 }
-#histimg{
-height:85%;
-width:100%;
+#timeimg{
+position:absolute;
+top:0;
+left:0;
+height:100%;
 overflow:hidden;
 }
 /*end timeline styles*/

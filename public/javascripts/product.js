@@ -1,7 +1,3 @@
-var threeContainer;
-
-var camera, scene, renderer, frame, controls;
-
 function init() {
 	function switchMenu(active){
 		$(active).css('zIndex', '70');    
@@ -21,11 +17,16 @@ function init() {
 		 
 		 
 	});
-    var title=$('.position').val();
+    var title=$('#watchid').text();
     var watchid='#'+title;
     console.log(watchid);
     console.log()
     $(watchid).addClass('selected');
+    //$('#vscroll').scrollTo(watchid);
+    var height=$(window).height(); 
+    var offset='20px';
+    $('#vscroll').animate({scrollTop:$(watchid).position().top}, 'slow')
+   
 	threeInit();
 	animate();
 
@@ -127,6 +128,7 @@ function animate() {
 function render() {
 
 	renderer.render( scene, camera );
+
 
 
 }
