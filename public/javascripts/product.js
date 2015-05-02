@@ -89,9 +89,9 @@ function threeInit() {
 	};
 
 	// model
-	var loader = new THREE.OBJLoader( manager );
+	var loader = new THREE.JSONLoader( manager );
 
-	loader.load( '/models/watchandtexturetrial.obj', function ( object ) {
+	loader.load( '/models/watch.js', function ( object ) {
 
 		object.traverse( function ( child ) {
 
@@ -103,17 +103,17 @@ function threeInit() {
 			}
 
 		} );
-		/*
 		var texture = Three.ImageUtils.loadTexture('/models/watch.jpg');
 		var material = new THREE.MeshLambertMaterial({map: texture});
 		mesh = new THREE.Mesh(object, material);
 		scene.add(mesh);
-		*/
+		/*
 		object.position.x = 200;
 		object.position.y = 0;
 		object.position.z = 0;
 		object.scale.set(0.2, 0.2, 0.2);
 		scene.add( object );
+		*/
 
 	}, onProgress, onError );
 	//
