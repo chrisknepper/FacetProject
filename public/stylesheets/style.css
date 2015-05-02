@@ -102,6 +102,10 @@ a{
 	content: "\e60a";
 }
 
+.icon-home_icon:before {
+	content: "\e620";
+}
+
 .icon-play_icon:before {
 	content: "\e60b";
 }
@@ -211,6 +215,7 @@ a{
 .icon-add_icon:before {
 	content: "\e607";
 }
+
 .general-ui-icon {
 	display: inline;
 	position: relative;
@@ -255,7 +260,7 @@ a{
 #globalNav {
 	width: 100px;
 	position: fixed;
-	right: 50px;
+	right: 75px;
 	text-align: right;
 	bottom: 50px;
 	z-index: 9001;
@@ -265,6 +270,7 @@ a{
 	color: #f3f3f3;
 	font-size: 3em;
 	border-color: #f3f3f3
+	margin: 0 10px;
 }
 
 #currentDevice {
