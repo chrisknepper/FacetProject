@@ -1210,6 +1210,9 @@ left:65px;
 #infoSnippet strong {
 	font-family: 'GothamHTF-Medium', sans-serif;
 }
+#infoSnippet span {
+	color: #9d8c6c;
+}
 #infoSnippet .slideCount {
 	width: 175px;
 	text-align: center;

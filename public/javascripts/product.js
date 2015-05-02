@@ -69,7 +69,7 @@ function threeInit() {
 
 	};
 
-	var texture = new THREE.Texture();
+	//var texture = new THREE.Texture();
 
 	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
@@ -82,9 +82,9 @@ function threeInit() {
 	};
 
 	// model
-	var loader = new THREE.OBJMTLLoader( manager );
+	var loader = new THREE.OBJLoader( manager );
 
-	loader.load( '/models/watch.obj', '/models/watch.mtl', function ( object ) {
+	loader.load( '/models/watchandtexturetrial.obj', function ( object ) {
 
 		object.traverse( function ( child ) {
 
@@ -96,6 +96,12 @@ function threeInit() {
 			}
 
 		} );
+		/*
+		var texture = Three.ImageUtils.loadTexture('');
+		var material = new THREE.MeshLambertMaterial({map: texture});
+		mesh = new THREE.Mesh(object, material);
+		scene.add(mesh);
+		*/
 		object.position.x = 200;
 		object.position.y = 0;
 		object.position.z = 0;
