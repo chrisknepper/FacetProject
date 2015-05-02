@@ -72,7 +72,7 @@ function threeInit() {
 
 	// model
 	var loader = new THREE.OBJMTLLoader(manager);
-	loader.load( '/models/finalwatchmodel.obj', '/models/finalwatchmodel.mtl', function ( object ) {
+	loader.load( '/models/finalwatchmodelthree.obj', '/models/finalwatchmodel.mtl', function ( object ) {
 
 		object.traverse( function ( child ) {
 
