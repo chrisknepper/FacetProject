@@ -257,12 +257,14 @@ a{
 	position: fixed;
 	right: 50px;
 	text-align: right;
-	top: 50px;
+	bottom: 50px;
 	z-index: 9001;
 }
 
 #globalNav a {
+	color: #f3f3f3;
 	font-size: 3em;
+	border-color: #f3f3f3
 }
 
 #currentDevice {
