@@ -13,7 +13,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Punctuality in work & life</strong> - When asked about his watch, his favorite part was the delicate and simple alarm button at the top to keep track of appointment, prayers, and his daily sewing practice.")
 						div(style="width:960px;height:1080px;background-image:url('/images/icons/gandhi/Gandhi_01.png');" class="galleryImage")
@@ -32,7 +31,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Calming Wait</strong> - Felix in his pressure suit, minutes before launching the first flight of the Red Bull Stratos mission on March 15, 2012. <span>Img: Red Bull Stratos</span>")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/felix/felix_gallery_12.png');" class="galleryImage")
@@ -70,7 +68,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Introduction</strong> - One of our premier watchsmiths at our brand, with an expertise in haute horlogerie (fine watchmaking) many of our grand achievement such as the El Primero’s evelution come from her.")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/alex/alex_01.png');" class="galleryImage")
@@ -103,7 +100,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Introduction</strong> - Racing legend Jackie Stewart has been wearing his brand watch on his wrist for 47 years, having purchased his first Facet watch after having raced in the Indianapolis 500 in 1966")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/jackie/jackie_01.png');" class="galleryImage")
@@ -136,7 +132,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Introductions</strong> - Born 1872 in the northeastern town of Cambrai, France. Louis was a French aviator, inventor and engineer. He developed the first practical headlamp for trucks and built the 1st successful aircraft to cross the channel")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/louis/Louis_01.png');" class="galleryImage")
@@ -169,7 +164,6 @@ block content
 			a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 			.galleryContainer
 				a(href="#" class="close").icon-close_icon.general-ui-icon.close-button
-				a(href="#" class="expand").icon-add_icon.general-ui-icon.add-button
 				.gallery
 					.galleryChild(data-text="<strong>Champion Design</strong> - Roger Federer wearing his Rose Gold facet watch and tournament trophy after winning the 2012 Wimbledon title against Andy Murray. <span>Img: Crown & Caliber</span>")
 						div(style="width:542px;height:402px;background-image:url('/images/icons/rodger/roger_01.png');" class="galleryImage")
@@ -197,7 +191,10 @@ block content
 				.forward.icon-right_arrow.general-ui-icon
 			.section
 				.text <strong>Breaking Sound</strong> - Baumgartner gets a little help suiting up for his jump, Felix steps into the void.
-			.slideCount 1/12
+			.slideCount
+				.first.slideCountCount 1
+				.divider.slideCountCount /
+				.second.slideCountCount 12
 	#backURL(data-url="/")
 	#navColor(data-color="white")
 	script(src="/javascripts/imagesloaded.pkgd.min.js")
