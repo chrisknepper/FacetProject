@@ -102,6 +102,10 @@ a{
 	content: "\e60a";
 }
 
+.icon-achievement:before {
+	content: "\e621";
+}
+
 .icon-home_icon:before {
 	content: "\e620";
 }
@@ -987,6 +991,8 @@ left:65px;
 	padding:0px;
 	font-size:25px;
 	white-space:nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 .watchHistorySelect{
 	position:relative;
