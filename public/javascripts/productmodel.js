@@ -1,233 +1,31 @@
-var loadingContainer, threeContainer, stats;
-var camera, controls, scene, renderer;
-var objects = [], plane;
+var keyshotVR;
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2(),
-offset = new THREE.Vector3(),
-INTERSECTED, SELECTED;
+function initKeyShotVR() {
+var nameOfDiv = "KeyShotVR";
+var folderName = "keyshot";
+var imageWidth = 1210;
+var imageHeight = 1080;
+var backgroundColor = "#FFFFFF";
+var uCount = 36;
+var vCount = 36;
+var uWrap = false;
+var vWrap = false;
+var uMouseSensitivity = -0.189474;
+var vMouseSensitivity = 0.211765;
+var uStartIndex = 18;
+var vStartIndex = 18;
+var minZoom = 1.000000;
+var maxZoom = 1.000000;
+var rotationDamping = 0.800000;
+var downScaleToBrowser = false;
+var addDownScaleGUIButton = false;
+var addPlayGUIButton = false;
+var imageExtension = "jpg";
+var showLoading = false;
+var loadingIcon = "ks_logo.png"; // Set to empty string for default icon.
+var allowFullscreen = false; // Double-click in desktop browsers for fullscreen.
 
-threeInit();
-animate();
-
-function threeInit() {
-
-	threeContainer = document.getElementById( 'ThreeJS' );
-	loadingContainer = document.getElementById('ThreeLoading');
-
-	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
-	camera.position.z = 7;
-
-	controls = new THREE.TrackballControls( camera );
-	controls.rotateSpeed = 1.5;
-	controls.zoomSpeed = 1.2;
-	controls.panSpeed = 0.8;
-	controls.noZoom = false;
-	controls.noPan = false;
-	controls.staticMoving = true;
-	controls.dynamicDampingFactor = 0.3;
-
-	scene = new THREE.Scene();
-
-	scene.add( new THREE.AmbientLight( 0x505050 ) );
-
-	var light = new THREE.SpotLight( 0xffffff, 1.5 );
-	light.position.set( 0, 500, 2000 );
-	light.castShadow = true;
-
-	light.shadowCameraNear = 200;
-	light.shadowCameraFar = camera.far;
-	light.shadowCameraFov = 50;
-
-	light.shadowBias = -0.00022;
-	light.shadowDarkness = 0.5;
-
-	light.shadowMapWidth = 2048;
-	light.shadowMapHeight = 2048;
-
-	scene.add( light );
-
-	plane = new THREE.Mesh(
-		new THREE.PlaneBufferGeometry( 2000, 2000, 8, 8 ),
-		new THREE.MeshBasicMaterial( { color: 0x000000, opacity: 0.25, transparent: true } )
-	);
-	plane.visible = false;
-	scene.add( plane );
-	var onProgress = function ( xhr ) {
-		if ( xhr.lengthComputable ) {
-			var percentComplete = xhr.loaded / xhr.total * 100;
-			console.log( Math.round(percentComplete, 2) + '% downloaded' );
-		}
-	};
-
-	var manager = new THREE.LoadingManager();
-	manager.onProgress = function ( item, loaded, total ) {
-
-		console.log( item, loaded, total );
-
-	};
-
-	var onError = function ( xhr ) {
-	};
-
-	// model
-	var loader = new THREE.OBJMTLLoader(manager);
-	loader.load( '/models/finalwatchmodelthree.obj', '/models/finalwatchmodel.mtl', function ( object ) {
-
-		object.traverse( function ( child ) {
-
-			if ( child instanceof THREE.Mesh ) {
-
-				child.geometry.computeBoundingBox();
-				//console.log(child.geometry.boundingBox);
-
-			}
-
-		} );
-		object.position.x = 0;
-		object.position.y = 0;
-		object.position.z = 0;
-		object.rotation.y = -10;
-		object.rotation.x = -5;
-		scene.add( object );
-		loadingContainer.remove();
-
-	}, onProgress, onError );
-	renderer = new THREE.WebGLRenderer( { antialias: true } );
-	renderer.setClearColor( 0xf0f0f0 );
-	renderer.setPixelRatio( window.devicePixelRatio );
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.sortObjects = false;
-
-	renderer.shadowMapEnabled = true;
-	renderer.shadowMapType = THREE.PCFShadowMap;
-
-	threeContainer.appendChild( renderer.domElement );
-	renderer.domElement.addEventListener( 'mousemove', onDocumentMouseMove, false );
-	renderer.domElement.addEventListener( 'mousedown', onDocumentMouseDown, false );
-	renderer.domElement.addEventListener( 'mouseup', onDocumentMouseUp, false );
-
-	//
-
-	window.addEventListener( 'resize', onWindowResize, false );
-
+keyshotVR = new keyshotVR(nameOfDiv,folderName,imageWidth,imageHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,addPlayGUIButton,imageExtension,showLoading,loadingIcon,allowFullscreen);
 }
 
-function onWindowResize() {
-
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-
-	renderer.setSize( window.innerWidth, window.innerHeight );
-
-}
-
-function onDocumentMouseMove( event ) {
-
-	event.preventDefault();
-
-	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-
-	//
-
-	raycaster.setFromCamera( mouse, camera );
-
-	if ( SELECTED ) {
-
-		var intersects = raycaster.intersectObject( plane );
-		SELECTED.position.copy( intersects[ 0 ].point.sub( offset ) );
-		return;
-
-	}
-
-	var intersects = raycaster.intersectObjects( objects );
-
-	if ( intersects.length > 0 ) {
-
-		if ( INTERSECTED != intersects[ 0 ].object ) {
-
-			if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
-
-			INTERSECTED = intersects[ 0 ].object;
-			INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
-
-			plane.position.copy( INTERSECTED.position );
-			plane.lookAt( camera.position );
-
-		}
-
-		threeContainer.style.cursor = 'pointer';
-
-	} else {
-
-		if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
-
-		INTERSECTED = null;
-
-		threeContainer.style.cursor = 'auto';
-
-	}
-
-}
-
-function onDocumentMouseDown( event ) {
-
-	event.preventDefault();
-
-	var vector = new THREE.Vector3( mouse.x, mouse.y, 0.5 ).unproject( camera );
-
-	var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
-
-	var intersects = raycaster.intersectObjects( objects );
-
-	if ( intersects.length > 0 ) {
-
-		controls.enabled = false;
-
-		SELECTED = intersects[ 0 ].object;
-
-		var intersects = raycaster.intersectObject( plane );
-		offset.copy( intersects[ 0 ].point ).sub( plane.position );
-
-		threeContainer.style.cursor = 'move';
-
-	}
-
-}
-
-function onDocumentMouseUp( event ) {
-
-	event.preventDefault();
-
-	controls.enabled = true;
-
-	if ( INTERSECTED ) {
-
-		plane.position.copy( INTERSECTED.position );
-
-		SELECTED = null;
-
-	}
-
-	threeContainer.style.cursor = 'auto';
-
-}
-
-//
-
-function animate() {
-
-	requestAnimationFrame( animate );
-
-	render();
-
-}
-
-function render() {
-
-	controls.update();
-
-	renderer.render( scene, camera );
-
-}
+window.onload = initKeyShotVR;
